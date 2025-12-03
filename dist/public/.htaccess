@@ -1,0 +1,89 @@
+# CC&C Solutions - Apache Configuration
+# Enhanced fix for HTML download issue
+
+# CRITICAL: Set default index file
+DirectoryIndex index.html index.htm default.html
+
+# CRITICAL: Force HTML content type and inline display
+<FilesMatch "\.(html|htm)$">
+    ForceType text/html
+    Header set Content-Type "text/html; charset=UTF-8"
+    Header set Content-Disposition "inline"
+</FilesMatch>
+
+# Explicit MIME types for all file types
+<IfModule mod_mime.c>
+    # HTML files
+    AddType text/html .html .htm
+    AddHandler text/html .html .htm
+    
+    # Stylesheets and scripts
+    AddType text/css .css
+    AddType text/javascript .js .mjs
+    AddType application/javascript .js
+    
+    # Other assets
+    AddType application/json .json
+    AddType video/mp4 .mp4
+    AddType image/svg+xml .svg
+    AddType image/webp .webp
+    AddType image/png .png
+    AddType image/jpeg .jpg .jpeg
+    AddType image/gif .gif
+    AddType font/woff2 .woff2
+</IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+    # Prevent MIME type sniffing
+    Header set X-Content-Type-Options "nosniff"
+    
+    # Force inline display for HTML (prevent download)
+    <FilesMatch "\.(html|htm)$">
+        Header unset Content-Disposition
+        Header set Content-Disposition "inline"
+    </FilesMatch>
+</IfModule>
+
+# SPA Routing
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    
+    # Force root to serve index.html with text/html type
+    RewriteRule ^$ index.html [L,T=text/html]
+    
+    # URL Redirects
+    RewriteRule ^about-us/?$ /about [R=301,L]
+    
+    # Serve existing files directly
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    
+    # Route all other requests to index.html with text/html type
+    RewriteRule ^ index.html [L,T=text/html]
+</IfModule>
+
+# Fallback for non-rewrite capable servers
+<IfModule !mod_rewrite.c>
+    ErrorDocument 404 /index.html
+</IfModule>
+
+# Disable directory browsing
+Options -Indexes +FollowSymLinks
+
+# Performance - Caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/html "access plus 0 seconds"
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType video/mp4 "access plus 1 year"
+</IfModule>
+
+# Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript
+</IfModule>

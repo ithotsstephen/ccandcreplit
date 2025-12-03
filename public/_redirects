@@ -1,0 +1,3 @@
+# GoDaddy Static Hosting Redirects
+# Simple catch-all redirect for SPA routing
+/*    /index.html   200

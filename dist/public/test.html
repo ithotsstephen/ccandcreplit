@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CC&C Solutions - Deployment Verification</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f172a; color: #e2e8f0; padding: 2rem; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 { color: #3b82f6; margin-bottom: 1rem; font-size: 2rem; }
+        h2 { color: #60a5fa; margin: 2rem 0 1rem; font-size: 1.5rem; }
+        .success { background: #10b981; color: white; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+        .info { background: #1e293b; border-left: 4px solid #3b82f6; padding: 1rem; margin: 1rem 0; }
+        .warning { background: #f59e0b; color: #1f2937; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+        ul { margin-left: 1.5rem; line-height: 2; }
+        a { color: #60a5fa; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        code { background: #334155; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-family: 'Courier New', monospace; }
+        .timestamp { color: #94a3b8; font-size: 0.9rem; }
+        .new { color: #10b981; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✓ CC&C Solutions - Static Build Deployed</h1>
+        
+        <div class="success">
+            <strong>Status:</strong> Production Build Active<br>
+            <strong>Build Date:</strong> <span class="timestamp">November 21, 2025 3:40 PM</span><br>
+            <strong>Mode:</strong> Static (Apache + React SPA)
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ CRITICAL FIX INCLUDED:</strong> Enhanced .htaccess with multiple layers of protection against HTML file download issue.
+        </div>
+
+        <h2>Latest Updates (Nov 21, 2025)</h2>
+        <div class="info">
+            <ul>
+                <li><span class="new">NEW:</span> Added "BIAN SIG" to Contact Form Service Interest dropdown</li>
+                <li><span class="new">NEW:</span> Added "ArchiQ" to Contact Form Service Interest dropdown</li>
+                <li><span class="new">NEW:</span> Added "AdviseIQ" to Contact Form Service Interest dropdown</li>
+                <li><span class="new">NEW:</span> Added "StratIQ" to Contact Form Service Interest dropdown</li>
+                <li><span class="new">FIXED:</span> BIAN SIG "Register Now" button now navigates to Contact page</li>
+                <li>✓ Enhanced .htaccess with ForceType, Content-Disposition inline</li>
+                <li>✓ Multiple MIME type declarations to prevent download issue</li>
+            </ul>
+        </div>
+
+        <h2>URL Structure</h2>
+        <div class="info">
+            <ul>
+                <li><code>/training</code> → <code>/ccandc-training</code></li>
+                <li><code>/bian</code> → <code>/bian-training</code></li>
+                <li><code>/about-us</code> → <code>/about</code> (301 redirect)</li>
+            </ul>
+        </div>
+
+        <h2>Test Navigation</h2>
+        <div class="info">
+            <ul>
+                <li><a href="/">Home Page</a></li>
+                <li><a href="/contact">Contact Page (Test new dropdown options)</a></li>
+                <li><a href="/bian-sig">BIAN SIG Page (Test Register Now button)</a></li>
+                <li><a href="/bian-training">BIAN Training</a></li>
+                <li><a href="/ccandc-training">CC&C Training</a></li>
+                <li><a href="/about">About Us</a></li>
+            </ul>
+        </div>
+
+        <h2>Contact Form Service Interest Options</h2>
+        <div class="info">
+            <ul>
+                <li>TOGAF® Training</li>
+                <li>BIAN Training</li>
+                <li><span class="new">BIAN SIG</span> ← NEW (Nov 21)</li>
+                <li>IT4IT™ Training</li>
+                <li><span class="new">ArchiQ</span> ← NEW (Nov 21)</li>
+                <li><span class="new">AdviseIQ</span> ← NEW (Nov 21)</li>
+                <li><span class="new">StratIQ</span> ← NEW (Nov 21)</li>
+                <li>Enterprise Architecture Consulting</li>
+                <li>Business Architecture</li>
+                <li>Digital Transformation</li>
+                <li>Other</li>
+            </ul>
+        </div>
+
+        <h2>BIAN Button Behavior</h2>
+        <div class="info">
+            <ul>
+                <li>All "Learn More" buttons in BIAN training page → Contact page (via window.open)</li>
+                <li>BIAN SIG "Register Now" button → Contact page (via setLocation)</li>
+            </ul>
+        </div>
+
+        <h2>Build Information</h2>
+        <div class="info">
+            <ul>
+                <li><strong>Vite Version:</strong> 7.2.2</li>
+                <li><strong>Node.js:</strong> 20.15.0</li>
+                <li><strong>Bundle Size:</strong> 839 KB (JS), 103 KB (CSS)</li>
+                <li><strong>Build Time:</strong> 2.45s</li>
+                <li><strong>Mode:</strong> VITE_STATIC_BUILD=true</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

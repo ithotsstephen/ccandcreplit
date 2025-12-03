@@ -1,0 +1,67 @@
+# Quick Reference - Subdirectory Test Deployment
+
+## 📦 Package
+**File**: `newwebsitetest-20251117-1752.zip` (42 MB)
+
+## 🎯 Target URL
+```
+https://ccandcsolutions.com/newwebsitetest/
+```
+
+## ⚡ Quick Upload (4 Steps)
+
+### 1. Create Folder
+```
+In Hostinger File Manager:
+public_html → New Folder → "newwebsitetest"
+```
+
+### 2. Upload & Extract
+```
+1. Open the newwebsitetest folder
+2. Upload: newwebsitetest-20251117-1752.zip
+3. Right-click → Extract
+4. Delete zip file
+```
+
+### 3. Show Hidden Files
+```
+File Manager Settings → ✓ Show Hidden Files
+Verify .htaccess is visible
+```
+
+### 4. Test
+```
+Visit: https://ccandcsolutions.com/newwebsitetest/
+```
+
+## ✅ Test URLs
+- https://ccandcsolutions.com/newwebsitetest/
+- https://ccandcsolutions.com/newwebsitetest/about
+- https://ccandcsolutions.com/newwebsitetest/services
+- https://ccandcsolutions.com/newwebsitetest/contact
+
+## 🔍 Expected Structure
+```
+public_html/
+└── newwebsitetest/
+    ├── .htaccess
+    ├── index.html
+    ├── 404.html
+    ├── index.php
+    ├── assets/
+    └── data/
+```
+
+## ⚠️ Critical
+- ✅ Must be in `newwebsitetest` subfolder
+- ✅ .htaccess must be present
+- ✅ RewriteBase is `/newwebsitetest/`
+- ❌ Don't upload to root public_html
+
+## 📖 Full Guide
+See: `NEWWEBSITETEST_DEPLOYMENT.md`
+
+---
+**Ready**: ✅ Upload Now
+**Date**: Nov 17, 2025 5:52 PM

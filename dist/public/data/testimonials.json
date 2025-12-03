@@ -1,0 +1,35 @@
+[
+  {
+    "id": "b605f544-d8ac-474b-929c-d0a668e25ee7",
+    "content": "We engaged CC and C Solutions for providing enterprise/solution architecture training. Their experts have a very good blend of domain knowledge / working experiences and they are leading consultants in strategy & architecture.",
+    "author": "Venkatesh Veluswamy",
+    "role": "Chief Architect",
+    "company": "AXA Japan",
+    "rating": 5,
+    "isActive": true,
+    "createdAt": "2025-09-03T10:00:37.370Z",
+    "updatedAt": "2025-09-03T10:00:37.370Z"
+  },
+  {
+    "id": "a892142b-cd59-4348-ab51-a47354a814d9",
+    "content": "CC and C Solutions is one of the leading industry experts on Enterprise Architecture and TOGAF®. Their deep subject matter knowledge and extensive practical experience make them an effective EA consultant.",
+    "author": "Tony Hudnell",
+    "role": "Associate Director",
+    "company": "Procter & Gamble",
+    "rating": 5,
+    "isActive": true,
+    "createdAt": "2025-09-03T10:00:37.370Z",
+    "updatedAt": "2025-09-03T10:00:37.370Z"
+  },
+  {
+    "id": "36fce224-7ff3-4f1e-9040-a3d4b34c78b1",
+    "content": "CC and C Solutions provide great strategic vision to their clients' information technology needs and back that up with the practical know-how to implement process and technology to support the vision.",
+    "author": "Vinod Parmar",
+    "role": "Senior IT Professional",
+    "company": "MLC Australia",
+    "rating": 5,
+    "isActive": true,
+    "createdAt": "2025-09-03T10:00:37.370Z",
+    "updatedAt": "2025-09-03T10:00:37.370Z"
+  }
+]

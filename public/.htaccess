@@ -1,0 +1,48 @@
+# GoDaddy Static Hosting Optimized Configuration
+# GoDaddy shared hosting SPA routing with WWW support
+ErrorDocument 404 /index.html
+
+# Set default documents (GoDaddy compatible)
+DirectoryIndex index.html index.htm
+
+# Security settings for GoDaddy
+Options -Indexes
+
+# GoDaddy compatible rewrite rules
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Simple SPA routing - handle existing files and directories
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    
+    # All non-existing files/directories go to index.html
+    RewriteRule ^(.*)$ /index.html [L,QSA]
+</IfModule>
+
+# Fallback for basic GoDaddy servers
+<IfModule !mod_rewrite.c>
+    # Simple fallback
+    <Files "*">
+        ErrorDocument 404 /index.html
+    </Files>
+</IfModule>
+
+# GoDaddy compatible MIME types
+AddType text/html .html .htm
+AddType text/css .css
+AddType text/javascript .js
+AddType application/javascript .js
+AddType application/json .json
+AddType video/mp4 .mp4
+AddType image/svg+xml .svg
+
+# Basic caching for GoDaddy
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType video/mp4 "access plus 1 month"
+</IfModule>

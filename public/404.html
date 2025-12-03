@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CC&C Solutions - Redirecting...</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            padding: 50px; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+        .container { 
+            max-width: 400px; 
+        }
+        .spinner {
+            border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top: 3px solid white;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <script>
+        // Comprehensive SPA redirect logic
+        function redirectToApp() {
+            const path = window.location.pathname;
+            const search = window.location.search;
+            const hash = window.location.hash;
+            
+            // If we're at root, go to home
+            if (path === '/' || path === '') {
+                window.location.href = '/index.html' + search + hash;
+            } else {
+                // For any other path, go to index.html and let React Router handle it
+                window.location.href = '/' + search + hash;
+            }
+        }
+        
+        // Try redirect immediately
+        redirectToApp();
+        
+        // Fallback redirect after 3 seconds
+        setTimeout(function() {
+            window.location.href = '/';
+        }, 3000);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>CC&C Solutions</h1>
+        <div class="spinner"></div>
+        <p>Loading application...</p>
+        <p><small>If you're not redirected automatically, <a href="/" style="color: white;">click here</a>.</small></p>
+    </div>
+</body>
+</html>

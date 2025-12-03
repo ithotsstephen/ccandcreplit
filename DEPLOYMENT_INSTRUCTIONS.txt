@@ -1,0 +1,103 @@
+========================================
+DEPLOYMENT INSTRUCTIONS
+ccandcsolutions.com - Static Build
+Package: ccandcsolutions-ROOT-20251118-1027.zip
+Build Date: November 18, 2025 10:27 AM
+========================================
+
+WHAT'S INCLUDED:
+---------------
+✓ Production React build (Vite)
+✓ All routes with updated URLs:
+  - /training → /ccandc-training
+  - /bian → /bian-training
+✓ .htaccess for Apache SPA routing
+✓ All images and videos
+✓ All data files (JSON)
+✓ Test page for verification
+
+DEPLOYMENT STEPS:
+----------------
+1. Login to Hostinger cPanel
+
+2. Go to File Manager
+
+3. Navigate to public_html/
+
+4. BACKUP EXISTING FILES:
+   - Select all files
+   - Click "Compress"
+   - Download backup
+
+5. DELETE OLD FILES:
+   - Select all files in public_html/
+   - Click "Delete"
+
+6. UPLOAD NEW FILES:
+   - Click "Upload"
+   - Upload ccandcsolutions-ROOT-20251118-1027.zip
+   - Wait for upload to complete
+
+7. EXTRACT:
+   - Right-click the ZIP file
+   - Select "Extract"
+   - Extract to: /public_html/
+   - Click "Extract Files"
+
+8. DELETE ZIP:
+   - Delete ccandcsolutions-ROOT-20251118-1027.zip from server
+
+9. VERIFY .htaccess:
+   - Enable "Show Hidden Files" in File Manager
+   - Verify .htaccess exists in public_html/
+   - If missing, upload it separately
+
+TESTING:
+-------
+1. Visit: https://ccandcsolutions.com/test.html
+   - Should show green success page
+
+2. Test URLs:
+   - https://ccandcsolutions.com/
+   - https://ccandcsolutions.com/ccandc-training
+   - https://ccandcsolutions.com/bian-training
+   - https://ccandcsolutions.com/about
+   - https://ccandcsolutions.com/contact
+
+3. Test direct access (copy URL and refresh):
+   - Each route should work on refresh (F5)
+   - No 404 errors
+
+4. Test navigation:
+   - Click all menu items
+   - Verify footer links work
+   - Check breadcrumbs on training pages
+
+TROUBLESHOOTING:
+--------------
+Issue: 404 errors on routes
+Fix: Verify .htaccess is uploaded and mod_rewrite is enabled
+
+Issue: CSS/JS not loading
+Fix: Clear browser cache (Ctrl+Shift+R)
+
+Issue: Images not showing
+Fix: Check assets/Images/ folder exists
+
+ROLLBACK:
+--------
+If issues occur, restore from backup:
+1. Delete all files in public_html/
+2. Upload your backup ZIP
+3. Extract to public_html/
+
+SUPPORT:
+-------
+Package size: 42 MB
+Total files: 23
+Build tool: Vite 7.2.2
+Framework: React SPA with Wouter routing
+
+========================================
+END OF DEPLOYMENT INSTRUCTIONS
+========================================

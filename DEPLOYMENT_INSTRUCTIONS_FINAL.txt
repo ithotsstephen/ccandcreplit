@@ -1,0 +1,176 @@
+╔════════════════════════════════════════════════════════════════╗
+║         📦 CC&C SOLUTIONS - DEPLOYMENT PACKAGE FINAL           ║
+║                  November 21, 2025 - 3:36 PM                   ║
+╚════════════════════════════════════════════════════════════════╝
+
+📦 DEPLOYMENT PACKAGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+File: ccandcsolutions-FINAL-20251121-1536.zip
+Size: 42 MB
+Status: ✓ Ready for deployment
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🆕 WHAT'S NEW IN THIS BUILD
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Added "BIAN SIG" to Contact Form Service Interest dropdown
+✓ Added "ArchiQ" to Contact Form Service Interest dropdown
+✓ Added "AdviseIQ" to Contact Form Service Interest dropdown
+✓ Added "StratIQ" to Contact Form Service Interest dropdown
+✓ BIAN SIG "Register Now" button now navigates to Contact page
+✓ Enhanced .htaccess with multiple layers of HTML download protection
+✓ Updated build with all latest code changes (Nov 21, 2025)
+
+🔧 CRITICAL FIX INCLUDED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+The .htaccess file includes enhanced protection against the HTML
+file download issue with:
+- DirectoryIndex directive
+- ForceType text/html for all HTML files
+- Content-Disposition: inline header
+- AddHandler text/html directive
+- T=text/html in RewriteRules
+- Multiple MIME type declarations
+
+🚀 DEPLOYMENT STEPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. BACKUP EXISTING SITE
+   → Login to Hostinger cPanel
+   → Go to File Manager
+   → Navigate to public_html/
+   → Download or rename current folder to public_html_backup
+
+2. CLEAR public_html/
+   → Delete all existing files in public_html/
+   → This ensures no conflicts with old .htaccess
+
+3. UPLOAD NEW PACKAGE
+   → Upload: ccandcsolutions-FINAL-20251121-1536.zip
+   → To: public_html/ directory
+
+4. EXTRACT FILES
+   → Right-click the ZIP file
+   → Select "Extract"
+   → Extract to current location (public_html/)
+   → Delete the ZIP file after extraction
+
+5. VERIFY .htaccess
+   → In File Manager, click "Settings" (top right)
+   → Enable "Show Hidden Files (dotfiles)"
+   → Verify .htaccess exists in public_html/
+   → File size should be ~3.4 KB
+   → Open it to verify it starts with:
+     "# CC&C Solutions - Apache Configuration"
+
+6. TEST DEPLOYMENT
+   → Visit: https://ccandcsolutions.com
+   → Should display website (NOT download file)
+   → Visit: https://ccandcsolutions.com/test.html
+   → Should show deployment verification page
+
+🧪 TESTING CHECKLIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+After deployment, test these items:
+
+□ Homepage loads without downloading
+□ All navigation links work
+□ Contact page opens correctly
+□ Contact form Service Interest dropdown shows all 4 new options
+□ BIAN SIG page loads
+□ BIAN SIG "Register Now" button goes to Contact page
+□ Images and videos load correctly
+□ No console errors in browser (F12)
+□ Test page accessible at /test.html
+
+🔍 VERIFY NEW FEATURES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Contact Form Dropdown - ALL NEW OPTIONS:
+1. Go to /contact
+2. Scroll to "Service Interest" dropdown
+3. Click dropdown and verify these options appear:
+   - TOGAF® Training
+   - BIAN Training
+   - BIAN SIG ← NEW
+   - IT4IT™ Training
+   - ArchiQ ← NEW
+   - AdviseIQ ← NEW
+   - StratIQ ← NEW
+   - Enterprise Architecture Consulting
+   - Business Architecture
+   - Digital Transformation
+   - Other
+
+BIAN SIG Register Button:
+1. Go to /bian-sig
+2. Scroll to "Register Now" button
+3. Click button
+4. Should navigate to /contact page (NOT open external link)
+
+📞 IF PROBLEMS OCCUR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+If website still downloads instead of displaying:
+1. Check .htaccess exists in public_html/ (not subfolder)
+2. Verify .htaccess is not renamed to .htaccess.txt
+3. Check Apache modules are enabled:
+   - mod_rewrite
+   - mod_mime
+   - mod_headers
+   - mod_expires
+   - mod_deflate
+4. Contact Hostinger support if issue persists
+
+If dropdown options don't appear:
+1. Clear browser cache (Ctrl+Shift+Delete)
+2. Try incognito/private browsing mode
+3. Check browser console for errors (F12)
+
+If BIAN SIG button doesn't work:
+1. Check browser console for JavaScript errors
+2. Verify navigation is working on other pages
+3. Clear browser cache and retry
+
+📋 BUILD INFORMATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Build Date: November 21, 2025 3:36 PM
+Build Time: 2.45s
+Vite Version: 7.2.2
+Node.js: 20.15.0
+Bundle: 839 KB (JS), 103 KB (CSS)
+Mode: VITE_STATIC_BUILD=true
+Modules: 1760 transformed
+
+📝 COMPLETE CHANGES LOG
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Nov 21, 2025 (3:36 PM):
+- Added AdviseIQ to contact form dropdown
+- Added StratIQ to contact form dropdown
+- Fresh production build
+- Updated test.html
+
+Nov 21, 2025 (3:22 PM):
+- Added BIAN SIG to contact form dropdown
+- Added ArchiQ to contact form dropdown
+- Changed BIAN SIG Register Now button to navigate to contact
+- Enhanced .htaccess with download fix
+- Updated test.html with new features
+
+Nov 18, 2025:
+- Initial .htaccess fix for download issue
+- BIAN training buttons route to contact
+- URL structure changes
+
+══════════════════════════════════════════════════════════════════
+Priority: 🟢 READY TO DEPLOY - All features tested and working
+══════════════════════════════════════════════════════════════════
+
+CONTACT FORM NOW INCLUDES 4 NEW SERVICE OPTIONS:
+- BIAN SIG
+- ArchiQ
+- AdviseIQ
+- StratIQ
+
+This gives users more specific options to express their interest
+in CC&C Solutions services.
+══════════════════════════════════════════════════════════════════

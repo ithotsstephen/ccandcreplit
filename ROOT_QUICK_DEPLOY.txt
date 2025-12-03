@@ -1,0 +1,118 @@
+═══════════════════════════════════════════════════════════
+ ROOT DOMAIN DEPLOYMENT - QUICK GUIDE
+═══════════════════════════════════════════════════════════
+
+📦 PACKAGE: ccandcsolutions-ROOT-20251117-1843.zip (42 MB)
+🎯 TARGET: https://ccandcsolutions.com/ (ROOT)
+📅 BUILD: Nov 17, 2025 6:43 PM
+
+═══════════════════════════════════════════════════════════
+
+⚠️  CRITICAL: BACKUP FIRST!
+═══════════════════════════════════════════════════════════
+
+1. Login to Hostinger File Manager
+2. Go to public_html
+3. Select ALL → Compress → backup.zip
+4. Download backup.zip
+5. THEN proceed with deployment
+
+═══════════════════════════════════════════════════════════
+
+🚀 DEPLOYMENT (5 Steps)
+═══════════════════════════════════════════════════════════
+
+STEP 1: Delete ALL files in public_html
+        (You have backup!)
+
+STEP 2: Upload ccandcsolutions-ROOT-20251117-1843.zip
+
+STEP 3: Right-click → Extract
+
+STEP 4: Delete zip file
+
+STEP 5: Test!
+
+═══════════════════════════════════════════════════════════
+
+✅ TEST URLS
+═══════════════════════════════════════════════════════════
+
+First Test:
+  https://ccandcsolutions.com/deployment-test.html
+  → Should show green success page
+
+Then Test:
+  https://ccandcsolutions.com/
+  https://ccandcsolutions.com/about
+  https://ccandcsolutions.com/services
+  https://ccandcsolutions.com/contact
+
+All should work perfectly!
+
+═══════════════════════════════════════════════════════════
+
+📁 EXPECTED FILES IN public_html/
+═══════════════════════════════════════════════════════════
+
+✅ .htaccess          (Enable "Show Hidden Files"!)
+✅ index.html
+✅ deployment-test.html
+✅ 404.html
+✅ index.php
+✅ assets/
+   ├── index-Dd4i3szG.js
+   ├── index-Dhfl3fND.css
+   ├── Images/
+   └── videos/
+✅ data/
+   └── *.json files
+
+═══════════════════════════════════════════════════════════
+
+⚡ DIFFERENCES FROM SUBDIRECTORY BUILD
+═══════════════════════════════════════════════════════════
+
+Subdirectory (/newwebsitetest/):
+  - Path: /newwebsitetest/
+  - JS: index-CKXLStpI.js
+  - .htaccess: RewriteBase /newwebsitetest/
+
+Root Domain (/):
+  - Path: / (root)
+  - JS: index-Dd4i3szG.js
+  - .htaccess: RewriteBase /
+
+═══════════════════════════════════════════════════════════
+
+🔧 IF SOMETHING GOES WRONG
+═══════════════════════════════════════════════════════════
+
+1. Don't panic!
+2. Delete all files in public_html
+3. Upload your backup.zip
+4. Extract it
+5. Your old site is restored
+
+═══════════════════════════════════════════════════════════
+
+✅ SUCCESS CHECKLIST
+═══════════════════════════════════════════════════════════
+
+□ Backup created and downloaded
+□ Old files deleted
+□ New package uploaded and extracted
+□ .htaccess visible (show hidden files)
+□ deployment-test.html works
+□ Homepage loads
+□ About page loads
+□ All routes work
+□ No 404 errors on refresh
+
+═══════════════════════════════════════════════════════════
+
+Package: ccandcsolutions-ROOT-20251117-1843.zip
+Location: /home/stephen/Documents/ccandcreplit/
+Ready: ✅ YES - Deploy to public_html/
+
+═══════════════════════════════════════════════════════════

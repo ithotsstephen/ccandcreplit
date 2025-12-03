@@ -1,0 +1,141 @@
+=================================================================
+  EMERGENCY FIX - SUBDIRECTORY NOT OPENING
+=================================================================
+
+PROBLEM: https://ccandcsolutions.com/newwebsitetest/ → 404 Error
+
+-----------------------------------------------------------------
+SOLUTION 1: TEST FILE FIRST
+-----------------------------------------------------------------
+
+1. Upload: newwebsitetest-diagnostic-20251117-1757.zip
+2. Extract to: public_html/newwebsitetest/
+3. Visit: https://ccandcsolutions.com/newwebsitetest/test.html
+
+   ✅ If test.html WORKS:
+      → Files uploaded correctly
+      → Check React app (click button on test page)
+   
+   ❌ If test.html shows 404:
+      → Files in wrong location
+      → See Solution 2
+
+-----------------------------------------------------------------
+SOLUTION 2: CHECK DIRECTORY STRUCTURE
+-----------------------------------------------------------------
+
+CORRECT:
+  public_html/
+  └── newwebsitetest/        ← Folder you created
+      ├── .htaccess          ← Enable "Show Hidden Files"
+      ├── index.html
+      ├── test.html          ← NEW diagnostic page
+      ├── assets/
+      └── data/
+
+WRONG:
+  public_html/
+  └── newwebsitetest.zip     ← Must EXTRACT this!
+
+WRONG:
+  public_html/
+  ├── index.html            ← Files in wrong place
+  └── assets/
+
+-----------------------------------------------------------------
+SOLUTION 3: MISSING .htaccess
+-----------------------------------------------------------------
+
+1. File Manager → Settings → ☑ Show Hidden Files
+2. Look for .htaccess in newwebsitetest folder
+3. If missing, create new file named: .htaccess
+4. Paste this content:
+
+DirectoryIndex index.html
+ErrorDocument 404 /newwebsitetest/index.html
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /newwebsitetest/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /newwebsitetest/index.html [L]
+</IfModule>
+
+5. Save with permissions: 644
+
+-----------------------------------------------------------------
+TEST URLS (Try in this exact order)
+-----------------------------------------------------------------
+
+1. Test page:
+   https://ccandcsolutions.com/newwebsitetest/test.html
+   
+2. Direct HTML:
+   https://ccandcsolutions.com/newwebsitetest/index.html
+   
+3. Directory:
+   https://ccandcsolutions.com/newwebsitetest/
+
+At least ONE of these should work!
+
+-----------------------------------------------------------------
+WHAT TO CHECK IN FILE MANAGER
+-----------------------------------------------------------------
+
+Path: public_html/newwebsitetest/
+
+Files you MUST see:
+  .htaccess      (1.6 KB)  ← May be hidden!
+  index.html     (2.5 KB)
+  test.html      (4.0 KB)  ← NEW
+  404.html       (2.2 KB)
+  index.php      (158 B)
+  
+Folders you MUST see:
+  assets/        (contains CSS, JS, Images, videos)
+  data/          (contains JSON files)
+
+-----------------------------------------------------------------
+QUICK DIAGNOSTIC
+-----------------------------------------------------------------
+
+Open browser console (F12) and check:
+
+✅ GOOD:
+   "Files loaded successfully"
+   "React app initialized"
+   
+❌ BAD:
+   "404 Not Found: assets/index-*.js"
+   → Files in wrong directory
+   
+   "Failed to load resource"
+   → Asset path wrong
+   
+   "Cannot GET /newwebsitetest/"
+   → .htaccess not working
+
+-----------------------------------------------------------------
+CONTACT HOSTINGER SUPPORT
+-----------------------------------------------------------------
+
+If nothing works, tell support:
+
+"Static site in subdirectory /newwebsitetest/ returns 404.
+Files verified in File Manager at public_html/newwebsitetest/.
+Even simple test.html returns 404.
+Please check server configuration and subdirectory access."
+
+-----------------------------------------------------------------
+PACKAGE DETAILS
+-----------------------------------------------------------------
+
+File: newwebsitetest-diagnostic-20251117-1757.zip
+Size: 42 MB
+Date: Nov 17, 2025 5:57 PM
+Includes: test.html for diagnostics
+
+=================================================================
+Need help? See: SUBDIRECTORY_TROUBLESHOOTING.md
+=================================================================
