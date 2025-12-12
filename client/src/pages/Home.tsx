@@ -107,6 +107,17 @@ export default function Home() {
               <div className="text-muted-foreground">Years of BIAN Experience</div>
             </div>
           </div>
+
+          {/* BIAN Award Image */}
+          <div className="mt-20 flex justify-center">
+            <img 
+              src="/assets/Images/BiAN AWARD.jpg" 
+              alt="BIAN Award" 
+              width={600}
+              height={337}
+              className="rounded-lg shadow-lg"
+            />
+          </div>
         </div>
       </section>
       

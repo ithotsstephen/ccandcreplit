@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deployment Test - C&C Solutions</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #667eea;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .test-section {
+            margin: 25px 0;
+            padding: 15px;
+            border-left: 4px solid #667eea;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+        .test-section h2 {
+            margin: 0 0 10px 0;
+            color: #333;
+            font-size: 16px;
+        }
+        .status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+        }
+        .status.info {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+        .test-list {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+        }
+        .test-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .test-list li:last-child {
+            border-bottom: none;
+        }
+        .test-list li:before {
+            content: "✓ ";
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        .build-info {
+            background: #e8f5e9;
+            border: 1px solid #4caf50;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .build-info h3 {
+            margin: 0 0 10px 0;
+            color: #2e7d32;
+        }
+        .build-info pre {
+            background: #f1f8e9;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-size: 12px;
+            margin: 0;
+        }
+        .warning {
+            background: #fff3e0;
+            border: 1px solid #ff9800;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .warning h3 {
+            margin: 0 0 5px 0;
+            color: #e65100;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            color: #666;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Deployment Test & Verification</h1>
+        
+        <div class="build-info">
+            <h3>📦 Build Information</h3>
+            <pre>Build Date: December 3, 2025
+Build Time: 23:08 UTC
+Node Version: 20.15.0
+Vite Version: 7.2.2
+Environment: Static Build (VITE_STATIC_BUILD=true)
+Build Mode: Production (NODE_ENV=production)</pre>
+        </div>
+
+        <div class="test-section">
+            <h2>Build Output <span class="status success">PASSED</span></h2>
+            <ul class="test-list">
+                <li>1760 modules transformed successfully</li>
+                <li>Build completed in 2.49 seconds</li>
+                <li>index.html: 2.55 KB (1.05 KB gzipped)</li>
+                <li>CSS bundle: 103.27 KB (16.77 KB gzipped)</li>
+                <li>JavaScript bundle: 839.50 KB (200.49 KB gzipped)</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2>Assets & Configuration <span class="status success">PASSED</span></h2>
+            <ul class="test-list">
+                <li>/data/ folder copied with all JSON files</li>
+                <li>/assets/ folder copied with images and videos</li>
+                <li>.htaccess created with SPA routing configuration</li>
+                <li>BIAN Award image (600x337) included in assets</li>
+                <li>Cache-Control headers configured</li>
+                <li>Security headers configured (X-Content-Type-Options, X-Frame-Options)</li>
+                <li>Compression enabled (mod_deflate)</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2>Static Features <span class="status info">CONFIGURED</span></h2>
+            <ul class="test-list">
+                <li>SPA routing via .htaccess (all routes → index.html)</li>
+                <li>Contact form with Formspree integration</li>
+                <li>11 service options in dropdown (including BIAN SIG, ArchiQ, AdviseIQ, StratIQ)</li>
+                <li>Static JSON data for testimonials, case studies, FAQs</li>
+                <li>Homepage with BIAN Award image display</li>
+                <li>All pages accessible from navigation</li>
+            </ul>
+        </div>
+
+        <div class="warning">
+            <h3>⚠️ Pre-Deployment Checklist</h3>
+            <ul style="margin: 0; padding-left: 20px;">
+                <li>Verify Hostinger uses Apache (not Nginx)</li>
+                <li>Ensure mod_rewrite is enabled</li>
+                <li>Ensure mod_deflate is enabled for compression</li>
+                <li>Upload entire dist/public/ folder contents to public_html/</li>
+                <li>Verify .htaccess has been uploaded correctly</li>
+                <li>Clear browser cache and visit https://ccandcsolutions.com</li>
+                <li>Test navigation to different pages (should not show 404)</li>
+                <li>Verify homepage displays BIAN Award image correctly</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2>Next Steps <span class="status info">TODO</span></h2>
+            <ul class="test-list">
+                <li>Create deployment ZIP package</li>
+                <li>Transfer to Hostinger via FTP/File Manager</li>
+                <li>Extract to public_html/ directory</li>
+                <li>Verify .htaccess is in place</li>
+                <li>Test production deployment at ccandcsolutions.com</li>
+                <li>Verify all pages load without errors</li>
+                <li>Check homepage BIAN Award image displays</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>C&C Solutions - Static Build Deployment Test</p>
+            <p>This page verifies the build is ready for production deployment</p>
+        </div>
+    </div>
+</body>
+</html>
