@@ -83,6 +83,15 @@ CC&C Solutions extended heartfelt thanks to LIXI Limited, Shane Rigby, and James
     shortDescription: "Start Transforming Your Bank with BIAN APIs - Hosted by Standard Bank",
     fullContent: `In March 2024, CC&C Solutions took part in the BIAN Chapter meeting in Cape Town, hosted by Standard Bank under the banner "Start Transforming Your Bank with BIAN APIs." CC&C's Mamta Sarangal joined the open table session titled "What is next after the API Adoption?", engaging in dialogue on future paths for BIAN implementation and API evolution. The meeting featured deep dives into BIAN tooling, ISO 20022 data modeling, and service landscape design, with regional banks (ABSA, Standard Bank) sharing adoption stories. Through this participation, CC&C reinforced its role as an active contributor to the African BIAN community and influencer in banking API transformation.`,
     imagePath: "/assets/Images/BIAN Open Day Mar24.png"
+  },
+  {
+    id: "bian-banking-summit-2024",
+    title: "CC&C Solutions at the BIAN Banking Summit 2025",
+    date: "November 18-19, 2025",
+    location: "Willis Tower, Chicago, USA",
+    shortDescription: "Platinum Sponsor of BIAN Banking Summit 2025 - Championing digital transformation across financial ecosystems",
+    fullContent: `CC&C Solutions is proud to be a Platinum Sponsor of the BIAN Banking Summit 2025, taking place on November 18–19, 2025 at Willis Tower, Chicago, USA. As a global leader in enterprise architecture and digital transformation, CC&C continues to champion the adoption of the Banking Industry Architecture Network (BIAN) to accelerate modernization and interoperability across financial ecosystems. Our team looks forward to engaging with global banking innovators, sharing insights on open banking transformation, and showcasing how CC&C's expertise is enabling institutions worldwide to build scalable, future-ready digital banks.`,
+    imagePath: "/assets/Images/BIAN Summit Nov25 Chicago.png"
   }
 ];
 
@@ -118,7 +127,7 @@ export default function Events() {
               <p className="text-muted-foreground">Mark your calendar for our upcoming industry appearances</p>
             </div>
             
-            <div className={`${upcomingEvents.length === 1 ? 'flex justify-center' : 'grid md:grid-cols-2'} gap-8 max-w-5xl mx-auto`}>
+            {/* <div className={`${upcomingEvents.length === 1 ? 'flex justify-center' : 'grid md:grid-cols-2'} gap-8 max-w-5xl mx-auto`}>
               {upcomingEvents.map((event) => (
                 <div
                   key={event.id}
@@ -126,7 +135,7 @@ export default function Events() {
                   className={`group cursor-pointer bg-card border-2 border-border rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:border-primary hover:-translate-y-2 hover:scale-[1.02] ${upcomingEvents.length === 1 ? 'max-w-2xl w-full' : ''}`}
                   data-testid={`card-event-${event.id}`}
                 >
-                  {/* Event Image */}
+                 
                   <div className="relative h-48 overflow-hidden bg-black">
                     {event.imagePath ? (
                       <img 
@@ -143,7 +152,7 @@ export default function Events() {
                     </div>
                   </div>
                   
-                  {/* Card Content */}
+                  
                   <div className="p-6">
                     <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
                       {event.title}
@@ -164,7 +173,7 @@ export default function Events() {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
         </section>
       )}

@@ -69,11 +69,19 @@ app.use((req, res, next) => {
   // this serves both the API and the client.
   // It is the only port that is not firewalled.
   const port = parseInt(process.env.PORT || '5000', 10);
-  server.listen({
-    port,
-    host: "0.0.0.0",
-    reusePort: true,
-  }, () => {
-    log(`serving on port ${port}`);
-  });
+  
+  // Fix for Windows local development: use 127.0.0.1 instead of 0.0.0.0
+  const isDevelopment = app.get("env") === "development";
+  const host = isDevelopment ? "127.0.0.1" : "0.0.0.0";
+
+  server.listen(
+    {
+      port,
+      host,
+      ...(isDevelopment ? {} : { reusePort: true }), // reusePort only for production/Replit
+    },
+    () => {
+      log(`Serving on http://${host}:${port}`);
+    }
+  );
 })();

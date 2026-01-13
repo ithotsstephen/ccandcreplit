@@ -353,10 +353,34 @@ export default function BIAN() {
 
           <div className="grid lg:grid-cols-2 gap-8">
             {/* BIAN Foundation Certification Training */}
+            
+             <Card className="premium-card group hover:shadow-2xl transition-all duration-500">
+              <CardContent className="p-8 flex flex-col h-full">
+                <h3 className="text-2xl font-bold text-card-foreground mb-6 group-hover:text-primary transition-colors duration-300">
+                  BIAN Foundation Certification Training<br></br> (In Person / Virtual Training)
+
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
+                  This component of the training program is designed to provide participants with a thorough understanding of the BIAN framework, including its core principles, concepts, and content. The foundation training lays the groundwork for more advanced learning and ensures that all participants develop a solid grasp of the essential elements of the BIAN framework, banking product development, business scenarios, and case study modules.
+</p>
+<p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
+                  This course will be delivered through <strong>in person and virtual training sessions,</strong> offering flexibility while maintaining a highly interactive learning experience.
+
+</p>
+                <button 
+                  // onClick={() => setLocation('/services/bian-foundation')}
+                    onClick={() => window.open('/contact')}
+                  className="premium-button px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
+                  data-testid="button-bian-foundation"
+                >
+                  Click now to begin learning
+                </button>
+              </CardContent>
+            </Card>
             <Card className="premium-card group hover:shadow-2xl transition-all duration-500">
               <CardContent className="p-8 flex flex-col h-full">
                 <h3 className="text-2xl font-bold text-card-foreground mb-6 group-hover:text-primary transition-colors duration-300">
-                  BIAN Foundation Certification Training
+                  BIAN Foundation Certification Training <br></br>(E Learning Platform)
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
                   This component of the training program is designed to provide participants with a thorough understanding of the BIAN framework: including its core principles, concepts, and content. The foundation training will lay the groundwork for more advanced learning and ensure that all participants have a solid grasp of the essential elements of BIAN framework, banking product development business scenarios and case studies modules. This course will be delivered via the CC & C Solutions new eLearning platform. 
@@ -371,10 +395,11 @@ export default function BIAN() {
                 </button>
               </CardContent>
             </Card>
+           
              <Card className="premium-card group hover:shadow-2xl transition-all duration-500">
               <CardContent className="p-8 flex flex-col h-full">
                 <h3 className="text-2xl font-bold text-card-foreground mb-6 group-hover:text-primary transition-colors duration-300">
-                  BIAN Foundation Training
+                  BIAN Foundation Training (E Learning Platform)
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
                   This component of the training program is designed to provide participants with a thorough understanding of the BIAN framework: including its core principles, concepts, and content. The foundation training will lay the groundwork for more advanced learning and ensure that all participants have a solid grasp of the essential elements of BIAN framework, banking product development business scenarios and case studies modules. This course will be delivered via the CC & C Solutions new eLearning platform. 
