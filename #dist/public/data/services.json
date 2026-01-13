@@ -1,0 +1,57 @@
+[
+  {
+    "id": "0b535963-12df-4348-b9e0-a8e673f7c0c0",
+    "name": "BIAN Foundation Certification",
+    "description": "Banking Industry Architecture Network framework training for financial services transformation.",
+    "category": "training",
+    "industry": "banking",
+    "icon": "fas fa-university",
+    "isActive": true,
+    "createdAt": "2025-09-01T05:35:20.528Z",
+    "updatedAt": "2025-09-01T05:35:20.528Z"
+  },
+  {
+    "id": "4bfc61ef-a431-4c2a-889f-d60318a36948",
+    "name": "Digital Transformation Advisory",
+    "description": "End-to-end digital transformation consulting and implementation services.",
+    "category": "consulting",
+    "industry": "digital-transformation",
+    "icon": "fas fa-digital-tachograph",
+    "isActive": true,
+    "createdAt": "2025-09-01T05:35:20.528Z",
+    "updatedAt": "2025-09-01T05:35:20.528Z"
+  },
+  {
+    "id": "15d11e37-a7aa-4b61-afe1-adb84552b4d5",
+    "name": "Enterprise Architecture Consulting",
+    "description": "Strategic EA consulting services for Fortune 500 companies worldwide.",
+    "category": "consulting",
+    "industry": "enterprise-architecture",
+    "icon": "fas fa-handshake",
+    "isActive": true,
+    "createdAt": "2025-09-01T05:35:20.528Z",
+    "updatedAt": "2025-09-01T05:35:20.528Z"
+  },
+  {
+    "id": "e7e911a7-966c-4bf8-bfe2-a8fbe55fdefd",
+    "name": "IT4IT Foundation Management",
+    "description": "Learn how to manage the business of IT using The Open Group's IT4IT standard for IT value chain optimization.",
+    "category": "training",
+    "industry": "it-management",
+    "icon": "fas fa-cogs",
+    "isActive": true,
+    "createdAt": "2025-09-01T05:35:20.528Z",
+    "updatedAt": "2025-09-01T05:35:20.528Z"
+  },
+  {
+    "id": "1aeb2e8a-92e1-4236-a01b-05101645cc29",
+    "name": "TOGAF 10 Foundation & Practitioner",
+    "description": "Master the world's leading enterprise architecture framework with comprehensive TOGAF 10 training covering both Foundation and Practitioner levels.",
+    "category": "training",
+    "industry": "enterprise-architecture",
+    "icon": "fas fa-building",
+    "isActive": true,
+    "createdAt": "2025-09-01T05:35:20.528Z",
+    "updatedAt": "2025-09-01T05:35:20.528Z"
+  }
+]

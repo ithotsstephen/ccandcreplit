@@ -1,0 +1,39 @@
+GoDaddy Upload Checklist
+========================
+
+1. Upload ALL contents of this folder to your GoDaddy hosting root directory
+
+2. Additional images you need to download from Replit and upload:
+   
+   From Replit Object Storage -> Upload to /assets/Images/:
+   □ About.jpg
+   □ Vish Photo.png
+   □ Nishan.png
+   □ Ramesh.png
+   □ ArchIQ.png
+   □ AdviseIQ.png
+   □ StratIQ.png
+   □ Banking.jpg
+   □ Manufacturing.jpg
+   □ Insurance.jpg
+   □ BIAN Award.jpeg
+   
+   From Replit Object Storage -> Upload to /assets/videos/:
+   □ Background BG Video.mp4
+   
+   Event images and other assets as needed.
+
+3. Test your site after upload!
+
+Files already included:
+✅ Global Reach.png
+✅ Mamta photo.png
+✅ CC&C Logo Original.png
+
+Directory structure created:
+- index.html (main site file)
+- assets/css/ (stylesheets)
+- assets/js/ (JavaScript)
+- assets/Images/ (your images go here)
+- assets/videos/ (your videos go here)
+- data/ (JSON data files)

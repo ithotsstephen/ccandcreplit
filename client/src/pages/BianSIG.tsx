@@ -273,7 +273,7 @@ export default function BianSIG() {
                         <td className="py-4 px-4 text-muted-foreground">12th December 2025</td>
                         <td className="py-4 px-4 text-muted-foreground">12 pm AEDT/ 2 pm NZST</td>
                         <td className="py-4 px-4">
-                          <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Scheduled</span>
+                          <span className="px-3 py-1 bg-primary/20 text-secondary rounded-full text-sm">Held</span>
                         </td>
                       </tr>
                     </tbody>
