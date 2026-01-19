@@ -30,13 +30,29 @@ const upcomingEvents: Event[] = [
 
 const pastEvents: Event[] = [
   {
-    id: "bian-london-2023",
-    title: "BIAN Summit London 2023",
-    date: "November 2023",
-    location: "London, United Kingdom",
-    shortDescription: "Leading interactive sessions on BIAN Service Domain model and API standardization",
-    fullContent: `In November 2023, CC&C Solutions participated prominently at the BIAN Banking Summit in London, engaging with global banking leaders and technology providers. As recognized subject matter experts in BIAN adoption, our team led interactive breakout sessions and roundtable dialogues on mapping legacy landscapes to the BIAN Service Domain model. We showcased our proven methodology in application rationalization and API standardization, sharing best practices to accelerate banks' architectural modernization. Our presence reinforced CC&C's commitment to advancing open banking frameworks and delivering measurable transformation across financial services.`,
-    imagePath: "/assets/Images/BIAN Summit Nov23 London.png"
+    id: "bian-banking-summit-2024",
+    title: "CC&C Solutions at the BIAN Banking Summit 2025",
+    date: "November 18-19, 2025",
+    location: "Willis Tower, Chicago, USA",
+    shortDescription: "Platinum Sponsor of BIAN Banking Summit 2025 - Championing digital transformation across financial ecosystems",
+    fullContent: `CC&C Solutions is proud to be a Platinum Sponsor of the BIAN Banking Summit 2025, taking place on November 18–19, 2025 at Willis Tower, Chicago, USA. As a global leader in enterprise architecture and digital transformation, CC&C continues to champion the adoption of the Banking Industry Architecture Network (BIAN) to accelerate modernization and interoperability across financial ecosystems. Our team looks forward to engaging with global banking innovators, sharing insights on open banking transformation, and showcasing how CC&C's expertise is enabling institutions worldwide to build scalable, future-ready digital banks.`,
+    imagePath: "/assets/Images/BIAN Summit Nov25 Chicago.png"
+  }
+ ,
+  {
+    id: "lixi-2025",
+    title: "LIXI Forum Sydney 2025",
+    date: "2025",
+    location: "Sydney, Australia",
+    shortDescription: "Leading with BIAN: Realising Composable Banking Architectures - Presentation by Mamta Sarangal and David Vander",
+    fullContent: `The LIXI Forum 2025 brought together more than 150 industry leaders and innovators from over 65 organisations to explore the future of lending, the transformative role of AI, and the importance of standards in building connected ecosystems.
+
+CC&C Solutions contributed to this dialogue through the presentation "Leading with BIAN: Realising Composable Banking Architectures," delivered by Mamta Sarangal (Chief Architect, CC&C Solutions) and David Vander (CEO, Avolution / BIAN Director). Together, they shared practical strategies for realising composable banking using the BIAN framework and highlighted global perspectives on architecture-led transformation.
+
+The forum also featured thought-provoking sessions on regulatory updates, broker evolution, and innovation under the Consumer Data Right (CDR), offering valuable insights into the challenges and opportunities shaping the financial services industry.
+
+CC&C Solutions extended heartfelt thanks to LIXI Limited, Shane Rigby, and James Pitt for hosting a dynamic and collaborative event. The team left the forum inspired and motivated to continue driving innovation in composable banking and connected digital ecosystems.`,
+    imagePath: "/assets/Images/Lixi Forum25.png"
   },
   {
     id: "singapore-fintech-2024",
@@ -60,21 +76,7 @@ The event culminated in CC&C receiving the prestigious Best in Class Partner Awa
 From deep-dive dialogues to award-winning results, CC&C's presence at the Summit reaffirmed our leadership in shaping the future of composable banking architecture and enterprise transformation.`,
     imagePath: "/assets/Images/BIAN Summit Nov24 London.png"
   },
-  {
-    id: "lixi-2025",
-    title: "LIXI Forum Sydney 2025",
-    date: "2025",
-    location: "Sydney, Australia",
-    shortDescription: "Leading with BIAN: Realising Composable Banking Architectures - Presentation by Mamta Sarangal and David Vander",
-    fullContent: `The LIXI Forum 2025 brought together more than 150 industry leaders and innovators from over 65 organisations to explore the future of lending, the transformative role of AI, and the importance of standards in building connected ecosystems.
-
-CC&C Solutions contributed to this dialogue through the presentation "Leading with BIAN: Realising Composable Banking Architectures," delivered by Mamta Sarangal (Chief Architect, CC&C Solutions) and David Vander (CEO, Avolution / BIAN Director). Together, they shared practical strategies for realising composable banking using the BIAN framework and highlighted global perspectives on architecture-led transformation.
-
-The forum also featured thought-provoking sessions on regulatory updates, broker evolution, and innovation under the Consumer Data Right (CDR), offering valuable insights into the challenges and opportunities shaping the financial services industry.
-
-CC&C Solutions extended heartfelt thanks to LIXI Limited, Shane Rigby, and James Pitt for hosting a dynamic and collaborative event. The team left the forum inspired and motivated to continue driving innovation in composable banking and connected digital ecosystems.`,
-    imagePath: "/assets/Images/Lixi Forum25.png"
-  },
+ 
   {
     id: "bian-sa-2024",
     title: "BIAN Chapter Meet — South Africa 2024",
@@ -84,14 +86,15 @@ CC&C Solutions extended heartfelt thanks to LIXI Limited, Shane Rigby, and James
     fullContent: `In March 2024, CC&C Solutions took part in the BIAN Chapter meeting in Cape Town, hosted by Standard Bank under the banner "Start Transforming Your Bank with BIAN APIs." CC&C's Mamta Sarangal joined the open table session titled "What is next after the API Adoption?", engaging in dialogue on future paths for BIAN implementation and API evolution. The meeting featured deep dives into BIAN tooling, ISO 20022 data modeling, and service landscape design, with regional banks (ABSA, Standard Bank) sharing adoption stories. Through this participation, CC&C reinforced its role as an active contributor to the African BIAN community and influencer in banking API transformation.`,
     imagePath: "/assets/Images/BIAN Open Day Mar24.png"
   },
-  {
-    id: "bian-banking-summit-2024",
-    title: "CC&C Solutions at the BIAN Banking Summit 2025",
-    date: "November 18-19, 2025",
-    location: "Willis Tower, Chicago, USA",
-    shortDescription: "Platinum Sponsor of BIAN Banking Summit 2025 - Championing digital transformation across financial ecosystems",
-    fullContent: `CC&C Solutions is proud to be a Platinum Sponsor of the BIAN Banking Summit 2025, taking place on November 18–19, 2025 at Willis Tower, Chicago, USA. As a global leader in enterprise architecture and digital transformation, CC&C continues to champion the adoption of the Banking Industry Architecture Network (BIAN) to accelerate modernization and interoperability across financial ecosystems. Our team looks forward to engaging with global banking innovators, sharing insights on open banking transformation, and showcasing how CC&C's expertise is enabling institutions worldwide to build scalable, future-ready digital banks.`,
-    imagePath: "/assets/Images/BIAN Summit Nov25 Chicago.png"
+ 
+   {
+    id: "bian-london-2023",
+    title: "BIAN Summit London 2023",
+    date: "November 2023",
+    location: "London, United Kingdom",
+    shortDescription: "Leading interactive sessions on BIAN Service Domain model and API standardization",
+    fullContent: `In November 2023, CC&C Solutions participated prominently at the BIAN Banking Summit in London, engaging with global banking leaders and technology providers. As recognized subject matter experts in BIAN adoption, our team led interactive breakout sessions and roundtable dialogues on mapping legacy landscapes to the BIAN Service Domain model. We showcased our proven methodology in application rationalization and API standardization, sharing best practices to accelerate banks' architectural modernization. Our presence reinforced CC&C's commitment to advancing open banking frameworks and delivering measurable transformation across financial services.`,
+    imagePath: "/assets/Images/BIAN Summit Nov23 London.png"
   }
 ];
 

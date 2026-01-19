@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import {
   Carousel,
   CarouselContent,
@@ -354,12 +355,14 @@ export default function BIAN() {
           <div className="grid lg:grid-cols-2 gap-8">
             {/* BIAN Foundation Certification Training */}
             
-             <Card className="premium-card group hover:shadow-2xl transition-all duration-500">
+             <Card className="premium-card group hover:shadow-2xl transition-all duration-500 border-2 border-green-500/30">
               <CardContent className="p-8 flex flex-col h-full">
-                <h3 className="text-2xl font-bold text-card-foreground mb-6 group-hover:text-primary transition-colors duration-300">
-                  BIAN Foundation Certification Training<br></br> (In Person / Virtual Training)
-
-                </h3>
+                <div className="flex items-start gap-3 mb-6">
+                  <h3 className="text-2xl font-bold text-card-foreground group-hover:text-primary transition-colors duration-300 flex-1">
+                    BIAN Foundation Certification Training<br></br> (In Person / Virtual Training)
+                  </h3>
+                  <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700 px-4 py-1.5 text-sm font-bold shadow-lg animate-pulse">NEW</Badge>
+                </div>
                 <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
                   This component of the training program is designed to provide participants with a thorough understanding of the BIAN framework, including its core principles, concepts, and content. The foundation training lays the groundwork for more advanced learning and ensures that all participants develop a solid grasp of the essential elements of the BIAN framework, banking product development, business scenarios, and case study modules.
 </p>
@@ -377,11 +380,14 @@ export default function BIAN() {
                 </button>
               </CardContent>
             </Card>
-            <Card className="premium-card group hover:shadow-2xl transition-all duration-500">
+            <Card className="premium-card group hover:shadow-2xl transition-all duration-500 border-2 border-green-500/30">
               <CardContent className="p-8 flex flex-col h-full">
-                <h3 className="text-2xl font-bold text-card-foreground mb-6 group-hover:text-primary transition-colors duration-300">
-                  BIAN Foundation Certification Training <br></br>(E Learning Platform)
-                </h3>
+                <div className="flex items-start gap-3 mb-6">
+                  <h3 className="text-2xl font-bold text-card-foreground group-hover:text-primary transition-colors duration-300 flex-1">
+                    BIAN Foundation Certification Training <br></br>(E Learning Platform)
+                  </h3>
+                  <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700 px-4 py-1.5 text-sm font-bold shadow-lg animate-pulse">NEW</Badge>
+                </div>
                 <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
                   This component of the training program is designed to provide participants with a thorough understanding of the BIAN framework: including its core principles, concepts, and content. The foundation training will lay the groundwork for more advanced learning and ensure that all participants have a solid grasp of the essential elements of BIAN framework, banking product development business scenarios and case studies modules. This course will be delivered via the CC & C Solutions new eLearning platform. 
                 </p>
@@ -396,11 +402,14 @@ export default function BIAN() {
               </CardContent>
             </Card>
            
-             <Card className="premium-card group hover:shadow-2xl transition-all duration-500">
+             <Card className="premium-card group hover:shadow-2xl transition-all duration-500 border-2 border-green-500/30">
               <CardContent className="p-8 flex flex-col h-full">
-                <h3 className="text-2xl font-bold text-card-foreground mb-6 group-hover:text-primary transition-colors duration-300">
-                  BIAN Foundation Training (E Learning Platform)
-                </h3>
+                <div className="flex items-start gap-3 mb-6">
+                  <h3 className="text-2xl font-bold text-card-foreground group-hover:text-primary transition-colors duration-300 flex-1">
+                    BIAN Foundation Training (E Learning Platform)
+                  </h3>
+                  <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700 px-4 py-1.5 text-sm font-bold shadow-lg animate-pulse">NEW</Badge>
+                </div>
                 <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
                   This component of the training program is designed to provide participants with a thorough understanding of the BIAN framework: including its core principles, concepts, and content. The foundation training will lay the groundwork for more advanced learning and ensure that all participants have a solid grasp of the essential elements of BIAN framework, banking product development business scenarios and case studies modules. This course will be delivered via the CC & C Solutions new eLearning platform. 
                 </p>
