@@ -1,0 +1,77 @@
+[
+  {
+    "name": "L&T",
+    "logoPath": "assets/ClientLogos/client-L&T.png",
+    "alt": "L&T Logo"
+  },
+  {
+    "name": "P&G",
+    "logoPath": "assets/ClientLogos/client-P&G.png",
+    "alt": "P&G Logo"
+  },
+  {
+    "name": "ADB",
+    "logoPath": "assets/ClientLogos/client-adb.png",
+    "alt": "ADB Logo"
+  },
+  {
+    "name": "AXA",
+    "logoPath": "assets/ClientLogos/client-axa.png",
+    "alt": "AXA Logo"
+  },
+  {
+    "name": "BMC",
+    "logoPath": "assets/ClientLogos/client-bmc.png",
+    "alt": "BMC Logo"
+  },
+  {
+    "name": "CISCO",
+    "logoPath": "assets/ClientLogos/client-cisco.png",
+    "alt": "CISCO Logo"
+  },
+  {
+    "name": "COGNIZANT",
+    "logoPath": "assets/ClientLogos/client-cognizant.png",
+    "alt": "COGNIZANT Logo"
+  },
+  {
+    "name": "COSTCO",
+    "logoPath": "assets/ClientLogos/client-costco.png",
+    "alt": "COSTCO Logo"
+  },
+  {
+    "name": "FULTON",
+    "logoPath": "assets/ClientLogos/client-fulton.png",
+    "alt": "FULTON Logo"
+  },
+  {
+    "name": "HSBC",
+    "logoPath": "assets/ClientLogos/client-hsbc.png",
+    "alt": "HSBC Logo"
+  },
+  {
+    "name": "JOHNSON & JOHNSON",
+    "logoPath": "assets/ClientLogos/client-johnson & johnson.png",
+    "alt": "JOHNSON & JOHNSON Logo"
+  },
+  {
+    "name": "MLC",
+    "logoPath": "assets/ClientLogos/client-mlc.png",
+    "alt": "MLC Logo"
+  },
+  {
+    "name": "QBE",
+    "logoPath": "assets/ClientLogos/client-qbe.png",
+    "alt": "QBE Logo"
+  },
+  {
+    "name": "VODAFONE",
+    "logoPath": "assets/ClientLogos/client-vodafone.png",
+    "alt": "VODAFONE Logo"
+  },
+  {
+    "name": "WESTPAC",
+    "logoPath": "assets/ClientLogos/client-westpac.png",
+    "alt": "WESTPAC Logo"
+  }
+]

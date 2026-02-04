@@ -104,7 +104,7 @@ export default function HeroSection() {
             </button>
             <button 
               onClick={goToSeeItInAction}
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-primary transition-all"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-black transition-all"
               data-testid="button-view-case-studies"
             >
               View Case Studies

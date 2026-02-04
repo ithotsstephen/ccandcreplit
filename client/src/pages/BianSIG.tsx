@@ -59,7 +59,7 @@ export default function BianSIG() {
   };
 
   const handleRegisterClick = () => {
-    setLocation('/contact');
+    setLocation('/registration');
   };
 
   return (
@@ -238,22 +238,31 @@ export default function BianSIG() {
                     <tbody>
                       <tr className="border-b border-border/50">
                         <td className="py-4 px-4 text-muted-foreground">1</td>
-                        <td className="py-4 px-4 text-muted-foreground">11th July 2025</td>
-                        <td className="py-4 px-4 text-muted-foreground">9am AEST / 11am NZST</td>
+                        <td className="py-4 px-4 text-muted-foreground">February 27th 2026</td>
+                        <td className="py-4 px-4 text-muted-foreground">1pm AEDT / 3pm NZDT</td>
                         <td className="py-4 px-4">
-                          <span className="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm">Held</span>
+                          <span className="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm">Scheduled</span>
                         </td>
                       </tr>
                       <tr className="border-b border-border/50">
                         <td className="py-4 px-4 text-muted-foreground">2</td>
-                        <td className="py-4 px-4 text-muted-foreground">15th August 2025</td>
-                        <td className="py-4 px-4 text-muted-foreground">1pm AEST / 3pm NZST</td>
+                        <td className="py-4 px-4 text-muted-foreground">12th December 2025</td>
+                        <td className="py-4 px-4 text-muted-foreground">12 pm AEDT/ 2 pm NZST</td>
                         <td className="py-4 px-4">
                           <span className="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm">Held</span>
                         </td>
                       </tr>
                       <tr className="border-b border-border/50">
                         <td className="py-4 px-4 text-muted-foreground">3</td>
+                        
+                        <td className="py-4 px-4 text-muted-foreground">27th October 2025</td>
+                        <td className="py-4 px-4 text-muted-foreground">6pm AEDT / 8pm NZDT</td>
+                        <td className="py-4 px-4">
+                          <span className="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm">Held</span>
+                        </td>
+                      </tr>
+                      <tr className="border-b border-border/50">
+                        <td className="py-4 px-4 text-muted-foreground">4</td>
                         <td className="py-4 px-4 text-muted-foreground">12th September 2025</td>
                         <td className="py-4 px-4 text-muted-foreground">1pm AEST / 3pm NZST</td>
                         <td className="py-4 px-4">
@@ -261,17 +270,18 @@ export default function BianSIG() {
                         </td>
                       </tr>
                       <tr className="border-b border-border/50">
-                        <td className="py-4 px-4 text-muted-foreground">4</td>
-                        <td className="py-4 px-4 text-muted-foreground">27th October 2025</td>
-                        <td className="py-4 px-4 text-muted-foreground">6pm AEDT / 8pm NZDT</td>
+                        <td className="py-4 px-4 text-muted-foreground">5</td>
+                        <td className="py-4 px-4 text-muted-foreground">15th August 2025</td>
+                        <td className="py-4 px-4 text-muted-foreground">1pm AEST / 3pm NZST</td>
                         <td className="py-4 px-4">
                           <span className="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm">Held</span>
                         </td>
                       </tr>
                       <tr>
-                        <td className="py-4 px-4 text-muted-foreground">5</td>
-                        <td className="py-4 px-4 text-muted-foreground">12th December 2025</td>
-                        <td className="py-4 px-4 text-muted-foreground">12 pm AEDT/ 2 pm NZST</td>
+                        <td className="py-4 px-4 text-muted-foreground">6</td>
+                        
+                        <td className="py-4 px-4 text-muted-foreground">11th July 2025</td>
+                        <td className="py-4 px-4 text-muted-foreground">9am AEST / 11am NZST</td>
                         <td className="py-4 px-4">
                           <span className="px-3 py-1 bg-primary/20 text-secondary rounded-full text-sm">Held</span>
                         </td>

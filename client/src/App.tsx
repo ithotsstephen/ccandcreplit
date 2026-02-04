@@ -36,6 +36,7 @@ import Togaf9Certified from "@/pages/Togaf9Certified";
 import TogafBusinessArchitecture from "@/pages/TogafBusinessArchitecture";
 import IT4ITFoundation from "@/pages/IT4ITFoundation";
 import Contact from "@/pages/Contact";
+import Registration from "@/pages/Registration";
 
 function Redirect({ to }: { to: string }) {
   const [, setLocation] = useLocation();
@@ -93,6 +94,7 @@ function AppRouter() {
       <Route path="/services/it4it-management" component={It4itManagement} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
+      <Route path="/registration" component={Registration} />
       {!isStaticMode && (
         <Route path="/admin">
           {isAuthenticated && user?.isAdmin ? <Admin /> : <div className="min-h-screen w-full flex items-center justify-center bg-background">

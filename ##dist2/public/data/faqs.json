@@ -1,0 +1,52 @@
+[
+  {
+    "id": "28ab721a-7423-4330-b6f9-f3b176822f9f",
+    "question": "What is TOGAF and why is it important?",
+    "answer": "TOGAF (The Open Group Architecture Framework) is a proven enterprise architecture methodology and framework used by the world's leading organizations to improve business efficiency. It provides a common language and comprehensive method for designing, planning, implementing, and governing enterprise information architecture.",
+    "category": "togaf",
+    "order": 1,
+    "isActive": true,
+    "createdAt": "2025-09-01T05:35:55.932Z",
+    "updatedAt": "2025-09-01T05:35:55.932Z"
+  },
+  {
+    "id": "1a3e0b85-2678-4f0f-9776-7f29eed70770",
+    "question": "What is BIAN and how does it help banks?",
+    "answer": "BIAN (Banking Industry Architecture Network) is a collaborative not-for-profit ecosystem that has created the world's leading open standard for banking. It provides a semantic service landscape, standardized business vocabulary, and service-oriented architecture for banks.",
+    "category": "bian",
+    "order": 1,
+    "isActive": true,
+    "createdAt": "2025-09-01T05:35:55.932Z",
+    "updatedAt": "2025-09-01T05:35:55.932Z"
+  },
+  {
+    "id": "41e0962a-2449-45f7-9336-269759b90403",
+    "question": "Do you offer customized training programs?",
+    "answer": "Yes, we specialize in tailored training programs designed to meet your organization's specific needs. Our consultants work with you to develop custom curricula that address your unique challenges and objectives.",
+    "category": "general",
+    "order": 1,
+    "isActive": true,
+    "createdAt": "2025-09-01T05:35:55.932Z",
+    "updatedAt": "2025-09-01T05:35:55.932Z"
+  },
+  {
+    "id": "eedc9d43-7140-4865-8919-50f8c7ef2b14",
+    "question": "How long does TOGAF certification training take?",
+    "answer": "Our TOGAF 10 Foundation course takes 2 days, while the Practitioner level requires an additional 3 days. We offer combined 5-day programs as well as flexible scheduling options including virtual and in-person delivery.",
+    "category": "togaf",
+    "order": 2,
+    "isActive": true,
+    "createdAt": "2025-09-01T05:35:55.932Z",
+    "updatedAt": "2025-09-01T05:35:55.932Z"
+  },
+  {
+    "id": "ee910281-a8d2-434c-a11a-18459281926e",
+    "question": "What support do you provide after training?",
+    "answer": "We offer ongoing support including mentoring sessions, implementation guidance, template libraries, and access to our expert network. Our goal is to ensure your team achieves long-term success and self-sufficiency.",
+    "category": "general",
+    "order": 2,
+    "isActive": true,
+    "createdAt": "2025-09-01T05:35:55.932Z",
+    "updatedAt": "2025-09-01T05:35:55.932Z"
+  }
+]
