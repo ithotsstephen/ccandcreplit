@@ -1,0 +1,213 @@
+═══════════════════════════════════════════════════════════
+ HOSTINGER DEPLOYMENT GUIDE - February 4, 2026
+═══════════════════════════════════════════════════════════
+
+📦 PACKAGE: ccandcsolutions-hostinger-20260204-1336.zip (42 MB)
+🎯 TARGET: https://ccandcsolutions.com/ (ROOT DOMAIN)
+📅 BUILD: February 4, 2026, 1:36 PM
+✅ INCLUDES: Latest changes with green "Scheduled" text for Feb 27 BIAN SIG
+
+═══════════════════════════════════════════════════════════
+
+⚠️  STEP 0: BACKUP FIRST! (CRITICAL)
+═══════════════════════════════════════════════════════════
+
+1. Login to Hostinger Control Panel
+   → https://hpanel.hostinger.com
+   
+2. Go to File Manager → public_html
+
+3. Select ALL files → Right-click → Compress
+   → Name it: backup-feb04-2026.zip
+   
+4. Download backup-feb04-2026.zip to your computer
+   (Keep this safe in case you need to restore!)
+
+5. ✅ ONLY PROCEED after backup is downloaded!
+
+═══════════════════════════════════════════════════════════
+
+🚀 DEPLOYMENT STEPS
+═══════════════════════════════════════════════════════════
+
+STEP 1: Clean public_html
+   → Select ALL files in public_html
+   → Delete (You have backup!)
+   → Confirm deletion
+
+STEP 2: Upload ZIP
+   → Click "Upload" button
+   → Select: ccandcsolutions-hostinger-20260204-1336.zip
+   → Wait for upload to complete (42 MB - may take 2-3 minutes)
+
+STEP 3: Extract
+   → Right-click on the ZIP file
+   → Select "Extract"
+   → Extract to: public_html (current directory)
+   → Wait for extraction to complete
+
+STEP 4: Cleanup
+   → Delete the ZIP file from public_html
+   → Keep it on your local computer!
+
+STEP 5: Verify .htaccess
+   → Enable "Show Hidden Files" in File Manager
+   → Confirm .htaccess exists in public_html
+   → If missing, something went wrong - restore backup!
+
+═══════════════════════════════════════════════════════════
+
+✅ TEST YOUR DEPLOYMENT
+═══════════════════════════════════════════════════════════
+
+Test these URLs in order:
+
+1. Homepage:
+   https://ccandcsolutions.com/
+
+2. Navigation pages:
+   https://ccandcsolutions.com/about
+   https://ccandcsolutions.com/services
+   https://ccandcsolutions.com/contact
+   https://ccandcsolutions.com/bian-sig
+
+3. Check BIAN SIG page:
+   → Go to: https://ccandcsolutions.com/bian-sig
+   → Scroll to "Upcoming Sessions" table
+   → February 27th 2026 session
+   → "Scheduled" should appear in GREEN color ✅
+
+4. Test 404 handling:
+   https://ccandcsolutions.com/nonexistent-page
+   → Should redirect to homepage (not show 404 error)
+
+═══════════════════════════════════════════════════════════
+
+📁 FILES IN public_html/ (After Extraction)
+═══════════════════════════════════════════════════════════
+
+✅ .htaccess              (SPA routing - MUST be visible!)
+✅ index.html             (2.55 KB)
+✅ 404.html               (2.2 KB)
+✅ assets/
+   ├── index-yFXRrMIQ.js    (865 KB - minified)
+   ├── index-CI1YpxuI.css   (105 KB)
+   ├── Images/
+   │   ├── BiAN AWARD.jpg
+   │   ├── CC&C Logo Original.png
+   │   ├── Global Reach.png
+   │   └── Mamta photo.png
+   └── videos/
+       └── BackgroundBGVideo.mp4
+✅ data/
+   ├── blog-posts.json
+   ├── case-studies.json
+   ├── client-logos.json
+   ├── content-about.json
+   ├── content-features.json
+   ├── content-footer.json
+   ├── content-hero.json
+   ├── faqs.json
+   ├── services.json
+   └── testimonials.json
+
+═══════════════════════════════════════════════════════════
+
+🔧 TROUBLESHOOTING
+═══════════════════════════════════════════════════════════
+
+Problem: Blank page or loading forever
+Fix: 
+   1. Check browser console (F12)
+   2. Clear browser cache (Ctrl+Shift+Delete)
+   3. Verify .htaccess exists
+   4. Check file permissions (755 for folders, 644 for files)
+
+Problem: 404 errors on page navigation
+Fix:
+   1. Enable "Show Hidden Files"
+   2. Verify .htaccess is in public_html root
+   3. Check .htaccess contains RewriteBase /
+   4. Contact Hostinger support to verify mod_rewrite is enabled
+
+Problem: Images not loading
+Fix:
+   1. Check assets/Images/ folder exists
+   2. Verify images are inside (BiAN AWARD.jpg, etc.)
+   3. Check file permissions
+   4. Clear browser cache
+
+Problem: Green color not showing for "Scheduled"
+Fix:
+   1. Hard refresh: Ctrl+Shift+R (or Cmd+Shift+R on Mac)
+   2. Clear browser cache completely
+   3. Try incognito/private window
+
+═══════════════════════════════════════════════════════════
+
+🚨 EMERGENCY RESTORE
+═══════════════════════════════════════════════════════════
+
+If something goes seriously wrong:
+
+1. Don't panic! You have a backup!
+2. Login to Hostinger File Manager
+3. Delete ALL files in public_html
+4. Upload backup-feb04-2026.zip
+5. Extract it to public_html
+6. Your old site is restored ✅
+
+═══════════════════════════════════════════════════════════
+
+📞 SUPPORT CONTACTS
+═══════════════════════════════════════════════════════════
+
+Hostinger Support:
+   → Live Chat: https://hpanel.hostinger.com
+   → Available 24/7
+   → Have your domain ready: ccandcsolutions.com
+
+What to say if you need help:
+   "I deployed a React SPA and need to verify mod_rewrite 
+    is enabled for my .htaccess file to work properly.
+    The site needs SPA routing to work."
+
+═══════════════════════════════════════════════════════════
+
+✅ DEPLOYMENT CHECKLIST
+═══════════════════════════════════════════════════════════
+
+Before deployment:
+□ Backup created and downloaded
+□ ccandcsolutions-hostinger-20260204-1336.zip ready
+
+During deployment:
+□ All files deleted from public_html
+□ ZIP uploaded successfully
+□ ZIP extracted to public_html
+□ ZIP file deleted (cleanup)
+□ .htaccess visible (Show Hidden Files enabled)
+
+After deployment:
+□ Homepage loads (ccandcsolutions.com)
+□ Navigation works (about, services, contact)
+□ BIAN SIG page loads with green "Scheduled" text
+□ 404 redirect works
+□ Images display correctly
+□ Video background plays
+□ Contact form displays correctly
+
+═══════════════════════════════════════════════════════════
+
+🎉 SUCCESS!
+═══════════════════════════════════════════════════════════
+
+If all checklist items pass, your deployment is successful!
+
+The latest version of ccandcsolutions.com is now live with:
+✅ Updated BIAN SIG page with green "Scheduled" status
+✅ All latest features and content
+✅ Optimized performance
+✅ Mobile responsive design
+
+═══════════════════════════════════════════════════════════
