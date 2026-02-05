@@ -1,113 +1,28 @@
 import { useState, useEffect, useRef } from "react";
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Checkbox } from "@/components/ui/checkbox";
-import PrivacyPolicyDialog from "@/components/PrivacyPolicyDialog";
-import TermsConditionsDialog from "@/components/TermsConditionsDialog";
-import { isStaticMode } from "@/lib/staticData";
 
-declare global {
-  interface Window {
-    grecaptcha: any;
-  }
-}
-
-// Formspree endpoint for static builds
-// To set up: Sign up at formspree.io and create a form for anish@ccandcsolutions.com
-// Replace this with your actual Formspree form ID
+// Replace with your actual Formspree form ID
 const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT || "https://formspree.io/f/xanavjan";
 
-export default function RegistreForm() {
+export default function RegisterForm() {
   const { toast } = useToast();
-  const [privacyDialogOpen, setPrivacyDialogOpen] = useState(false);
-  const [termsDialogOpen, setTermsDialogOpen] = useState(false);
-  const recaptchaRef = useRef<HTMLDivElement>(null);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
     company: '',
     region: '',
-    service: '',
     message: '',
-    terms: false,
-    marketing: false
   });
 
-  // COMMENTED OUT: Fetch reCAPTCHA site key (only in dynamic mode) - will use later
-  // const { data: recaptchaConfig } = useQuery<{ siteKey: string }>({
-  //   queryKey: ['/api/recaptcha-site-key'],
-  //   enabled: !isStaticMode,
-  // });
-
-  // COMMENTED OUT: Render reCAPTCHA widget when site key is loaded (only in dynamic mode) - will use later
-  // useEffect(() => {
-  //   if (!isStaticMode && recaptchaConfig?.siteKey && recaptchaRef.current && window.grecaptcha) {
-  //     // Check if widget is already rendered
-  //     if (!recaptchaRef.current.hasChildNodes()) {
-  //       window.grecaptcha.render(recaptchaRef.current, {
-  //         sitekey: recaptchaConfig.siteKey,
-  //       });
-  //     }
-  //   }
-  // }, [recaptchaConfig]);
-
   const contactMutation = useMutation({
-    mutationFn: async (data: typeof formData) => {
-      // In static mode, use Formspree endpoint
-      if (isStaticMode) {
-        const response = await fetch(FORMSPREE_ENDPOINT, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            name: `${data.firstName} ${data.lastName}`,
-            firstName: data.firstName,
-            lastName: data.lastName,
-            email: data.email,
-            company: data.company,
-            region: data.region,
-            service: data.service,
-            message: data.message,
-            _replyto: data.email,
-            _subject: `Resistraion Form Submission from ${data.firstName} ${data.lastName}`,
-          }),
-        });
-
-        if (!response.ok) {
-          const error = await response.json().catch(() => ({ error: 'Unknown error' }));
-          throw new Error(error.error || 'Form submission failed');
-        }
-
-        return response.json();
-      }
-      
-      // COMMENTED OUT: In dynamic mode, use backend API with reCAPTCHA - will use later
-      // const recaptchaToken = window.grecaptcha?.getResponse();
-      // 
-      // if (!recaptchaToken) {
-      //   throw new Error('Please complete the reCAPTCHA verification');
-      // }
-
-      // return await apiRequest('POST', '/api/contact', {
-      //   firstName: data.firstName,
-      //   lastName: data.lastName,
-      //   email: data.email,
-      //   company: data.company,
-      //   region: data.region,
-      //   service: data.service,
-      //   message: data.message,
-      //   recaptchaToken
-      // });
-
-      // For now, use Formspree even in dynamic mode (can switch back later)
+    mutationFn: async (data) => {
       const response = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
         headers: {
@@ -120,10 +35,9 @@ export default function RegistreForm() {
           email: data.email,
           company: data.company,
           region: data.region,
-          service: data.service,
           message: data.message,
           _replyto: data.email,
-          _subject: `New Contact Form Submission from ${data.firstName} ${data.lastName}`,
+          _subject: `New Registration Form Submission from ${data.firstName} ${data.lastName}`,
         }),
       });
 
@@ -145,18 +59,16 @@ export default function RegistreForm() {
         email: '',
         company: '',
         region: '',
-        service: '',
         message: '',
-        terms: false,
-        marketing: false
       });
-      // COMMENTED OUT: Reset reCAPTCHA - will use later
-      // if (window.grecaptcha) {
-      //   window.grecaptcha.reset();
-      // }
     },
-    onError: (error: any) => {
-      const errorMessage = error?.message || "Please try again later or contact us directly.";
+    onError: (error) => {
+      let errorMessage = error?.message || "Please try again later or contact us directly.";
+      if (error.message.includes("Failed to fetch")) {
+        errorMessage = "Network error. Please check your connection.";
+      } else if (error.message.includes("invalid email")) {
+        errorMessage = "Please enter a valid email address.";
+      }
       toast({
         title: "Error Sending Message",
         description: errorMessage,
@@ -166,13 +78,22 @@ export default function RegistreForm() {
     }
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.message || !formData.terms) {
+
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
       toast({
         title: "Please fill in all required fields",
-        description: "All fields marked with * are required.",
+        description: "First Name, Last Name, Email, and Message are required.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
+      toast({
+        title: "Invalid Email",
+        description: "Please enter a valid email address.",
         variant: "destructive",
       });
       return;
@@ -184,7 +105,6 @@ export default function RegistreForm() {
   return (
     <section id="contact" className="py-20 bg-primary">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-
         <Card className="rounded-2xl shadow-2xl">
           <CardContent className="p-8 md:p-12">
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -214,7 +134,7 @@ export default function RegistreForm() {
                   />
                 </div>
               </div>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-card-foreground" htmlFor="email">Email Address *</label>
@@ -240,7 +160,7 @@ export default function RegistreForm() {
                   />
                 </div>
               </div>
-              
+
               <div className="space-y-2">
                 <label className="text-sm font-medium text-card-foreground" htmlFor="region">Region</label>
                 <Select value={formData.region} onValueChange={(value) => setFormData({...formData, region: value})}>
@@ -258,9 +178,7 @@ export default function RegistreForm() {
                   </SelectContent>
                 </Select>
               </div>
-              
-             
-              
+
               <div className="space-y-2">
                 <label className="text-sm font-medium text-card-foreground" htmlFor="message">Message *</label>
                 <Textarea
@@ -273,69 +191,9 @@ export default function RegistreForm() {
                   data-testid="textarea-message"
                 />
               </div>
-              
-              {/* <div className="flex items-start space-x-3">
-                <Checkbox 
-                  id="terms" 
-                  checked={formData.terms}
-                  onCheckedChange={(checked) => setFormData({...formData, terms: checked as boolean})}
-                  required
-                  data-testid="checkbox-terms"
-                />
-                <label 
-                  htmlFor="terms" 
-                  className="text-sm text-card-foreground cursor-pointer"
-                  data-testid="label-terms"
-                >
-                  I agree to the{' '}
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setTermsDialogOpen(true);
-                    }}
-                    className="text-accent hover:underline"
-                    data-testid="button-terms-conditions"
-                  >
-                    terms & conditions
-                  </button>{' '}and{' '}
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setPrivacyDialogOpen(true);
-                    }}
-                    className="text-accent hover:underline"
-                    data-testid="button-privacy-policy"
-                  >
-                    privacy policy
-                  </button> *
-                </label>
-              </div>
-              
-              <div className="flex items-start space-x-3">
-                <Checkbox 
-                  id="marketing" 
-                  checked={formData.marketing}
-                  onCheckedChange={(checked) => setFormData({...formData, marketing: checked as boolean})}
-                  data-testid="checkbox-marketing"
-                />
-                <label 
-                  htmlFor="marketing" 
-                  className="text-sm text-card-foreground cursor-pointer"
-                  data-testid="label-marketing"
-                >
-                  I'd like to receive exclusive offers, promotions, and updates
-                </label>
-              </div> */}
-              
-              {/* COMMENTED OUT: reCAPTCHA container - will use later */}
-              {/* <div className="flex justify-center" data-testid="recaptcha-container">
-                <div ref={recaptchaRef}></div>
-              </div> */}
-              
-              <Button 
-                type="submit" 
+
+              <Button
+                type="submit"
                 className="w-full bg-accent text-accent-foreground py-4 text-lg font-semibold hover:bg-accent/90"
                 disabled={contactMutation.isPending}
                 data-testid="button-submit-contact"
@@ -346,16 +204,6 @@ export default function RegistreForm() {
           </CardContent>
         </Card>
       </div>
-      
-      <PrivacyPolicyDialog 
-        open={privacyDialogOpen}
-        onOpenChange={setPrivacyDialogOpen}
-      />
-      
-      <TermsConditionsDialog 
-        open={termsDialogOpen}
-        onOpenChange={setTermsDialogOpen}
-      />
     </section>
   );
 }
