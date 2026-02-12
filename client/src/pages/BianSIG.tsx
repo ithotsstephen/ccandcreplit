@@ -12,7 +12,7 @@ export default function BianSIG() {
     window.scrollTo(0, 0);
 
     document.title = "AU/NZ BIAN Special Interest Group | CC&C Solutions";
-    
+
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Join the AU/NZ BIAN Special Interest Group - free virtual meetings for financial services professionals to collaborate on BIAN adoption, share best practices, and engage with framework experts.');
@@ -67,7 +67,7 @@ export default function BianSIG() {
       <Navigation />
 
       {/* Hero Section */}
-      <section 
+      <section
         className="pt-24 pb-16 relative bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: 'url(/assets/Images/BIAN%20SIG%20Header.jpg)' }}
       >
@@ -78,7 +78,7 @@ export default function BianSIG() {
               AU/NZ BIAN <span className="text-primary">Special Interest Group</span>
             </h1>
             <p className="text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
-              Bringing together business and technology professionals in financial services organizations 
+              Bringing together business and technology professionals in financial services organizations
               who are applying or seeking to learn more about BIAN.
             </p>
           </div>
@@ -92,20 +92,25 @@ export default function BianSIG() {
             <div>
               <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-8">Overview</h2>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                The AU/NZ BIAN Special Interest Group has been formed to bring together business and 
-                technology professionals in financial services organizations who are applying or seeking 
+                The AU/NZ BIAN Special Interest Group has been formed to bring together business and
+                technology professionals in financial services organizations who are applying or seeking
                 to learn more about BIAN.
               </p>
             </div>
             <div className="relative">
-              <img 
-                src="/assets/Images/BIAN-SIG.jpg" 
-                alt="BIAN Training Session" 
+              <img
+                src="/assets/Images/BIAN-SIG.jpg"
+                alt="BIAN Training Session"
                 className="rounded-xl shadow-2xl"
               />
               <div className="absolute -bottom-8 -left-8 bg-primary text-primary-foreground p-6 rounded-xl shadow-lg">
-                <div className="text-2xl font-bold">Free</div>
-                <div className="text-sm">to Join</div>
+                <button
+                  onClick={handleRegisterClick}
+                  className="text-left block"
+                >
+                  <div className="text-2xl font-bold">Free</div>
+                  <div className="text-sm">to Join</div>
+                </button>
               </div>
             </div>
           </div>
@@ -123,7 +128,7 @@ export default function BianSIG() {
                 </div>
                 <h3 className="text-2xl font-bold text-card-foreground mb-6">Mission</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  To enable a composable banking architecture and industry interoperability in Australia 
+                  To enable a composable banking architecture and industry interoperability in Australia
                   and New Zealand through the application of BIAN.
                 </p>
               </CardContent>
@@ -198,9 +203,9 @@ export default function BianSIG() {
             </Card>
 
             <div className="relative">
-              <img 
-                src="/assets/Images/SIG-Agenda.jpg" 
-                alt="BIAN Workshop Session" 
+              <img
+                src="/assets/Images/SIG-Agenda.jpg"
+                alt="BIAN Workshop Session"
                 className="rounded-xl shadow-2xl"
               />
               <div className="absolute -bottom-8 -right-8 bg-accent text-accent-foreground p-6 rounded-xl shadow-lg">
@@ -254,7 +259,7 @@ export default function BianSIG() {
                       </tr>
                       <tr className="border-b border-border/50">
                         <td className="py-4 px-4 text-muted-foreground">3</td>
-                        
+
                         <td className="py-4 px-4 text-muted-foreground">27th October 2025</td>
                         <td className="py-4 px-4 text-muted-foreground">6pm AEDT / 8pm NZDT</td>
                         <td className="py-4 px-4">
@@ -279,7 +284,7 @@ export default function BianSIG() {
                       </tr>
                       <tr>
                         <td className="py-4 px-4 text-muted-foreground">6</td>
-                        
+
                         <td className="py-4 px-4 text-muted-foreground">11th July 2025</td>
                         <td className="py-4 px-4 text-muted-foreground">9am AEST / 11am NZST</td>
                         <td className="py-4 px-4">
@@ -365,12 +370,12 @@ export default function BianSIG() {
             The BIAN Special Interest Group is <span className="text-primary font-semibold">free to join</span>
           </p>
           <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
-            Connect with industry peers, share best practices, and stay ahead of the latest BIAN developments 
+            Connect with industry peers, share best practices, and stay ahead of the latest BIAN developments
             in the Australia and New Zealand region.
           </p>
-          
+
           <div className="flex justify-center">
-            <button 
+            <button
               onClick={handleRegisterClick}
               className="premium-button px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105"
               data-testid="button-register-now"
