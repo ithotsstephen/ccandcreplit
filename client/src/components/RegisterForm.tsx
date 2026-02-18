@@ -8,7 +8,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 // Replace with your actual Formspree form ID
-const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT || "https://formspree.io/f/xanavjan";
+// const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT || "https://formspree.io/f/xanavjan";
+const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT || "https://formspree.io/f/xgolwowl";
 
 export default function RegisterForm() {
   const { toast } = useToast();
@@ -17,6 +18,7 @@ export default function RegisterForm() {
     lastName: '',
     email: '',
     company: '',
+    phone: '',
     region: '',
     message: '',
   });
@@ -34,6 +36,7 @@ export default function RegisterForm() {
           lastName: data.lastName,
           email: data.email,
           company: data.company,
+          phone: data.phone,
           region: data.region,
           message: data.message,
           _replyto: data.email,
@@ -58,6 +61,7 @@ export default function RegisterForm() {
         lastName: '',
         email: '',
         company: '',
+        phone: '',
         region: '',
         message: '',
       });
@@ -81,10 +85,10 @@ export default function RegisterForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.message) {
       toast({
         title: "Please fill in all required fields",
-        description: "First Name, Last Name, Email, and Message are required.",
+        description: "First Name, Last Name, Email, Phone Number, and Message are required.",
         variant: "destructive",
       });
       return;
@@ -94,6 +98,17 @@ export default function RegisterForm() {
       toast({
         title: "Invalid Email",
         description: "Please enter a valid email address.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Validate phone number (at least 7 digits)
+    const phoneDigitsOnly = formData.phone.replace(/[^0-9]/g, '');
+    if (phoneDigitsOnly.length < 7) {
+      toast({
+        title: "Invalid Phone Number",
+        description: "Please enter a valid phone number with at least 7 digits.",
         variant: "destructive",
       });
       return;
@@ -135,17 +150,39 @@ export default function RegisterForm() {
                 </div>
               </div>
 
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-card-foreground" htmlFor="email">Email Address *</label>
+                <Input
+                  id="email"
+                  type="email"
+                  required
+                  value={formData.email}
+                  onChange={(e) => setFormData({...formData, email: e.target.value})}
+                  placeholder="Enter your email address"
+                  data-testid="input-email"
+                />
+              </div>
+              
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-card-foreground" htmlFor="email">Email Address *</label>
-                  <Input
-                    id="email"
-                    type="email"
+                <div className="fs-field space-y-2">
+                  <label className="fs-label text-sm font-medium text-card-foreground" htmlFor="phone-number">
+                    Phone Number *
+                  </label>
+                  <input
+                    className="fs-input flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    id="phone-number"
+                    name="phone-number"
                     required
-                    value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
-                    placeholder="Enter your email address"
-                    data-testid="input-email"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={(e) => {
+                      const filtered = e.target.value.replace(/[^0-9()\-\s+]/g, '');
+                      if (filtered.length <= 20) {
+                        setFormData({...formData, phone: filtered});
+                      }
+                    }}
+                    placeholder="(XXX) XXX-XXXX"
+                    data-testid="input-phone"
                   />
                 </div>
                 <div className="space-y-2">
