@@ -72,83 +72,7 @@ export default function Training() {
           </div>
         </div>
       </section>
-      {/* What the ArchIQ Platform Offers */}
-      <section className="py-20 section-darker">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">What the ArchIQ Platform Offers</h2>
-          </div>
-
-          <div className="space-y-12 max-w-5xl mx-auto">
-            {/* Feature 1 */}
-            <Card className="premium-card group hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
-              <CardContent className="p-8">
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
-                      <span className="text-2xl font-bold text-primary">01</span>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-card-foreground mb-4 group-hover:text-primary transition-colors duration-300">
-                      Expert-Powered Learning, Tailored for Your Business
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed text-lg">
-                      Delivers customised training journeys built around the industry-leading architecture frameworks and standards 
-                      your organisation relies on — providing high-quality, targeted learning supported by up-to-date materials that 
-                      reinforce key concepts and stay relevant in an ever-changing technological landscape, all powered by our industry experts.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Feature 2 */}
-            <Card className="premium-card group hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
-              <CardContent className="p-8">
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:bg-accent/20 transition-all duration-300">
-                      <span className="text-2xl font-bold text-accent">02</span>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-card-foreground mb-4 group-hover:text-accent transition-colors duration-300">
-                      Practical Architecture Training with Real-World Insight
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed text-lg">
-                      Delivers immersive learning experiences through high-quality modules, real-world case studies, and interactive content — 
-                      providing expert-led guidance that builds practical understanding and long-term capability in complex software architecture.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Feature 3 */}
-            <Card className="premium-card group hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
-              <CardContent className="p-8">
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:bg-secondary/20 transition-all duration-300">
-                      <span className="text-2xl font-bold text-secondary">03</span>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-card-foreground mb-4 group-hover:text-secondary transition-colors duration-300">
-                      Scalable and Cost-Effective for Teams and Individuals
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed text-lg">
-                      Delivers a cloud-based platform designed for enterprises and individuals alike — providing depth of learning, organisational 
-                      relevance, and measurable results with always-on access and real-time progress insights, all at a fraction of traditional costs.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+   
       {/* Training Built for Your Enterprise */}
       <section className="py-20 section-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -268,18 +192,28 @@ export default function Training() {
             {/* BIAN */}
             <Card className="premium-card h-full flex flex-col">
               <CardContent className="p-8 flex-1 flex flex-col">
-                <div className="h-64 mb-6 flex items-center justify-center">
+                {/* <div className="h-64 mb-6 flex items-center justify-center">
                   <img 
                     src="/assets/Images/Training BIAN.png"
                     alt="BIAN Training"
                     className="w-full h-full object-contain rounded-lg"
                     data-testid="image-training-bian"
                   />
+                </div> */}
+
+  <div className="h-64 mb-6 flex items-center justify-center">
+                  <img 
+                    src="/assets/Images/BIAN_Foundation.png"
+                    alt="BIAN Foundation"
+                    className="w-full h-full object-contain rounded-lg"
+                    data-testid="BIAN Foundation"
+                  />
                 </div>
-                <h3 className="text-2xl font-bold text-card-foreground mb-4">BIAN</h3>
+
+                <h3 className="text-2xl font-bold text-card-foreground mb-4">BIAN Training</h3>
                 <div className="flex-1">
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    CC&C Solutions, honored with the Banking Industry Architecture Network (BIAN) 2024 "Best-in-Class Partner" award, 
+                    CC&C Solutions, honored with the Banking Industry Architecture Network (BIAN) 2024 & 2025 "Best-in-Class Partner" award, 
                     stands out not just as a trainer but as a trusted authority.
                   </p>
                   <p className="text-muted-foreground leading-relaxed mb-6">
@@ -299,40 +233,8 @@ export default function Training() {
               </CardContent>
             </Card>
 
-            {/* IT4IT */}
-            <Card className="premium-card h-full flex flex-col">
-              <CardContent className="p-8 flex-1 flex flex-col">
-                <div className="h-64 mb-6 flex items-center justify-center">
-                  <img 
-                    src="/assets/Images/Training IT4IT.png"
-                    alt="IT4IT Training"
-                    className="w-full h-full object-contain rounded-lg"
-                    data-testid="image-training-it4it"
-                  />
-                </div>
-                <h3 className="text-2xl font-bold text-card-foreground mb-4">IT4IT™</h3>
-                <div className="flex-1">
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    At CC&C Solutions, our IT4IT™ training is led by architects who apply this value-chain reference architecture 
-                    every day — not only teaching the standard, but embedding it in real enterprise transformations.
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
-                    Our courses go beyond theory, delivering hands-on experience in how IT must operate as a business, driving 
-                    efficiency, alignment and competitive advantage.
-                  </p>
-                  <a 
-                    href="training/it4it-foundation"
-                    className="inline-flex items-center text-primary hover:text-primary/80 font-semibold transition-colors group"
-                    data-testid="link-it4it-foundation"
-                  >
-                    Learn More 
-                    <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
 
-            {/* TOGAF */}
+               {/* TOGAF */}
             <Card className="premium-card h-full flex flex-col">
               <CardContent className="p-8 flex-1 flex flex-col">
                 <div className="h-64 mb-6 flex items-center justify-center">
@@ -343,10 +245,10 @@ export default function Training() {
                     data-testid="image-training-togaf"
                   />
                 </div>
-                <h3 className="text-2xl font-bold text-card-foreground mb-4">TOGAF</h3>
+                <h3 className="text-2xl font-bold text-card-foreground mb-4">TOGAF® EA Certification Practitioner Training</h3>
                 <div className="flex-1">
                   <p className="text-muted-foreground leading-relaxed mb-6">
-                    Master enterprise architecture with TOGAF certification. Our experts apply the framework daily in large-scale transformations, bringing real-world relevance and practical experience to every training module.
+                    Master enterprise architecture with TOGAF® certification. Our experts apply the framework daily in large-scale transformations, bringing real-world relevance and practical experience to every training module.
                   </p>
                   <div className="space-y-3">
                     <button
@@ -373,13 +275,23 @@ export default function Training() {
               </CardContent>
             </Card>
 
-            {/* Foundation Training */}
+     
+
+           {/* Foundation Training */}
             <Card className="premium-card h-full flex flex-col">
               <CardContent className="p-8 flex-1 flex flex-col">
-                <div className="h-64 mb-6 flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg">
+                {/* <div className="h-64 mb-6 flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg">
                   <i className="fas fa-graduation-cap text-8xl text-primary/40"></i>
+                </div> */}
+                 <div className="h-64 mb-6 flex items-center justify-center">
+                  <img 
+                    src="/assets/Images/BIAN_certification.jpg"
+                    alt="BIAN Foundation"
+                    className="w-full h-full object-contain rounded-lg"
+                    data-testid="BIAN Foundation"
+                  />
                 </div>
-                <h3 className="text-2xl font-bold text-card-foreground mb-4">Foundation Training</h3>
+                <h3 className="text-2xl font-bold text-card-foreground mb-4">Banking Architecture Foundation Training</h3>
                 <div className="flex-1">
                   <p className="text-muted-foreground leading-relaxed mb-6">
                     Build your architecture career with our comprehensive foundation training programs. 
@@ -394,6 +306,39 @@ export default function Training() {
                     >
                       Architecture Foundations
                     </button>
+                    {/* <button
+                      onClick={() => setLocation('/training/archimate')}
+                      className="w-full premium-button px-4 py-3 rounded-lg font-semibold text-sm transition-all transform hover:scale-105"
+                      data-testid="button-archimate"
+                    >
+                      ArchiMate 3
+                    </button> */}
+                  
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+
+ {/* Archimate Training */}
+            <Card className="premium-card h-full flex flex-col">
+              <CardContent className="p-8 flex-1 flex flex-col">
+                <div className="h-64 mb-6 flex items-center justify-center">
+                  <img 
+                    src="/assets/Images/Archimate3.png"
+                    alt="Archimate3"
+                    className="w-full h-full object-contain rounded-lg"
+                    data-testid="Archimate3"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold text-card-foreground mb-4">ArchiMate®3 Practitioner Training</h3>
+                <div className="flex-1">
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                                       ArchiMate®3 Training is a structured course that teaches you how to model, visualize, and analyse enterprise architectures using The Open Group’s ArchiMate 3.2 standard, and prepares you for the ArchiMate 3 Foundation and Practitioner certifications.
+
+                  </p>
+                    <div className="space-y-3">
+                   
                     <button
                       onClick={() => setLocation('/training/archimate')}
                       className="w-full premium-button px-4 py-3 rounded-lg font-semibold text-sm transition-all transform hover:scale-105"
@@ -401,17 +346,81 @@ export default function Training() {
                     >
                       ArchiMate 3
                     </button>
-                    <button
-                      onClick={() => setLocation('/training/sparx-ea')}
-                      className="w-full premium-button px-4 py-3 rounded-lg font-semibold text-sm transition-all transform hover:scale-105"
-                      data-testid="button-sparx-ea"
-                    >
-                      Sparx Enterprise Architect
-                    </button>
+                  
                   </div>
+                 
+                 
                 </div>
               </CardContent>
             </Card>
+
+
+       {/* IT4IT */}
+            <Card className="premium-card h-full flex flex-col">
+              <CardContent className="p-8 flex-1 flex flex-col">
+                <div className="h-64 mb-6 flex items-center justify-center">
+                  <img 
+                    src="/assets/Images/Training IT4IT.png"
+                    alt="IT4IT Training"
+                    className="w-full h-full object-contain rounded-lg"
+                    data-testid="image-training-it4it"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold text-card-foreground mb-4">IT4IT™ Foundation Certification Training</h3>
+                <div className="flex-1">
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    At CC&C Solutions, our IT4IT™ training is led by architects who apply this value-chain reference architecture 
+                    every day — not only teaching the standard, but embedding it in real enterprise transformations.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed mb-6">
+                    Our courses go beyond theory, delivering hands-on experience in how IT must operate as a business, driving 
+                    efficiency, alignment and competitive advantage.
+                  </p>
+                  <a 
+                    href="training/it4it-foundation"
+                    className="inline-flex items-center text-primary hover:text-primary/80 font-semibold transition-colors group"
+                    data-testid="link-it4it-foundation"
+                  >
+                    Learn More 
+                    <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Archimate Training
+            <Card className="premium-card h-full flex flex-col">
+                              <div className="h-64 mb-6 flex items-center justify-center">
+                  <img 
+                    src="/assets/Images/Archimate3.png"
+                    alt="IT4IT Training"
+                    className="w-full h-full object-contain rounded-lg"
+                    data-testid="image-training-it4it"
+                  />
+                </div>
+              <CardContent className="p-8 flex-1 flex flex-col">
+                <div className="h-64 mb-6 flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg">
+                  <i className="fas fa-graduation-cap text-8xl text-primary/40"></i>
+                </div>
+                <h3 className="text-2xl font-bold text-card-foreground mb-4">ArchiMate®3 Training</h3>
+                <div className="flex-1">
+                  <p className="text-muted-foreground leading-relaxed mb-6">
+                    ArchiMate®3 Training is a structured course that teaches you how to model, visualize, and analyse enterprise architectures using The Open Group’s ArchiMate 3.2 standard, and prepares you for the ArchiMate 3 Foundation and Practitioner certifications.
+                  </p>
+                  <div className="space-y-3">
+                   
+                    <button
+                      onClick={() => setLocation('/training/archimate')}
+                      className="w-full premium-button px-4 py-3 rounded-lg font-semibold text-sm transition-all transform hover:scale-105"
+                      data-testid="button-archimate"
+                    >
+                      ArchiMate 3
+                    </button>
+                  
+                  </div>
+                </div>
+              </CardContent>
+            </Card> */}
           </div>
 
           {/* Learnworld Link */}
@@ -436,6 +445,89 @@ export default function Training() {
           </div>
         </div>
       </section>
+
+
+   {/* What the ArchIQ Platform Offers */}
+      <section className="py-20 section-darker">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">What the ArchIQ Platform Offers</h2>
+          </div>
+
+          <div className="space-y-12 max-w-5xl mx-auto">
+            {/* Feature 1 */}
+            <Card className="premium-card group hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+              <CardContent className="p-8">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
+                      <span className="text-2xl font-bold text-primary">01</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-card-foreground mb-4 group-hover:text-primary transition-colors duration-300">
+                      Expert-Powered Learning, Tailored for Your Business
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed text-lg">
+                      Delivers customised training journeys built around the industry-leading architecture frameworks and standards 
+                      your organisation relies on — providing high-quality, targeted learning supported by up-to-date materials that 
+                      reinforce key concepts and stay relevant in an ever-changing technological landscape, all powered by our industry experts.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Feature 2 */}
+            <Card className="premium-card group hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+              <CardContent className="p-8">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:bg-accent/20 transition-all duration-300">
+                      <span className="text-2xl font-bold text-accent">02</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-card-foreground mb-4 group-hover:text-accent transition-colors duration-300">
+                      Practical Architecture Training with Real-World Insight
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed text-lg">
+                      Delivers immersive learning experiences through high-quality modules, real-world case studies, and interactive content — 
+                      providing expert-led guidance that builds practical understanding and long-term capability in complex software architecture.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Feature 3 */}
+            <Card className="premium-card group hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+              <CardContent className="p-8">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:bg-secondary/20 transition-all duration-300">
+                      <span className="text-2xl font-bold text-secondary">03</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-card-foreground mb-4 group-hover:text-secondary transition-colors duration-300">
+                      Scalable and Cost-Effective for Teams and Individuals
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed text-lg">
+                      Delivers a cloud-based platform designed for enterprises and individuals alike — providing depth of learning, organisational 
+                      relevance, and measurable results with always-on access and real-time progress insights, all at a fraction of traditional costs.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+
+
+
       {/* Client Testimonials */}
       <section className="py-20 section-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -448,7 +540,7 @@ export default function Training() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Testimonial 1 */}
-            <Card className="premium-card">
+            {/* <Card className="premium-card">
               <CardContent className="p-8">
                 <div className="mb-6">
                   <i className="fas fa-quote-left text-4xl text-primary/20"></i>
@@ -464,10 +556,55 @@ export default function Training() {
                   </div>
                 </div>
               </CardContent>
+            </Card> */}
+
+            <Card className="premium-card">
+              <CardContent className="p-8">
+                <div className="mb-6">
+                  <i className="fas fa-quote-left text-4xl text-primary/20"></i>
+                </div>
+                <p className="text-muted-foreground leading-relaxed mb-6 text-lg italic">
+                  "ANZ has discovered CC&C Solutions to be an invaluable partner in our BIAN journey. Their extensive knowledge and collaborative approach have contributed significantly to our success. The guidance, training, and support they provide are essential to our successful implementation
+ANZ BANK"
+                </p>
+                <div className="flex items-center">
+                  <div>
+                    <p className="font-bold text-card-foreground">ANZ BANK</p>
+                    {/* <p className="text-sm text-muted-foreground">Associate Director, Procter & Gamble</p> */}
+                  </div>
+                </div>
+              </CardContent>
             </Card>
+
+
+        
 
             {/* Testimonial 2 */}
             <Card className="premium-card">
+              <CardContent className="p-8">
+                <div className="mb-6">
+                  <i className="fas fa-quote-left text-4xl text-primary/20"></i>
+                </div>
+                <p className="text-muted-foreground leading-relaxed mb-6 text-lg italic">
+                  "My appreciation to CC&C for such an insightful training on BIAN."
+                </p>
+                <div className="flex items-center">
+                  <div>
+                    <p className="font-bold text-card-foreground">HSBC</p>
+                    {/* <p className="text-sm text-muted-foreground">Chief IT Architect, OTP Group</p> */}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+
+
+
+
+
+
+            {/* Testimonial 2 */}
+            {/* <Card className="premium-card">
               <CardContent className="p-8">
                 <div className="mb-6">
                   <i className="fas fa-quote-left text-4xl text-primary/20"></i>
@@ -483,7 +620,7 @@ export default function Training() {
                   </div>
                 </div>
               </CardContent>
-            </Card>
+            </Card> */}
           </div>
         </div>
       </section>

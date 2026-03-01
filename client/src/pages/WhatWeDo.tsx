@@ -67,35 +67,35 @@ export default function WhatWeDo() {
   const defaultTrainingServices = [
     {
       id: '1',
-      name: 'TOGAF® Architecture',
+      name: 'TOGAF® Architecture Certification',
       description: 'Provide your teams the most up-to-date TOGAF® certification, reflecting the many enhancements including agile architecture and digital transformation.',
       icon: 'fas fa-graduation-cap',
       category: 'training'
     },
     {
       id: '2', 
-      name: 'IT4IT™ Management',
+      name: 'IT4IT™ Management Certification',
       description: 'With more than half of all IT4IT™ practitioners trained by CC&C, we equip your teams to manage DevOps and Digital Products at scale.',
       icon: 'fas fa-cogs',
       category: 'training'
     },
     {
       id: '3',
-      name: 'BIAN Foundation', 
+      name: 'BIAN Foundation Certification', 
       description: 'As the only BIAN-accredited training organisation with a global footprint, we deliver measurable value while maximizing BIAN usage effectively.',
       icon: 'fas fa-university',
       category: 'training'
     },
     {
       id: '4',
-      name: 'Data Architecture',
+      name: 'BIAN Data Architecture Certification',
       description: 'Master data governance, modeling, and integration strategies that drive business intelligence and analytics success.',
       icon: 'fas fa-database',
       category: 'training'
     },
     {
       id: '5',
-      name: 'Integration Fundamentals',
+      name: 'BIAN Integration Fundamentals',
       description: 'Build robust integration capabilities that connect systems, data, and processes across your enterprise ecosystem.',
       icon: 'fas fa-link',
       category: 'training'
@@ -244,7 +244,7 @@ export default function WhatWeDo() {
             </button>
             <button 
               onClick={() => setLocation("/about")}
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-primary transition-all"
+              className="border-2 border-blue text-blue px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue  transition-all transform hover:scale-105"
               data-testid="button-learn-more"
             >
               Learn About Us

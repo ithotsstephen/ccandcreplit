@@ -86,7 +86,17 @@ async function upsertUser(
 export async function setupAuth(app: Express) {
   // Skip auth setup in static mode
   if (isStaticMode) {
-    console.log('Running in static mode - skipping auth setup');
+    console.log('Running in static mode - skipping full auth setup');
+    // Provide minimal session middleware and a safe `isAuthenticated` stub
+    // so routes that call `req.isAuthenticated()` don't throw during static
+    // builds or local development without Replit auth configured.
+    app.use(getSession());
+    app.use((req, _res, next) => {
+      // Attach a safe stub compatible with passport's API
+      (req as any).isAuthenticated = () => false;
+      (req as any).logout = (cb?: (...args: any[]) => void) => cb && cb();
+      next();
+    });
     return;
   }
 

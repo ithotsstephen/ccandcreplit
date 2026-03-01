@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -100,6 +100,39 @@ From deep-dive dialogues to award-winning results, CC&C's presence at the Summit
 
 export default function Events() {
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
+  const [showPopup, setShowPopup] = useState(false);
+
+  const closePopup = () => {
+    setShowPopup(false);
+  };
+
+  // Auto-open popup after 2 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPopup(true);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Close on Escape key & prevent body scroll while popup open
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        closePopup();
+      }
+    };
+
+    if (showPopup) {
+      document.addEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [showPopup]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -296,6 +329,56 @@ export default function Events() {
       </Dialog>
 
       <Footer />
+      {/* IMAGE POPUP: BIAN Certification */}
+      {showPopup && (
+        <div
+          className="fixed inset-0 bg-black/75 z-[9999] flex items-center justify-center p-6 animate-fadeIn"
+          onClick={closePopup}
+        >
+          <div className="flex items-center justify-center relative">
+            <button
+              onClick={closePopup}
+              className="absolute -top-4 -right-4 w-10 h-10 bg-white rounded-full shadow-2xl flex items-center justify-center hover:bg-gray-100 hover:scale-110 transition-all duration-300 z-20 border-3 border-white/60"
+              aria-label="Close"
+              data-testid="close-popup-button-events"
+            >
+              <svg
+                className="w-5 h-5 text-black font-bold"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="3"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            <img
+              src="/assets/Images/Award.jpeg"
+              alt="BIAN Certification"
+              className="max-h-[70vh] max-w-[90vw] w-auto h-auto object-contain rounded-[10px] shadow-[0_35px_60px_rgba(0,0,0,0.6)] border-4 border-white/30 transition-all duration-500 cursor-default mx-auto"
+              onClick={(e) => e.stopPropagation()}
+              data-testid="events-popup-image"
+            />
+          </div>
+        </div>
+      )}
+
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: scale(0.8);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+      `}</style>
     </div>
   );
 }

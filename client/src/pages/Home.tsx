@@ -170,7 +170,7 @@ export default function Home() {
                 <div className="flex items-center justify-center space-x-4 text-sm text-secondary">
                   <div className="flex items-center">
                     <i className="fas fa-calendar mr-1"></i>
-                    2024
+                    2025
                   </div>
                   <div className="flex items-center">
                     <i className="fas fa-building mr-1"></i>

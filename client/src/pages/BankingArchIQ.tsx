@@ -179,7 +179,7 @@ export default function BankingArchIQ() {
                 <div className="w-16 h-16 bg-accent rounded-lg flex items-center justify-center mb-6">
                   <i className="fas fa-graduation-cap text-2xl text-accent-foreground"></i>
                 </div>
-                <h3 className="text-2xl font-bold text-card-foreground mb-6">TOGAF® for Banking</h3>
+                <h3 className="text-2xl font-bold text-card-foreground mb-6">TOGAF® EA Practitioner Certification</h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   TOGAF® certification training customized for banking and financial services, 
                   combining standard enterprise architecture with banking-specific use cases and examples.
@@ -220,7 +220,7 @@ export default function BankingArchIQ() {
                 <div className="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mb-6">
                   <i className="fas fa-cogs text-2xl text-secondary-foreground"></i>
                 </div>
-                <h3 className="text-2xl font-bold text-card-foreground mb-6">IT4IT™ for Banking</h3>
+                <h3 className="text-2xl font-bold text-card-foreground mb-6">IT4IT™ Certification Training</h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   IT4IT™ training focused on banking IT operating models, helping financial institutions optimize 
                   their IT value chain from strategy to operations.

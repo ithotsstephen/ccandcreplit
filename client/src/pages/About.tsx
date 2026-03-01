@@ -143,7 +143,7 @@ export default function About() {
                 drive reusability, standardization, and agility.
               </p>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Our expertise earned the 2024 "Best in Class Partner" Award, while one of our clients received 
+                Our expertise earned the 2024 & 2025 "Best in Class Partner" Award, while one of our clients received 
                 the "Transformation Champion" Award — proof of our shared commitment to excellence.
               </p>
 

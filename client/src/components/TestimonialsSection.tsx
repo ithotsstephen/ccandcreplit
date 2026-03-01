@@ -37,30 +37,51 @@ export default function TestimonialsSection() {
 
   // Actual testimonials from CC&C Solutions website
   const defaultTestimonials = [
+   
     {
       id: '1',
-      content: "We engaged CC and C Solutions for providing enterprise/solution architecture training. Their experts have a very good blend of domain knowledge / working experiences and they are leading consultants in strategy & architecture.",
-      author: "Venkatesh Veluswamy",
-      role: "Chief Architect",
-      company: "AXA Japan",
-      rating: 5
-    },
-    {
-      id: '2',
       content: "CC and C Solutions is one of the leading industry experts on Enterprise Architecture and TOGAF®. Their deep subject matter knowledge and extensive practical experience make them an effective EA consultant.",
       author: "Tony Hudnell",
       role: "Associate Director",
       company: "Procter & Gamble",
       rating: 5
     },
+
     {
-      id: '3',
+      id: '2',
+      content: "ANZ has discovered CC and C Solutions to be an invaluable partner in our BIAN journey. Their extensive knowledge and collaborative approach have contributed significantly to our success. The guidance, training, and support they provide are essential to our successful implementation",
+      author: "",
+      role: "",
+      company: "ANZ BANK",
+      rating: 5
+    },
+    // {
+    //   id: '3',
+    //   content: "We engaged CC and C Solutions for providing enterprise/solution architecture training. Their experts have a very good blend of domain knowledge / working experiences and they are leading consultants in strategy & architecture.",
+    //   author: "Venkatesh Veluswamy",
+    //   role: "Chief Architect",
+    //   company: "AXA Japan",
+    //   rating: 5
+    // },
+   
+     
+    {
+      id: '4',
+      content: "We engaged CC and C Solutions for providing enterprise solution architecture training. Their experts have a very good blend of domain knowledge and working experiences and they are leading consultants in strategy and architecture.",
+      author: "Venkatesh Veluswamy",
+      role: "Chief Architect",
+      company: "AXA Japan",
+      rating: 5
+    },
+     {
+      id: '5',
       content: "CC and C Solutions provide great strategic vision to their clients' information technology needs and back that up with the practical know-how to implement process and technology to support the vision.",
       author: "Vinod Parmar",
       role: "Senior IT Professional",
       company: "MLC Australia",
       rating: 5
     }
+    
   ];
 
   const displayTestimonials = testimonials.length > 0 ? testimonials : defaultTestimonials;
