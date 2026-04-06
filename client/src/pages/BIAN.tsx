@@ -371,8 +371,7 @@ export default function BIAN() {
 
 </p>
                 <button 
-                  // onClick={() => setLocation('/services/bian-foundation')}
-                    onClick={() => window.open('/contact')}
+                    onClick={() => setLocation('/training/bian-foundation-certification-training')}
                   className="premium-button px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
                   data-testid="button-bian-foundation"
                 >
@@ -406,36 +405,67 @@ export default function BIAN() {
               <CardContent className="p-8 flex flex-col h-full">
                 <div className="flex items-start gap-3 mb-6">
                   <h3 className="text-2xl font-bold text-card-foreground group-hover:text-primary transition-colors duration-300 flex-1">
-                    BIAN Foundation Training (E Learning Platform)
+                    BIAN Practitioner Certification Training<br></br>(In Person / Virtual Training)
                   </h3>
                   <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700 px-4 py-1.5 text-sm font-bold shadow-lg animate-pulse">NEW</Badge>
                 </div>
                 <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
-                  This component of the training program is designed to provide participants with a thorough understanding of the BIAN framework: including its core principles, concepts, and content. The foundation training will lay the groundwork for more advanced learning and ensure that all participants have a solid grasp of the essential elements of BIAN framework, banking product development business scenarios and case studies modules. This course will be delivered via the CC & C Solutions new eLearning platform. 
+                  The BIAN Architecture Practitioner Certification is the next level after the BIAN Foundation Certification. It is designed for professionals who want to apply the BIAN standard in real-world banking architecture, going beyond conceptual understanding to practical implementation.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
+                  This course focuses on applying the BIAN framework, metamodel, and service landscape to interoperable and modular financial services architectures through interactive in-person and virtual delivery.
                 </p>
                 <button 
-                  // onClick={() => setLocation('/services/bian-foundation')}
-                    onClick={() => window.open('https://ccandc-academy.learnworlds.com/')}
+                    onClick={() => setLocation('/training/bian-practitioner-certification-training')}
                   className="premium-button px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
-                  data-testid="button-bian-foundation"
+                  data-testid="button-bian-practitioner"
                 >
                   Click now to begin learning.
                 </button>
               </CardContent>
             </Card>
 
-            {/* BIAN Data Architecture and Design Specialist Certification Training */}
-            <Card className="premium-card group hover:shadow-2xl transition-all duration-500">
+             <Card className="premium-card group hover:shadow-2xl transition-all duration-500 border-2 border-green-500/30">
               <CardContent className="p-8 flex flex-col h-full">
-                <h3 className="text-2xl font-bold text-card-foreground mb-6 group-hover:text-primary transition-colors duration-300">
-                  BIAN Data Architecture and Design Specialist Certification Training
-                </h3>
+                <div className="flex items-start gap-3 mb-6">
+                  <h3 className="text-2xl font-bold text-card-foreground group-hover:text-primary transition-colors duration-300 flex-1">
+                    BIAN Foundation & Practitioner Certification Training<br></br>(In Person / Virtual Training)
+                  </h3>
+                  <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700 px-4 py-1.5 text-sm font-bold shadow-lg animate-pulse">NEW</Badge>
+                </div>
                 <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
-                  The objective of BIAN Data Architecture & Design Specialist is to provide knowledge and comprehension of the BIAN Architecture and BIAN Business Object Modelling (BOM). BIAN BOM provides the financial sector with a reference model for information architecture, and this training would demonstrate how to customise data artifacts to your own organization context through a practical use case approach.
+                  A comprehensive BIAN training path for architects and practitioners that moves from foundational understanding into practical application across modular banking architectures.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
+                  This course combines BIAN framework fundamentals with practitioner-level use of the metamodel and service landscape through interactive in-person and virtual delivery.
                 </p>
                 <button 
-                  // onClick={() => window.open('https://training.ccandcsolutions.com/bian-data-architecture-specialist-certification/?course_id=BIAN%20Data%20Architecture%20&%20Design%20Specialist%20Certification', '_blank')}
-                     onClick={() => window.open('https://ccandcsolutions.com/contact')}
+                    onClick={() => setLocation('/training/bian-foundation-practitioner-certification-training')}
+                  className="premium-button px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
+                  data-testid="button-bian-foundation-practitioner"
+                >
+                  Click now to begin learning.
+                </button>
+              </CardContent>
+            </Card>
+
+            {/* BIAN Data Architecture Practitioner Certification Training */}
+            <Card className="premium-card group hover:shadow-2xl transition-all duration-500 border-2 border-green-500/30">
+              <CardContent className="p-8 flex flex-col h-full">
+                <div className="flex items-start gap-3 mb-6">
+                  <h3 className="text-2xl font-bold text-card-foreground group-hover:text-primary transition-colors duration-300 flex-1">
+                    BIAN Data Architecture Practitioner Certification Training<br></br>(In Person / Virtual Training)
+                  </h3>
+                  <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700 px-4 py-1.5 text-sm font-bold shadow-lg animate-pulse">NEW</Badge>
+                </div>
+                <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
+                  The BIAN Data Architecture & Design Practitioner develops the ability to realize the added value of the BIAN Object Model with a practical understanding of BIAN reference architecture design principles.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
+                  This course covers BIAN object modelling concepts, ArchiMate and UML foundations, and practical application of BIAN modelling patterns through interactive delivery.
+                </p>
+                <button 
+                    onClick={() => setLocation('/training/bian-data-architecture-practitioner-certification-training')}
                   className="premium-button px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
                   data-testid="button-bian-data"
                 >

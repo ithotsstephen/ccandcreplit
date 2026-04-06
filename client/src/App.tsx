@@ -35,6 +35,10 @@ import TogafPractitioner from "@/pages/TogafPractitioner";
 import Togaf9Certified from "@/pages/Togaf9Certified";
 import TogafBusinessArchitecture from "@/pages/TogafBusinessArchitecture";
 import IT4ITFoundation from "@/pages/IT4ITFoundation";
+import BianFoundationTraining from "@/pages/BianFoundationTraining";
+import BianPractitionerTraining from "@/pages/BianPractitionerTraining";
+import BianFoundationPractitionerTraining from "@/pages/BianFoundationPractitionerTraining";
+import BianDataArchitecturePractitionerTraining from "@/pages/BianDataArchitecturePractitionerTraining";
 import Contact from "@/pages/Contact";
 import Registration from "@/pages/Registration";
 
@@ -75,6 +79,14 @@ function AppRouter() {
       <Route path="/training/togaf-9-certified" component={Togaf9Certified} />
       <Route path="/training/togaf-business-architecture" component={TogafBusinessArchitecture} />
       <Route path="/training/it4it-foundation" component={IT4ITFoundation} />
+      <Route path="/training/bian-foundation" component={() => <Redirect to="/training/bian-foundation-certification-training" />} />
+      <Route path="/training/bian-foundation-certification-training" component={BianFoundationTraining} />
+      <Route path="/training/bian-partitioner-certification-training" component={() => <Redirect to="/training/bian-practitioner-certification-training" />} />
+      <Route path="/training/bian-practitioner-certification-training" component={BianPractitionerTraining} />
+      <Route path="/training/bian-foundation-partitioner-certification-training" component={() => <Redirect to="/training/bian-foundation-practitioner-certification-training" />} />
+      <Route path="/training/bian-foundation-practitioner-certification-training" component={BianFoundationPractitionerTraining} />
+      <Route path="/training/bian-data-architecture-partitioner-certification-training" component={() => <Redirect to="/training/bian-data-architecture-practitioner-certification-training" />} />
+      <Route path="/training/bian-data-architecture-practitioner-certification-training" component={BianDataArchitecturePractitionerTraining} />
       <Route path="/consulting" component={Consulting} />
       <Route path="/viztools" component={StratIQ} />
       <Route path="/stratiq" component={() => <Redirect to="/viztools" />} />
