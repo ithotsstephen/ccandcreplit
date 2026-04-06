@@ -260,7 +260,7 @@ export default function Footer() {
         
         <div className="border-t border-primary-foreground/20 pt-8 text-center">
           <p className="text-primary-foreground/60">
-            © 2025 CC&C Solutions. All rights reserved. |{' '}
+            © 2026 CC&C Solutions. All rights reserved. |{' '}
             <button 
               onClick={() => setPrivacyDialogOpen(true)}
               className="hover:text-secondary transition-colors underline"

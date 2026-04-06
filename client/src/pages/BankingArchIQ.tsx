@@ -284,7 +284,7 @@ export default function BankingArchIQ() {
                 </ul>
                 
                 <button 
-                  onClick={() => setLocation("/#contact")}
+                  onClick={() => setLocation("/training/architecture-foundations")}
                   className="text-primary font-semibold hover:underline"
                   data-testid="button-inquire-workshops"
                 >
@@ -357,7 +357,7 @@ export default function BankingArchIQ() {
             </button>
             <button 
               onClick={() => setLocation('/banking')}
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-primary transition-all"
+              className="border-2 border-blue text-blue px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue hover:text-blue transition-all transform hover:scale-105"
               data-testid="button-view-banking-solutions"
             >
               View All Banking Solutions

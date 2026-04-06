@@ -49,7 +49,7 @@ export default function TestimonialsSection() {
 
     {
       id: '2',
-      content: "ANZ has discovered CC and C Solutions to be an invaluable partner in our BIAN journey. Their extensive knowledge and collaborative approach have contributed significantly to our success. The guidance, training, and support they provide are essential to our successful implementation",
+      content: "ANZ has discovered CC and C Solutions to be an invaluable partner in our BIAN journey. Their extensive knowledge and collaborative approach have contributed significantly to our success. The guidance, training, and support they provide are essential to our successful implementation.",
       author: "",
       role: "",
       company: "ANZ BANK",
@@ -66,19 +66,19 @@ export default function TestimonialsSection() {
    
      
     {
+      id: '3',
+      content: "I sincerely thank the entire CC&C team for your excellent support throughout the BIAN adoption process. I truly appreciate the professionalism, responsiveness, and quality of work you’ve brought to this collaboration.",
+      author: "Domonkos Kertesz",
+      role: "Chief Architect",
+      company: "OTP Group",
+      rating: 5
+    },
+     {
       id: '4',
       content: "We engaged CC and C Solutions for providing enterprise solution architecture training. Their experts have a very good blend of domain knowledge and working experiences and they are leading consultants in strategy and architecture.",
       author: "Venkatesh Veluswamy",
       role: "Chief Architect",
       company: "AXA Japan",
-      rating: 5
-    },
-     {
-      id: '5',
-      content: "CC and C Solutions provide great strategic vision to their clients' information technology needs and back that up with the practical know-how to implement process and technology to support the vision.",
-      author: "Vinod Parmar",
-      role: "Senior IT Professional",
-      company: "MLC Australia",
       rating: 5
     }
     

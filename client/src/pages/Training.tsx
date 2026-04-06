@@ -245,7 +245,7 @@ export default function Training() {
                     data-testid="image-training-togaf"
                   />
                 </div>
-                <h3 className="text-2xl font-bold text-card-foreground mb-4">TOGAF® EA Certification Practitioner Training</h3>
+                <h3 className="text-2xl font-bold text-card-foreground mb-4">TOGAF® EA Practitioner Certification Training</h3>
                 <div className="flex-1">
                   <p className="text-muted-foreground leading-relaxed mb-6">
                     Master enterprise architecture with TOGAF® certification. Our experts apply the framework daily in large-scale transformations, bringing real-world relevance and practical experience to every training module.
@@ -586,11 +586,11 @@ ANZ BANK"
                   <i className="fas fa-quote-left text-4xl text-primary/20"></i>
                 </div>
                 <p className="text-muted-foreground leading-relaxed mb-6 text-lg italic">
-                  "My appreciation to CC&C for such an insightful training on BIAN."
+                  "Appreciation to CC&C for such an insightful training on BIAN."
                 </p>
                 <div className="flex items-center">
                   <div>
-                    <p className="font-bold text-card-foreground">HSBC</p>
+                    <p className="font-bold text-card-foreground">HSBC Bank</p>
                     {/* <p className="text-sm text-muted-foreground">Chief IT Architect, OTP Group</p> */}
                   </div>
                 </div>
