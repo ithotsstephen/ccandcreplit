@@ -29,6 +29,7 @@ import BankingAdviseIQ from "@/pages/BankingAdviseIQ";
 import BankingStratIQ from "@/pages/BankingStratIQ";
 import BankingArchIQ from "@/pages/BankingArchIQ";
 import ArchitectureFoundations from "@/pages/ArchitectureFoundations";
+import ArchitectingAIPoweredBank from "@/pages/ArchitectingAIPoweredBank";
 import ArchiMate from "@/pages/ArchiMate";
 import SparxEA from "@/pages/SparxEA";
 import TogafPractitioner from "@/pages/TogafPractitioner";
@@ -72,6 +73,7 @@ function AppRouter() {
       <Route path="/" component={Home} />
       <Route path="/what-we-do" component={WhatWeDo} />
       <Route path="/ccandc-training" component={Training} />
+      <Route path="/training/architecting-the-ai-powered-bank" component={ArchitectingAIPoweredBank} />
       <Route path="/training/architecture-foundations" component={ArchitectureFoundations} />
       <Route path="/training/archimate" component={ArchiMate} />
       <Route path="/training/sparx-ea" component={SparxEA} />

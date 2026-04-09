@@ -300,6 +300,13 @@ export default function Training() {
                   </p>
                   <div className="space-y-3">
                     <button
+                      onClick={() => setLocation('/training/architecting-the-ai-powered-bank')}
+                      className="w-full premium-button px-4 py-3 rounded-lg font-semibold text-sm transition-all transform hover:scale-105"
+                      data-testid="button-architecting-ai-powered-bank"
+                    >
+                      Architecting the AI-Powered Bank
+                    </button>
+                    <button
                       onClick={() => setLocation('/training/architecture-foundations')}
                       className="w-full premium-button px-4 py-3 rounded-lg font-semibold text-sm transition-all transform hover:scale-105"
                       data-testid="button-architecture-foundations"
