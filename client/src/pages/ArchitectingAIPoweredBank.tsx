@@ -95,9 +95,9 @@ export default function ArchitectingAIPoweredBank() {
                 Back to Training
               </a>
             </Link>
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold uppercase tracking-[0.18em] mb-6">
+            {/* <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold uppercase tracking-[0.18em] mb-6">
               Banking Programme
-            </div>
+            </div> */}
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 font-['Playfair_Display',serif]">
               Architecting the AI-Powered Bank
             </h1>
