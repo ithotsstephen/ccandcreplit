@@ -375,7 +375,7 @@ export default function BIAN() {
                   className="premium-button px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
                   data-testid="button-bian-foundation"
                 >
-                  Click now to begin learning
+                  Learn more
                 </button>
               </CardContent>
             </Card>
@@ -420,7 +420,7 @@ export default function BIAN() {
                   className="premium-button px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
                   data-testid="button-bian-practitioner"
                 >
-                  Click now to begin learning.
+                  Learn more
                 </button>
               </CardContent>
             </Card>
@@ -444,7 +444,7 @@ export default function BIAN() {
                   className="premium-button px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
                   data-testid="button-bian-foundation-practitioner"
                 >
-                  Click now to begin learning.
+                  Learn more
                 </button>
               </CardContent>
             </Card>

@@ -221,14 +221,25 @@ export default function Training() {
                     from this hands-on experience are continually brought back into our programs, deepening understanding and ensuring every 
                     session reflects the latest knowledge, case studies, and opportunities.
                   </p>
-                  <a 
+                  {/* <a 
                     href="bian-training"
                     className="inline-flex items-center text-primary hover:text-primary/80 font-semibold transition-colors group"
                     data-testid="link-bian-training"
                   >
                     Learn More 
                     <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
-                  </a>
+                  </a> */}
+
+  <button
+                      onClick={() => setLocation('bian-training')}
+                      className="w-full premium-button px-4 py-3 rounded-lg font-semibold text-sm transition-all transform hover:scale-105"
+                      data-testid="button-togaf-practitioner"
+                    >
+                      Learn more
+                    </button>
+
+
+
                 </div>
               </CardContent>
             </Card>
@@ -285,13 +296,13 @@ export default function Training() {
                 </div> */}
                  <div className="h-64 mb-6 flex items-center justify-center">
                   <img 
-                    src="/assets/Images/BIAN_certification.jpg"
+                    src="/assets/Images/BANK_ARCHITECURE.jpg"
                     alt="BIAN Foundation"
                     className="w-full h-full object-contain rounded-lg"
                     data-testid="BIAN Foundation"
                   />
                 </div>
-                <h3 className="text-2xl font-bold text-card-foreground mb-4">Banking Architecture Foundation Training</h3>
+                <h3 className="text-2xl font-bold text-card-foreground mb-4"> Architecture Foundations</h3>
                 <div className="flex-1">
                   <p className="text-muted-foreground leading-relaxed mb-6">
                     Build your architecture career with our comprehensive foundation training programs. 
@@ -299,20 +310,19 @@ export default function Training() {
                     essential skills needed to excel in modern enterprise architecture.
                   </p>
                   <div className="space-y-3">
-                    <button
+                    {/* <button
                       onClick={() => setLocation('/training/architecting-the-ai-powered-bank')}
                       className="w-full premium-button px-4 py-3 rounded-lg font-semibold text-sm transition-all transform hover:scale-105"
                       data-testid="button-architecting-ai-powered-bank"
                     >
                       Architecting the AI-Powered Bank
-                    </button>
+                    </button> */}
                     <button
                       onClick={() => setLocation('/training/architecture-foundations')}
                       className="w-full premium-button px-4 py-3 rounded-lg font-semibold text-sm transition-all transform hover:scale-105"
                       data-testid="button-architecture-foundations"
                     >
-                      Architecture Foundations
-                    </button>
+Learn more                    </button>
                     {/* <button
                       onClick={() => setLocation('/training/archimate')}
                       className="w-full premium-button px-4 py-3 rounded-lg font-semibold text-sm transition-all transform hover:scale-105"
@@ -351,7 +361,7 @@ export default function Training() {
                       className="w-full premium-button px-4 py-3 rounded-lg font-semibold text-sm transition-all transform hover:scale-105"
                       data-testid="button-archimate"
                     >
-                      ArchiMate 3
+                      Learn more
                     </button>
                   
                   </div>
@@ -383,14 +393,52 @@ export default function Training() {
                     Our courses go beyond theory, delivering hands-on experience in how IT must operate as a business, driving 
                     efficiency, alignment and competitive advantage.
                   </p>
-                  <a 
+
+
+ <button
+                    onClick={() => setLocation('training/it4it-foundation')}
+                    className="w-full premium-button px-4 py-3 rounded-lg font-semibold text-sm transition-all transform hover:scale-105"
+                    data-testid="button-training-architecting-ai-powered-bank-card"
+                  >
+                    Learn More
+                  </button>
+
+
+
+                  {/* <a 
                     href="training/it4it-foundation"
                     className="inline-flex items-center text-primary hover:text-primary/80 font-semibold transition-colors group"
                     data-testid="link-it4it-foundation"
                   >
                     Learn More 
                     <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
-                  </a>
+                  </a> */}
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="premium-card h-full flex flex-col">
+              <CardContent className="p-8 flex-1 flex flex-col">
+                <div className="h-64 mb-6 flex items-center justify-center">
+                  <img
+                    src="/assets/Images/ai powered banking.jpg"
+                    alt="Architecting the AI-Powered Bank"
+                    className="w-full h-full object-contain rounded-lg"
+                    data-testid="image-training-ai-powered-bank"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold text-card-foreground mb-4">Architecting the AI-Powered Bank</h3>
+                <div className="flex-1">
+                  <p className="text-muted-foreground leading-relaxed mb-6">
+                    Every bank has an AI strategy. Almost none have the foundations to execute it. This intensive 2-day programme reveals what the world's most successful AI banks built before they built AI — and gives your team the frameworks, evidence, and practical tools to do the same.
+                  </p>
+                  <button
+                    onClick={() => setLocation('/training/architecting-the-ai-powered-bank')}
+                    className="w-full premium-button px-4 py-3 rounded-lg font-semibold text-sm transition-all transform hover:scale-105"
+                    data-testid="button-training-architecting-ai-powered-bank-card"
+                  >
+                    Learn More
+                  </button>
                 </div>
               </CardContent>
             </Card>
