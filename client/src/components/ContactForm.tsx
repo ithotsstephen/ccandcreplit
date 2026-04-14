@@ -316,6 +316,7 @@ export default function ContactForm() {
                     <SelectItem value="enterprise-consulting">Enterprise Architecture Consulting</SelectItem>
                     <SelectItem value="business-architecture">Business Architecture</SelectItem>
                     <SelectItem value="digital-transformation">Digital Transformation</SelectItem>
+                     <SelectItem value="architecting-for-ai">Architecting for AI Course</SelectItem>
                     <SelectItem value="other">Other</SelectItem>
                   </SelectContent>
                 </Select>

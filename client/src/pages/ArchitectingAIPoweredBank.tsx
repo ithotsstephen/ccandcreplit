@@ -102,7 +102,7 @@ export default function ArchitectingAIPoweredBank() {
               Architecting the AI-Powered Bank
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8 leading-relaxed">
-              Every bank has an AI strategy. Almost none have the foundations to execute it. This intensive 2-day programme reveals what the world's most successful AI banks built before they built AI — and gives your team the frameworks, evidence, and practical tools to do the same.
+              Every bank has an AI strategy. Almost none have the foundations to execute it. This intensive 2-day programme reveals what the world's most successful banks built before they built AI — and gives your team the frameworks, evidence, and practical tools to do the same.
             </p>
           </div>
         </div>
