@@ -207,10 +207,10 @@ export default function ArchitectingAIPoweredBank() {
       <section className="py-20 section-darker">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <CTASection
-            tag="Express Your Interest"
-            title="Express Your Interest"
+         
+            title="Enquire Now"
             description="This programme is delivered on-site for banking institutions. If you're interested in bringing it to your organisation, or would like to discuss how it could work for your team, we'd welcome a conversation."
-            buttonText="Express Your Interest"
+            buttonText="Contact Us"
           />
         </div>
       </section>

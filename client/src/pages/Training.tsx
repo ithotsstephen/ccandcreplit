@@ -430,8 +430,7 @@ Learn more                    </button>
                 <h3 className="text-2xl font-bold text-card-foreground mb-4">Architecting the AI-Powered Bank</h3>
                 <div className="flex-1">
                   <p className="text-muted-foreground leading-relaxed mb-6">
-                    Every bank has an AI strategy. Almost none have the foundations to execute it. This intensive 2-day programme reveals what the world's most successful AI banks built before they built AI — and gives your team the frameworks, evidence, and practical tools to do the same.
-                  </p>
+Every bank has an AI strategy. But many struggle to achieve scale and hard benefit from it. This intensive 2-day programme reveals what the world's most successful banks built before they built AI — and gives your team the frameworks, evidence, and practical tools to do the same.                  </p>
                   <button
                     onClick={() => setLocation('/training/architecting-the-ai-powered-bank')}
                     className="w-full premium-button px-4 py-3 rounded-lg font-semibold text-sm transition-all transform hover:scale-105"
