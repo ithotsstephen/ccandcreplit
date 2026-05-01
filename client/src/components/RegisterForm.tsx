@@ -216,7 +216,7 @@ export default function RegisterForm() {
                 </Select>
               </div>
 
-              <div className="space-y-2">
+              {/* <div className="space-y-2">
                 <label className="text-sm font-medium text-card-foreground" htmlFor="message">Message *</label>
                 <Textarea
                   id="message"
@@ -227,15 +227,16 @@ export default function RegisterForm() {
                   placeholder="Tell us about your requirements and how we can help..."
                   data-testid="textarea-message"
                 />
-              </div>
-
+              </div> */}
+              <div></div>
+ <div></div>
               <Button
                 type="submit"
                 className="w-full bg-accent text-accent-foreground py-4 text-lg font-semibold hover:bg-accent/90"
                 disabled={contactMutation.isPending}
                 data-testid="button-submit-contact"
               >
-                {contactMutation.isPending ? "Sending..." : "Send Message"}
+                {contactMutation.isPending ? "Sending..." : "Register"}
               </Button>
             </form>
           </CardContent>

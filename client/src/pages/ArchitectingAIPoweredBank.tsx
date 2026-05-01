@@ -6,30 +6,30 @@ import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
 
 const aboutParagraphs = [
-  "A handful of banks are generating billions in measurable value from AI. The rest can't get past pilot. The difference isn't the technology — it's the architecture underneath it.",
-  "This programme draws on in-depth case studies from four of the world's most AI-advanced banks to show what they invested in before AI that made the difference — and why most institutions are underinvesting in the one thing that determines whether AI scales or stalls.",
-  "Participants will work with the AI Enablement House — a practical framework covering the four pillars that enable AI at scale and the architectural foundation that holds them together. They'll leave with a clear diagnosis of where their own organisation stands, what needs to change, and a prioritised action plan to start closing the gap.",
+  "A handful of banks are generating billions in measurable value from AI. The rest can't get past pilot. The difference isn't the technology, it's the architecture underneath it.",
+  "This programme draws on in-depth case studies from four of the world's most AI-advanced banks to show what they invested in before AI that made the difference, and why most institutions are underinvesting in the one thing that determines whether AI scales or stalls.",
+  "Participants will work with the AI Enablement House: a practical framework covering the four pillars that enable AI at scale and the architectural foundation that holds them together. They'll leave with a clear diagnosis of where their own organisation stands, what needs to change, and a prioritised action plan to start closing the gap.",
   "Day 1 is for leaders: the strategic case, the evidence, and a hands-on readiness assessment. Day 2 is for architects: the enabling foundation, industry-standard frameworks, and reusable blueprints participants can take straight back to their teams.",
 ];
 
 const dayOneModules = [
-  "The AI Leadership Landscape: Where AI stands today in banking, who's leading, and what the global benchmarks reveal about the widening gap between leaders and the rest. Detailed profiles of four leading banks — their AI operating models, investment levels, and measurable outcomes.",
-  "The AI Enablement House — Why Most AI Initiatives Stall: A practical framework for understanding what must be in place before AI can scale. Four pillars — reimagined journeys, data, technology maturity, and human capital — explored through case study evidence from banks that have made AI work at enterprise scale.",
-  "The Architecture Imperative: Why strong enterprise architecture is the common ingredient separating banks that scale AI from those stuck in perpetual pilot — and why most banks are underinvesting in the foundation.",
+  "The AI Leadership Landscape: Where AI stands today in banking, who's leading, and what the global benchmarks reveal about the widening gap between leaders and the rest. Detailed profiles of four leading banks including their AI operating models, investment levels, and measurable outcomes.",
+  "The AI Enablement House — Why Most AI Initiatives Stall: A practical framework for understanding what must be in place before AI can scale. Four pillars are reimagined journeys, data, technology maturity and huan capital explored through case study evidence from banks that have made AI work at enterprise scale: ",
+  "The Architecture Imperative: Why strong enterprise architecture is the common ingredient separating banks that scale AI from those stuck in perpetual pilot, and why most banks are underinvesting in the foundation.",
   "Workshop — Assessing Your Organisation's AI Readiness: A structured self-assessment where participants evaluate their own institution against the four pillars and identify prioritised gaps to take back to their leadership teams.",
 ];
 
 const dayTwoModules = [
-  "The Architectural Foundation — Capability Models & Canonical Data: How a common architectural language enables composable, AI-ready banking — from modular capability design to governed data definitions that eliminate the hidden cost of inconsistency across the enterprise. The programme leverages BIAN, the industry-standard framework adopted by over 200 financial institutions, as the anchor for these concepts.",
+  "The Architectural Foundation — Capability Models & Canonical Data: How a common architectural language enables composable, AI-ready banking from modular capability design to governed data definitions that eliminate the hidden cost of inconsistency across the enterprise. The programme leverages BIAN, the industry-standard framework adopted by financial institutions, worldwide as the anchor for these concepts.",
   "APIs, Agentic AI & Governance: What your API landscape needs to look like to support the next generation of autonomous AI agents, and how to build explainability and traceability into the foundation rather than retrofitting it after deployment.",
   "Workshop — Architecture Blueprint & AI Action Commitments: Hands-on exercises mapping AI use cases to architectural components, followed by a personal action plan across architecture, data, integration, governance, and people.",
 ];
 
 const takeaways = [
-  "Articulate why enterprise architecture is the critical enabler for AI at scale — and communicate this to executive stakeholders",
+  "Articulate why enterprise architecture is the critical enabler for AI at scale and communicate this to executive stakeholders",
   "Evaluate your organisation's AI readiness across four dimensions: reimagined journeys, data, technology maturity, and human capital",
   "Explain what the world's leading AI banks invested in before AI that enabled them to scale",
-  "Identify and quantify the hidden \"Translation Tax\" — the cost of inconsistent data definitions and capability fragmentation across the enterprise",
+  "Identify and quantify the hidden \"Translation Tax\": The cost of inconsistent data definitions and capability fragmentation across the enterprise",
   "Apply industry-standard capability models and data frameworks to decompose AI use cases into well-governed, reusable architectural components",
   "Build explainability and traceability into AI governance from the architectural foundation up",
   "Leave with three practical artefacts: a Pillar Self-Assessment, an Architecture Blueprint, and an AI Action Commitments roadmap",
@@ -102,7 +102,7 @@ export default function ArchitectingAIPoweredBank() {
               Architecting the AI-Powered Bank
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8 leading-relaxed">
-              Every bank has an AI strategy. But many struggle to achieve scale and hard benefit from it. This intensive 2-day programme reveals what the world's most successful banks built before they built AI — and gives your team the frameworks, evidence, and practical tools to do the same.
+              Every bank has an AI strategy. But many struggle to achieve scale and hard benefit from it. This intensive 2-day programme reveals what the world's most successful banks built before they built AI, and gives your team the frameworks, evidence, and practical tools to do the same.
             </p>
           </div>
         </div>

@@ -308,7 +308,7 @@ export default function ContactForm() {
                   <SelectContent>
                     <SelectItem value="togaf-training">TOGAF® Training</SelectItem>
                     <SelectItem value="bian-training">BIAN Training</SelectItem>
-                    <SelectItem value="bian-sig">BIAN SIG</SelectItem>
+                    {/* <SelectItem value="bian-sig">BIAN SIG</SelectItem> */}
                     <SelectItem value="it4it-training">IT4IT™ Training</SelectItem>
                     <SelectItem value="archiq">ArchiQ</SelectItem>
                     <SelectItem value="adviseiq">AdviseIQ</SelectItem>
