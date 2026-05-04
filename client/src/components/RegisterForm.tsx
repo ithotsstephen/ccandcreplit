@@ -20,7 +20,7 @@ export default function RegisterForm() {
     company: '',
     phone: '',
     region: '',
-    message: '',
+    // message: '',
   });
 
   const contactMutation = useMutation({
@@ -63,7 +63,7 @@ export default function RegisterForm() {
         company: '',
         phone: '',
         region: '',
-        message: '',
+         message: '',
       });
     },
     onError: (error) => {
@@ -85,7 +85,7 @@ export default function RegisterForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.message) {
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone ) {
       toast({
         title: "Please fill in all required fields",
         description: "First Name, Last Name, Email, Phone Number, and Message are required.",
