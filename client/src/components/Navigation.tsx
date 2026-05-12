@@ -155,6 +155,9 @@ export default function Navigation() {
               <button onClick={() => setLocation('/about')} className="text-muted-foreground hover:text-primary transition-colors">
                 About
               </button>
+              <button onClick={() => setLocation('/offerings')} className="text-muted-foreground hover:text-primary transition-colors">
+                Our Offerings
+              </button>
               <button onClick={() => setLocation('/contact')} className="bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors" data-testid="link-contact">
                 Contact
               </button>
@@ -284,6 +287,12 @@ export default function Navigation() {
                 data-testid="mobile-link-about"
               >
                 About
+              </button>
+              <button 
+                onClick={() => { setLocation('/offerings'); setIsMobileMenuOpen(false); }} 
+                className="block w-full text-left px-3 py-3 text-foreground hover:text-primary hover:bg-muted rounded-md transition-colors text-base"
+              >
+                Our Offerings
               </button>
               <button 
                 onClick={() => { setLocation('/contact'); setIsMobileMenuOpen(false); }} 
