@@ -277,6 +277,8 @@ export default function BianFoundationPractitionerTraining() {
         </div>
       </section>
 
+     
+
       <section className="py-20 section-darker">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <CTASection

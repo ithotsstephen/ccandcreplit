@@ -179,6 +179,115 @@ export default function Insights() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    let jsonLdScript = document.querySelector('script[type="application/ld+json"][data-page="insights"]');
+    if (!jsonLdScript) {
+      jsonLdScript = document.createElement('script');
+      jsonLdScript.type = 'application/ld+json';
+      jsonLdScript.setAttribute('data-page', 'insights');
+      jsonLdScript.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://ccandcsolutions.com/insights#localbusiness",
+            "name": "CCandC Solutions",
+            "url": "https://ccandcsolutions.com/insights",
+            "image": "https://ccandcsolutions.com/assets/Images/CC&CLogo.png",
+            "logo": "https://ccandcsolutions.com/assets/Images/CC&CLogo.png",
+            "telephone": "+61 2 8448 2000",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Zenith, Tower A, L9/821 Pacific Hwy",
+              "addressLocality": "Chatswood",
+              "addressRegion": "NSW",
+              "postalCode": "2067",
+              "addressCountry": "AU"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/ccandcsolutions/",
+              "https://x.com/ccandcsolutions",
+              "https://www.youtube.com/@ccandcsolutions576"
+            ]
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://ccandcsolutions.com/insights#organization",
+            "name": "CCandC Solutions",
+            "url": "https://ccandcsolutions.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://ccandcsolutions.com/assets/Images/CC&CLogo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+61 2 8448 2000",
+              "contactType": "customer support",
+              "areaServed": "AU",
+              "availableLanguage": "English"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/ccandcsolutions/",
+              "https://x.com/ccandcsolutions",
+              "https://www.youtube.com/@ccandcsolutions576"
+            ]
+          },
+          {
+            "@type": "Service",
+            "@id": "https://ccandcsolutions.com/insights#service",
+            "name": "CCandC Insights and Industry Solutions",
+            "serviceType": "Business Insights, Analytics and Consulting Services",
+            "url": "https://ccandcsolutions.com/insights",
+            "provider": {
+              "@id": "https://ccandcsolutions.com/insights#organization"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "Australia"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://ccandcsolutions.com/insights#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://ccandcsolutions.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Insights",
+                "item": "https://ccandcsolutions.com/insights"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ccandcsolutions.com/#website",
+            "url": "https://ccandcsolutions.com/",
+            "name": "CCandC Solutions",
+            "publisher": {
+              "@id": "https://ccandcsolutions.com/insights#organization"
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://ccandcsolutions.com/search?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        ]
+      });
+      document.head.appendChild(jsonLdScript);
+    }
+
+    return () => {
+      if (jsonLdScript) {
+        jsonLdScript.remove();
+      }
+    };
   }, []);
 
   return (

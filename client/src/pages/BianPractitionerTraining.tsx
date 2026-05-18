@@ -253,6 +253,89 @@ export default function BianPractitionerTraining() {
         </div>
       </section>
 
+
+   {/* Client Testimonials */}
+      <section className="py-20 section-dark">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">What Our Clients Say</h2>
+            <p className="text-xl text-muted-foreground">
+              Backed by 25 years of expertise, we help teams master the latest architecture standards to design and scale with confidence
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Testimonial 1 */}
+            <Card className="premium-card">
+              <CardContent className="p-8">
+                <div className="mb-6">
+                  <i className="fas fa-quote-left text-4xl text-primary/20"></i>
+                </div>
+                <p className="text-muted-foreground leading-relaxed mb-6 text-lg italic">
+                  "Our partnership with CC&C Solutions has been transformative in accelerating our
+digital transformation journey. Their expertise in enterprise architecture, BIAN
+operating model, and agile methodologies has been instrumental in helping us shift to
+a product-oriented organization. Through their training and consulting services, we've
+gained the tools and strategies needed to achieve our vision of becoming a leading
+credit union in the US. The team's professionalism, industry knowledge, and
+commitment to our success have exceeded our expectations at every step"
+                </p>
+                <div className="flex items-center">
+                  <div>
+                    <p className="font-bold text-card-foreground">Ashish Chopra</p>
+                    <p className="text-sm text-muted-foreground">Chief Information Officer, Texas Dow Employee Credit Union</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Testimonial 2 */}
+            <Card className="premium-card">
+              <CardContent className="p-8">
+                <div className="mb-6">
+                  <i className="fas fa-quote-left text-4xl text-primary/20"></i>
+                </div>
+                <p className="text-muted-foreground leading-relaxed mb-6 text-lg italic">
+                  "I sincerely thank the entire CC&C team for your excellent support throughout the
+BIAN adoption process. I truly appreciate the professionalism, responsiveness, and
+quality of work you've brought to this collaboration."
+                </p>
+                <div className="flex items-center">
+                  <div>
+                    <p className="font-bold text-card-foreground">Domonkos Kertesz</p>
+                    <p className="text-sm text-muted-foreground">Chief IT Architect, OTP Group</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+     {/* Testimonial 3 */}
+            <Card className="premium-card">
+              <CardContent className="p-8">
+                <div className="mb-6">
+                  <i className="fas fa-quote-left text-4xl text-primary/20"></i>
+                </div>
+                <p className="text-muted-foreground leading-relaxed mb-6 text-lg italic">
+"ANZ has discovered CC&C Solutions to be an invaluable partner in our BIAN journey.
+Their extensive knowledge and collaborative approach have contributed significantly
+to our success. The guidance, training, and support they provide are essential to our
+successful implementation"                </p>
+                <div className="flex items-center">
+                  <div>
+                    <p className="font-bold text-card-foreground">Arran Price</p>
+                    <p className="text-sm text-muted-foreground">Enterprise Architect, ANZ New Zealand</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+          </div>
+        </div>
+      </section>
+
+
+
+
       <section className="py-20 section-darker">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <CTASection

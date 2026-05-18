@@ -86,6 +86,16 @@ export default function Navigation() {
                         >
                           BIAN
                         </button>
+
+<button 
+  onClick={() => { setLocation('/offerings'); setIsWhatWeDoOpen(false); }}
+  className="w-full text-left px-4 py-2 text-muted-foreground hover:text-primary hover:bg-muted transition-colors"
+  data-testid="dropdown-offerings"
+>
+  Our Offerings
+</button>
+
+
                       </div>
                     </div>
                   </div>
@@ -155,9 +165,9 @@ export default function Navigation() {
               <button onClick={() => setLocation('/about')} className="text-muted-foreground hover:text-primary transition-colors">
                 About
               </button>
-              <button onClick={() => setLocation('/offerings')} className="text-muted-foreground hover:text-primary transition-colors">
+              {/* <button onClick={() => setLocation('/offerings')} className="text-muted-foreground hover:text-primary transition-colors">
                 Our Offerings
-              </button>
+              </button> */}
               <button onClick={() => setLocation('/contact')} className="bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors" data-testid="link-contact">
                 Contact
               </button>
@@ -221,6 +231,16 @@ export default function Navigation() {
                   >
                     BIAN
                   </button>
+
+
+                  <button 
+  onClick={() => { setLocation('/offerings'); setIsMobileMenuOpen(false); }} 
+  className="block w-full text-left px-4 py-2 text-muted-foreground hover:text-primary hover:bg-muted rounded-md transition-colors text-base"
+  data-testid="mobile-link-offerings"
+>
+  Our Offerings
+</button>
+
                 </div>
               )}
               
@@ -288,12 +308,12 @@ export default function Navigation() {
               >
                 About
               </button>
-              <button 
+              {/* <button 
                 onClick={() => { setLocation('/offerings'); setIsMobileMenuOpen(false); }} 
                 className="block w-full text-left px-3 py-3 text-foreground hover:text-primary hover:bg-muted rounded-md transition-colors text-base"
               >
                 Our Offerings
-              </button>
+              </button> */}
               <button 
                 onClick={() => { setLocation('/contact'); setIsMobileMenuOpen(false); }} 
                 className="block w-full text-left px-3 py-3 bg-primary text-primary-foreground rounded-md mt-2 hover:bg-primary/90 transition-colors font-medium text-base"

@@ -106,13 +106,121 @@ export default function Events() {
     setShowPopup(false);
   };
 
-  // Auto-open popup after 2 seconds
+  // Auto-open popup after 2 seconds and inject page-specific JSON-LD
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
     }, 2000);
 
-    return () => clearTimeout(timer);
+    let jsonLdScript = document.querySelector('script[type="application/ld+json"][data-page="events"]');
+    if (!jsonLdScript) {
+      jsonLdScript = document.createElement('script');
+      jsonLdScript.type = 'application/ld+json';
+      jsonLdScript.setAttribute('data-page', 'events');
+      jsonLdScript.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://ccandcsolutions.com/events#localbusiness",
+            "name": "CCandC Solutions",
+            "url": "https://ccandcsolutions.com/events",
+            "image": "https://ccandcsolutions.com/assets/Images/CC&CLogo.png",
+            "logo": "https://ccandcsolutions.com/assets/Images/CC&CLogo.png",
+            "telephone": "+61 2 8448 2000",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Zenith, Tower A, L9/821 Pacific Hwy",
+              "addressLocality": "Chatswood",
+              "addressRegion": "NSW",
+              "postalCode": "2067",
+              "addressCountry": "AU"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/ccandcsolutions/",
+              "https://x.com/ccandcsolutions",
+              "https://www.youtube.com/@ccandcsolutions576"
+            ]
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://ccandcsolutions.com/events#organization",
+            "name": "CCandC Solutions",
+            "url": "https://ccandcsolutions.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://ccandcsolutions.com/assets/Images/CC&CLogo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+61 2 8448 2000",
+              "contactType": "customer support",
+              "areaServed": "AU",
+              "availableLanguage": "English"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/ccandcsolutions/",
+              "https://x.com/ccandcsolutions",
+              "https://www.youtube.com/@ccandcsolutions576"
+            ]
+          },
+          {
+            "@type": "Service",
+            "@id": "https://ccandcsolutions.com/events#service",
+            "name": "CCandC Events and Industry Engagement Services",
+            "serviceType": "Corporate Events, Training and Industry Networking Services",
+            "url": "https://ccandcsolutions.com/events",
+            "provider": {
+              "@id": "https://ccandcsolutions.com/events#organization"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "Australia"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://ccandcsolutions.com/events#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://ccandcsolutions.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Events",
+                "item": "https://ccandcsolutions.com/events"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ccandcsolutions.com/#website",
+            "url": "https://ccandcsolutions.com/",
+            "name": "CCandC Solutions",
+            "publisher": {
+              "@id": "https://ccandcsolutions.com/events#organization"
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://ccandcsolutions.com/search?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        ]
+      });
+      document.head.appendChild(jsonLdScript);
+    }
+
+    return () => {
+      clearTimeout(timer);
+      if (jsonLdScript) {
+        jsonLdScript.remove();
+      }
+    };
   }, []);
 
   // Close on Escape key & prevent body scroll while popup open

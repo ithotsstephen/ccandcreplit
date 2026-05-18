@@ -32,10 +32,10 @@ export default function Offerings() {
       name: "BIAN Foundation Certification Training (Trainer-Led).pdf",
       thumbnail: "/assets/pdf_downloads/Thumbnail_pdf_006.png",
     },
-    {
-      name: "BIAN Practitioner Certification Training (Trainer-Led).pdf",
-      thumbnail: "/assets/pdf_downloads/Thumbnail_pdf_007.png",
-    },
+    // {
+    //   name: "BIAN Practitioner Certification Training (Trainer-Led).pdf",
+    //   thumbnail: "/assets/pdf_downloads/Thumbnail_pdf_007.png",
+    // },
   ];
 
   return (
