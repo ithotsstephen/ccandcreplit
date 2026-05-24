@@ -40,6 +40,9 @@ import BianFoundationTraining from "@/pages/BianFoundationTraining";
 import BianPractitionerTraining from "@/pages/BianPractitionerTraining";
 import BianFoundationPractitionerTraining from "@/pages/BianFoundationPractitionerTraining";
 import BianDataArchitecturePractitionerTraining from "@/pages/BianDataArchitecturePractitionerTraining";
+import BianAdvisoryImplementationConsulting from "@/pages/BianAdvisoryImplementationConsulting";
+import BianDiscoveryWorkshop from "@/pages/BianDiscoveryWorkshop";
+import BianExecutiveWorkshop from "@/pages/BianExecutiveWorkshop";
 import Contact from "@/pages/Contact";
 import Registration from "@/pages/Registration";
 import Offerings from "@/pages/Offerings";
@@ -90,6 +93,9 @@ function AppRouter() {
       <Route path="/training/bian-foundation-practitioner-certification-training" component={BianFoundationPractitionerTraining} />
       <Route path="/training/bian-data-architecture-partitioner-certification-training" component={() => <Redirect to="/training/bian-data-architecture-practitioner-certification-training" />} />
       <Route path="/training/bian-data-architecture-practitioner-certification-training" component={BianDataArchitecturePractitionerTraining} />
+      <Route path="/consulting/bian-advisory-implementation-consulting" component={BianAdvisoryImplementationConsulting} />
+      <Route path="/consulting/bian-discovery-workshop" component={BianDiscoveryWorkshop} />
+      <Route path="/consulting/bian-executive-workshop" component={BianExecutiveWorkshop} />
       <Route path="/consulting" component={Consulting} />
       <Route path="/viztools" component={StratIQ} />
       <Route path="/stratiq" component={() => <Redirect to="/viztools" />} />
@@ -131,7 +137,10 @@ function AppRouter() {
 
 function App() {
   // No base path needed for root domain deployment
+  // const basePath = "/demo/";
+
   const basePath = "";
+
 
   return (
     <QueryClientProvider client={queryClient}>

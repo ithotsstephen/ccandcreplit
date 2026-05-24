@@ -2,8 +2,33 @@ import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 import CTASection from "@/components/CTASection";
+
+const clientTestimonials = [
+  {
+    id: "1",
+    quote:
+      "Our partnership with CC&C Solutions has been transformative in accelerating our digital transformation journey. Their expertise in enterprise architecture, BIAN operating model, and agile methodologies has been instrumental in helping us shift to a product-oriented organization. Through their training and consulting services, we've gained the tools and strategies needed to achieve our vision of becoming a leading credit union in the US. The team's professionalism, industry knowledge, and commitment to our success have exceeded our expectations at every step",
+    author: "Ashish Chopra",
+    role: "Chief Information Officer, Texas Dow Employee Credit Union",
+  },
+  {
+    id: "2",
+    quote:
+      "I sincerely thank the entire CC&C team for your excellent support throughout the BIAN adoption process. I truly appreciate the professionalism, responsiveness, and quality of work you've brought to this collaboration.",
+    author: "Domonkos Kertesz",
+    role: "Chief IT Architect, OTP Group",
+  },
+  {
+    id: "3",
+    quote:
+      "ANZ has discovered CC&C Solutions to be an invaluable partner in our BIAN journey. Their extensive knowledge and collaborative approach have contributed significantly to our success. The guidance, training, and support they provide are essential to our successful implementation",
+    author: "Arran Price",
+    role: "Enterprise Architect, ANZ New Zealand",
+  },
+];
 
 const targetAudience = [
   "Enterprise Architects",
@@ -37,6 +62,20 @@ const courseInclusions = [
 ];
 
 export default function BianPractitionerTraining() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    align: "start",
+    loop: true,
+    slidesToScroll: 1,
+  });
+
+  const scrollPrev = useCallback(() => {
+    emblaApi?.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    emblaApi?.scrollNext();
+  }, [emblaApi]);
+
   useEffect(() => {
     window.scrollTo(0, 0);
 
@@ -254,81 +293,59 @@ export default function BianPractitionerTraining() {
       </section>
 
 
-   {/* Client Testimonials */}
       <section className="py-20 section-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">What Our Clients Say</h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Backed by 25 years of expertise, we help teams master the latest architecture standards to design and scale with confidence
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {/* Testimonial 1 */}
-            <Card className="premium-card">
-              <CardContent className="p-8">
-                <div className="mb-6">
-                  <i className="fas fa-quote-left text-4xl text-primary/20"></i>
-                </div>
-                <p className="text-muted-foreground leading-relaxed mb-6 text-lg italic">
-                  "Our partnership with CC&C Solutions has been transformative in accelerating our
-digital transformation journey. Their expertise in enterprise architecture, BIAN
-operating model, and agile methodologies has been instrumental in helping us shift to
-a product-oriented organization. Through their training and consulting services, we've
-gained the tools and strategies needed to achieve our vision of becoming a leading
-credit union in the US. The team's professionalism, industry knowledge, and
-commitment to our success have exceeded our expectations at every step"
-                </p>
-                <div className="flex items-center">
-                  <div>
-                    <p className="font-bold text-card-foreground">Ashish Chopra</p>
-                    <p className="text-sm text-muted-foreground">Chief Information Officer, Texas Dow Employee Credit Union</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+          <div className="relative max-w-6xl mx-auto px-4 md:px-14">
+            <button
+              type="button"
+              onClick={scrollPrev}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-11 h-11 md:w-12 md:h-12 rounded-full bg-card border border-border shadow-lg flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+              aria-label="Previous testimonials"
+            >
+              <i className="fas fa-chevron-left"></i>
+            </button>
 
-            {/* Testimonial 2 */}
-            <Card className="premium-card">
-              <CardContent className="p-8">
-                <div className="mb-6">
-                  <i className="fas fa-quote-left text-4xl text-primary/20"></i>
-                </div>
-                <p className="text-muted-foreground leading-relaxed mb-6 text-lg italic">
-                  "I sincerely thank the entire CC&C team for your excellent support throughout the
-BIAN adoption process. I truly appreciate the professionalism, responsiveness, and
-quality of work you've brought to this collaboration."
-                </p>
-                <div className="flex items-center">
-                  <div>
-                    <p className="font-bold text-card-foreground">Domonkos Kertesz</p>
-                    <p className="text-sm text-muted-foreground">Chief IT Architect, OTP Group</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            <button
+              type="button"
+              onClick={scrollNext}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-11 h-11 md:w-12 md:h-12 rounded-full bg-card border border-border shadow-lg flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+              aria-label="Next testimonials"
+            >
+              <i className="fas fa-chevron-right"></i>
+            </button>
 
-     {/* Testimonial 3 */}
-            <Card className="premium-card">
-              <CardContent className="p-8">
-                <div className="mb-6">
-                  <i className="fas fa-quote-left text-4xl text-primary/20"></i>
-                </div>
-                <p className="text-muted-foreground leading-relaxed mb-6 text-lg italic">
-"ANZ has discovered CC&C Solutions to be an invaluable partner in our BIAN journey.
-Their extensive knowledge and collaborative approach have contributed significantly
-to our success. The guidance, training, and support they provide are essential to our
-successful implementation"                </p>
-                <div className="flex items-center">
-                  <div>
-                    <p className="font-bold text-card-foreground">Arran Price</p>
-                    <p className="text-sm text-muted-foreground">Enterprise Architect, ANZ New Zealand</p>
+            <div className="overflow-hidden" ref={emblaRef}>
+              <div className="flex">
+                {clientTestimonials.map((testimonial) => (
+                  <div
+                    key={testimonial.id}
+                    className="flex-[0_0_100%] md:flex-[0_0_50%] min-w-0 px-3"
+                  >
+                    <Card className="premium-card h-full">
+                      <CardContent className="p-8 flex flex-col h-full">
+                        <div className="mb-6">
+                          <i className="fas fa-quote-left text-4xl text-primary/20"></i>
+                        </div>
+                        <p className="text-muted-foreground leading-relaxed mb-6 text-lg italic flex-1">
+                          &ldquo;{testimonial.quote}&rdquo;
+                        </p>
+                        <div>
+                          <p className="font-bold text-card-foreground">{testimonial.author}</p>
+                          <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                        </div>
+                      </CardContent>
+                    </Card>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

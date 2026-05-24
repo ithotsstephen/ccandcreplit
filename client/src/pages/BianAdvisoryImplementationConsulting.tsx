@@ -30,48 +30,32 @@ const clientTestimonials = [
   },
 ];
 
-const targetAudience = [
-  "Enterprise Architects",
-  "Solution Architects",
-  "Business and Information Architects",
-  "IT and Systems Architects",
-  "Integration Specialists",
-  "Technology Consultants and Advisors in the financial sector",
-  "Transformation and Change Managers",
-  "Developers and API Designers who work with BIAN-aligned systems",
-  "Business Analysts and Functional Designers working on interoperability projects",
-  "Consultants supporting BIAN adoption within banks",
+const whatWeDeliver = [
+  "BIAN reference blueprint and service landscape",
+  "Application-to-Service Domain mapping",
+  "BIAN-aligned API design and specification",
+  "Data model alignment to BIAN BOM",
+  "Business architecture and capability mapping",
+  "Design evaluation and certification",
+  "Governance framework and Centre of Enablement",
+  "Embedded coaching and knowledge transfer",
 ];
 
-const courseInclusions = [
-  "3 days training: virtual online trainer or in-person",
-  "BIAN course materials in PDF",
-  "Practice exam",
-  "Mock examination with answers",
-  "BIAN Foundation and Practitioner exam voucher",
+const engagementModels = [
+  "Advisory consulting",
+  "Embedded consulting within your teams",
+  "Programme-based delivery",
+  "On-site, hybrid, or remote engagement",
 ];
 
-const foundationExamDetails = [
-  { label: "Number of questions", value: "60" },
-  { label: "Duration", value: "60 min" },
-  { label: "Pass mark", value: "70%" },
-  { label: "Book format", value: "Closed book" },
-  { label: "Language", value: "English" },
-  { label: "Exam type", value: "Online proctored" },
-  { label: "Voucher validity", value: "One year" },
+const whyCcc = [
+  "BIAN-accredited organisation with fully certified consultants",
+  "Two-time BIAN Best-in-Class Partner Award winner (2024 and 2025)",
+  "Globally accredited BIAN training provider",
+  "Back-to-back recognition for BIAN consulting excellence",
 ];
 
-const practitionerExamDetails = [
-  { label: "Number of questions", value: "60" },
-  { label: "Duration", value: "60 min" },
-  { label: "Pass mark", value: "70%" },
-  { label: "Book format", value: "Closed book" },
-  { label: "Language", value: "English" },
-  { label: "Exam type", value: "Online proctored" },
-  { label: "Voucher validity", value: "One year" },
-];
-
-export default function BianFoundationPractitionerTraining() {
+export default function BianAdvisoryImplementationConsulting() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
     loop: true,
@@ -93,24 +77,24 @@ export default function BianFoundationPractitionerTraining() {
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "BIAN Foundation and Practitioner Certification Training for professionals progressing from BIAN fundamentals to practical architecture application in modular banking environments.",
+        "BIAN Advisory & Implementation Consulting from CC&C Solutions — expert BIAN consultants embedded in your organisation for reference architecture, API design, data alignment, and governance.",
       );
     }
 
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) {
-      ogTitle.setAttribute("content", "BIAN Foundation & Practitioner Certification Training | CC&C Solutions");
+      ogTitle.setAttribute("content", "BIAN Advisory & Implementation Consulting | CC&C Solutions");
     }
 
     const ogDescription = document.querySelector('meta[property="og:description"]');
     if (ogDescription) {
       ogDescription.setAttribute(
         "content",
-        "Develop BIAN foundation knowledge and practitioner capability through a combined certification training path.",
+        "Two-time BIAN Best-in-Class Partner delivering hands-on advisory, embedded consulting, and programme-based BIAN adoption for banks and financial institutions worldwide.",
       );
     }
 
-    document.title = "BIAN Foundation & Practitioner Certification Training | CC&C Solutions";
+    document.title = "BIAN Advisory & Implementation Consulting | CC&C Solutions";
 
     return () => {
       document.title = "CC&C Solutions";
@@ -146,10 +130,10 @@ export default function BianFoundationPractitionerTraining() {
               </a>
             </Link>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              BIAN Foundation & Practitioner Certification Training
+              BIAN Advisory &amp; Implementation Consulting
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
-              A combined BIAN training path that starts with core foundations and progresses into practical architecture application.
+              Expert BIAN consultants embedded in your organisation
             </p>
           </div>
         </div>
@@ -161,10 +145,28 @@ export default function BianFoundationPractitionerTraining() {
             <Card className="premium-card">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <i className="fas fa-clock text-2xl text-primary"></i>
+                  <i className="fas fa-certificate text-2xl text-primary"></i>
                 </div>
-                <h3 className="text-lg font-bold text-card-foreground mb-2">Duration</h3>
-                <p className="text-muted-foreground">3 Days</p>
+                <h3 className="text-lg font-bold text-card-foreground mb-2">BIAN Accredited</h3>
+                <p className="text-muted-foreground">Fully certified consultants</p>
+              </CardContent>
+            </Card>
+            <Card className="premium-card">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <i className="fas fa-award text-2xl text-primary"></i>
+                </div>
+                <h3 className="text-lg font-bold text-card-foreground mb-2">Best-in-Class Partner</h3>
+                <p className="text-muted-foreground">2024 and 2025 award winner</p>
+              </CardContent>
+            </Card>
+            <Card className="premium-card">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <i className="fas fa-handshake text-2xl text-primary"></i>
+                </div>
+                <h3 className="text-lg font-bold text-card-foreground mb-2">Engagement</h3>
+                <p className="text-muted-foreground">Advisory, embedded, or programme-based</p>
               </CardContent>
             </Card>
             <Card className="premium-card">
@@ -173,72 +175,56 @@ export default function BianFoundationPractitionerTraining() {
                   <i className="fas fa-laptop-house text-2xl text-primary"></i>
                 </div>
                 <h3 className="text-lg font-bold text-card-foreground mb-2">Delivery</h3>
-                <p className="text-muted-foreground">In person or virtual</p>
+                <p className="text-muted-foreground">On-site, hybrid, or remote</p>
               </CardContent>
             </Card>
             <Card className="premium-card">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <i className="fas fa-users text-2xl text-primary"></i>
+                  <i className="fas fa-globe text-2xl text-primary"></i>
                 </div>
-                <h3 className="text-lg font-bold text-card-foreground mb-2">Audience</h3>
-                <p className="text-muted-foreground">Architecture and transformation roles</p>
-              </CardContent>
-            </Card>
-            <Card className="premium-card">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <i className="fas fa-user-shield text-2xl text-primary"></i>
-                </div>
-                <h3 className="text-lg font-bold text-card-foreground mb-2">Exams</h3>
-                <p className="text-muted-foreground">Foundation and practitioner</p>
-              </CardContent>
-            </Card>
-            <Card className="premium-card">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <i className="fas fa-ticket-alt text-2xl text-primary"></i>
-                </div>
-                <h3 className="text-lg font-bold text-card-foreground mb-2">Voucher</h3>
-                <p className="text-muted-foreground">Included</p>
+                <h3 className="text-lg font-bold text-card-foreground mb-2">Global Reach</h3>
+                <p className="text-muted-foreground">APAC, UK, Europe, Africa, Americas</p>
               </CardContent>
             </Card>
           </div>
 
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            The BIAN Architecture Foundation and Practitioner Certification is a comprehensive training programme covering both foundational and advanced application of the BIAN standard.</p>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            It is designed for professionals who want to move from understanding BIAN concepts to applying them in real world banking architecture. The course covers the BIAN framework, metamodel, and service landscape to help design interoperable and modular financial services architectures.</p>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            Delivered through in person and virtual sessions, this programme offers flexibility while maintaining a highly interactive learning experience.
+              Adopting BIAN is more than a reference architecture exercise — it requires deep expertise in how the standard translates into real-world banking architecture, API design, data alignment, and governance.
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 mt-12 text-center">What You Will Learn Section</h2>
-<p className="text-lg text-muted-foreground leading-relaxed mb-6">In this course, you will learn the core principles and building blocks of BIAN and understand how BIAN supports composable banking architectures. You will explore the application of BIAN across business, data, and technology layers while gaining practical knowledge of the BIAN framework, metamodel, and service landscape. The course will also help you develop the ability to translate business needs into BIAN aligned architecture solutions for modern financial institutions.</p>
-            <p className="text-lg text-muted-foreground leading-relaxed mt-6">
-          Please ensure the overall formatting, layout, and styling remain consistent with the current Offerings page design and branding guidelines. The new pages should follow the same structure and user experience as the existing training pages.</p>
-            <p className="text-lg text-muted-foreground leading-relaxed mt-6">Let us know once the updates are completed or if any clarification is required.</p>      
-
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              As a BIAN-accredited organisation and two-time winner of BIAN&apos;s Best In Class Partner Award (2024 and 2025), CC&amp;C&apos;s consulting services bring the required expertise directly into your organisation.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              Our consultants work alongside your architecture, technology, and delivery teams to apply BIAN correctly across the full spectrum of adoption activities. This includes establishing a BIAN-aligned reference blueprint, mapping your application landscape to BIAN Service Domains, designing BIAN-conformant APIs, aligning your data model to the BIAN Business Object Model (BOM), and standing up governance frameworks that ensure long-term compliance and value.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Whether you&apos;re at the start of your BIAN journey or looking to accelerate an existing programme, CC&amp;C provides the hands-on expertise to move from strategy to execution. We&apos;ve supported banks and financial institutions across Australia, New Zealand, Asia-Pacific, the UK, Europe, Africa, and North America — bringing global experience with local delivery.
+            </p>
           </div>
         </div>
       </section>
 
       <section className="py-20 section-darker">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">Target Audience</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">Who Is This For?</h2>
           <p className="text-lg text-muted-foreground leading-relaxed text-center max-w-4xl mx-auto mb-10">
-            The BIAN Foundation & Practitioner Certification is intended for professionals who work in or with financial institutions and are involved in architecture, design, and digital transformation.
+            Banks, credit unions, fintechs, and financial services organisations adopting or scaling BIAN.
           </p>
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {targetAudience.map((audience, index) => (
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {[
+              { icon: "fa-university", label: "Banks" },
+              { icon: "fa-piggy-bank", label: "Credit unions" },
+              { icon: "fa-mobile-alt", label: "Fintechs" },
+              { icon: "fa-chart-line", label: "Financial services organisations scaling BIAN" },
+            ].map((item, index) => (
               <Card key={index} className="premium-card">
-                <CardContent className="p-6">
-                  <div className="flex items-start">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-4 shrink-0">
-                      <i className="fas fa-user-tie text-primary"></i>
-                    </div>
-                    <p className="text-muted-foreground leading-relaxed">{audience}</p>
+                <CardContent className="p-6 text-center">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <i className={`fas ${item.icon} text-primary`}></i>
                   </div>
+                  <p className="text-muted-foreground leading-relaxed">{item.label}</p>
                 </CardContent>
               </Card>
             ))}
@@ -248,10 +234,18 @@ export default function BianFoundationPractitionerTraining() {
 
       <section className="pt-20 pb-0 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">Learning Objectives</h2>
-          <p className="text-lg text-muted-foreground leading-relaxed text-center max-w-4xl mx-auto mb-0">
-            Apart from understanding the BIAN foundational building blocks, including its core principles, concepts, and content, the BIAN Practitioner course validates that professionals can effectively use and apply BIAN concepts, artefacts, and framework within their organization's architectural context. It ensures participants can translate business needs into architectural solutions aligned with the BIAN standard.
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">What We Deliver</h2>
+          <p className="text-lg text-muted-foreground leading-relaxed text-center max-w-4xl mx-auto mb-10">
+            End-to-end BIAN adoption support across architecture, integration, data, and governance.
           </p>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {whatWeDeliver.map((item, index) => (
+              <div key={index} className="flex items-start">
+                <i className="fas fa-check-circle text-primary mt-1 mr-3 shrink-0"></i>
+                <p className="text-muted-foreground leading-relaxed">{item}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -260,18 +254,9 @@ export default function BianFoundationPractitionerTraining() {
           <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <Card className="premium-card">
               <CardContent className="p-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-card-foreground mb-6">Pre-requisite</h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  Intended for professionals who work in or with financial institutions and are involved in architecture, design, and digital transformation.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="premium-card">
-              <CardContent className="p-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-card-foreground mb-6">Course Inclusions</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-card-foreground mb-6">Engagement Models</h2>
                 <div className="space-y-4">
-                  {courseInclusions.map((item, index) => (
+                  {engagementModels.map((item, index) => (
                     <div key={index} className="flex items-start">
                       <i className="fas fa-check-circle text-primary mt-1 mr-3"></i>
                       <p className="text-muted-foreground">{item}</p>
@@ -280,37 +265,15 @@ export default function BianFoundationPractitionerTraining() {
                 </div>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
 
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
-            BIAN Foundation & Practitioner Certification Exam Format
-          </h2>
-          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <Card className="premium-card">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-card-foreground mb-6">BIAN Foundation Exam Format</h3>
+                <h2 className="text-2xl md:text-3xl font-bold text-card-foreground mb-6">Why CC&amp;C?</h2>
                 <div className="space-y-4">
-                  {foundationExamDetails.map((detail) => (
-                    <div key={detail.label} className="flex justify-between gap-6 border-b border-border pb-3 last:border-b-0 last:pb-0">
-                      <span className="text-muted-foreground">{detail.label}</span>
-                      <span className="text-card-foreground font-semibold text-right">{detail.value}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-            <Card className="premium-card">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-card-foreground mb-6">BIAN Practitioner Exam Format</h3>
-                <div className="space-y-4">
-                  {practitionerExamDetails.map((detail) => (
-                    <div key={detail.label} className="flex justify-between gap-6 border-b border-border pb-3 last:border-b-0 last:pb-0">
-                      <span className="text-muted-foreground">{detail.label}</span>
-                      <span className="text-card-foreground font-semibold text-right">{detail.value}</span>
+                  {whyCcc.map((item, index) => (
+                    <div key={index} className="flex items-start">
+                      <i className="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                      <p className="text-muted-foreground">{item}</p>
                     </div>
                   ))}
                 </div>
@@ -380,8 +343,8 @@ export default function BianFoundationPractitionerTraining() {
       <section className="pt-8 pb-20 section-darker">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <CTASection
-            title="Ready to Take the Full BIAN Certification Path?"
-            description="Talk to CC&C Solutions about combined foundation and practitioner training for teams building BIAN-aligned banking architectures."
+            title="Ready to Accelerate Your BIAN Adoption?"
+            description="Talk to CC&C Solutions about advisory and implementation consulting to move from BIAN strategy to execution with accredited experts embedded in your team."
             buttonText="Enquire Today"
           />
         </div>

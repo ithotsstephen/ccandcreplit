@@ -11,6 +11,7 @@ export default function Offerings() {
     {
       name: "BIAN Advisory & Implementation Consulting.pdf",
       thumbnail: "/assets/pdf_downloads/Thumbnail_pdf_001.png",
+      pageUrl: "/consulting/bian-advisory-implementation-consulting",
     },
     {
       name: "BIAN Data Architecture Practitioner Certification Training (Trainer-Led).pdf",
@@ -19,10 +20,12 @@ export default function Offerings() {
     {
       name: "BIAN Discovery Workshop.pdf",
       thumbnail: "/assets/pdf_downloads/Thumbnail_pdf_003.png",
+      pageUrl: "/consulting/bian-discovery-workshop",
     },
     {
       name: "BIAN Executive Workshop.pdf",
       thumbnail: "/assets/pdf_downloads/Thumbnail_pdf_004.png",
+      pageUrl: "/consulting/bian-executive-workshop",
     },
     {
       name: "BIAN Foundation & Practitioner Certification Training (Trainer-Led).pdf",
@@ -78,19 +81,36 @@ export default function Offerings() {
                   <div className="p-6 flex-1 flex flex-col justify-between">
                     <h3 className="text-base font-bold text-foreground mb-4 leading-tight">
                       <button
-                        onClick={() => window.open(`/assets/pdf_downloads/${pdf.name}`, '_blank')}
+                        onClick={() => {
+                          if ("pageUrl" in pdf && pdf.pageUrl) {
+                            window.location.href = pdf.pageUrl;
+                          } else {
+                            window.open(`/assets/pdf_downloads/${pdf.name}`, "_blank");
+                          }
+                        }}
                         className="text-left w-full text-base font-bold text-foreground cursor-pointer hover:text-primary transition-colors"
                       >
-                        {pdf.name.replace('.pdf', '')}
+                        {pdf.name.replace(".pdf", "")}
                       </button>
                     </h3>
-                    <button
-                      onClick={() => window.open(`/assets/pdf_downloads/${pdf.name}`, '_blank')}
-                      className="text-primary hover:text-primary/80 transition-colors text-xs font-semibold inline-flex items-center cursor-pointer"
-                    >
-                      <i className="fas fa-download mr-1"></i>
-                      View PDF
-                    </button>
+                    <div className="flex flex-wrap gap-4">
+                      {"pageUrl" in pdf && pdf.pageUrl && (
+                        <button
+                          onClick={() => { window.location.href = pdf.pageUrl!; }}
+                          className="text-primary hover:text-primary/80 transition-colors text-xs font-semibold inline-flex items-center cursor-pointer"
+                        >
+                          <i className="fas fa-arrow-right mr-1"></i>
+                          View Page
+                        </button>
+                      )}
+                      <button
+                        onClick={() => window.open(`/assets/pdf_downloads/${pdf.name}`, "_blank")}
+                        className="text-primary hover:text-primary/80 transition-colors text-xs font-semibold inline-flex items-center cursor-pointer"
+                      >
+                        <i className="fas fa-download mr-1"></i>
+                        View PDF
+                      </button>
+                    </div>
                   </div>
                 </div>
               ))}

@@ -615,6 +615,80 @@ export default function BIAN() {
                 </button>
               </CardContent>
             </Card>
+
+            <Card className="premium-card group hover:shadow-2xl transition-all duration-500 border-2 border-green-500/30">
+              <CardContent className="p-8 flex flex-col h-full">
+                <div className="flex items-start gap-3 mb-6">
+                  <h3 className="text-2xl font-bold text-card-foreground group-hover:text-primary transition-colors duration-300 flex-1">
+                    BIAN Discovery Workshop
+                  </h3>
+                  {/* <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700 px-4 py-1.5 text-sm font-bold shadow-lg animate-pulse">NEW</Badge> */}
+                </div>
+                <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
+                  Not sure where BIAN fits in your organisation, or how to make the case for adoption? CC&amp;C&apos;s BIAN Discovery Workshop is a focused engagement designed to help financial institutions identify their highest-value BIAN use cases and build a compelling, evidence-based business case for adoption.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
+                  Led by CC&amp;C&apos;s experienced BIAN consultants, the workshop brings together your key stakeholders — from architecture and technology to business and product — for a structured series of working sessions. Together, we explore your strategic objectives, pain points, current-state architecture, and priority areas of opportunity.
+                </p>
+                <button
+                  onClick={() => setLocation("/consulting/bian-discovery-workshop")}
+                  className="premium-button px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
+                  data-testid="button-bian-discovery-workshop"
+                >
+                  Learn more
+                </button>
+              </CardContent>
+            </Card>
+
+            <Card className="premium-card group hover:shadow-2xl transition-all duration-500 border-2 border-green-500/30">
+              <CardContent className="p-8 flex flex-col h-full">
+                <div className="flex items-start gap-3 mb-6">
+                  <h3 className="text-2xl font-bold text-card-foreground group-hover:text-primary transition-colors duration-300 flex-1">
+                    BIAN Executive Workshop
+                  </h3>
+                  {/* <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700 px-4 py-1.5 text-sm font-bold shadow-lg animate-pulse">NEW</Badge> */}
+                </div>
+                <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
+                  For BIAN to gain traction in any organisation, leadership needs to understand it — not as a technical standard, but as a strategic lever. CC&amp;C&apos;s BIAN Executive Workshop is purpose-built for C-suite executives, CIOs, CTOs, CDOs, and senior leaders in both technology and business.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
+                  This workshop cuts through the complexity of BIAN and translates it into the language of business outcomes. Participants gain a clear understanding of what BIAN is, how it applies to their organisation, and — critically — how it delivers tangible benefit: reduced complexity, faster time-to-market, better data governance, and a credible foundation for AI and digital transformation.
+                </p>
+                <button
+                  onClick={() => setLocation("/consulting/bian-executive-workshop")}
+                  className="premium-button px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
+                  data-testid="button-bian-executive-workshop"
+                >
+                  Learn more
+                </button>
+              </CardContent>
+            </Card>
+
+            <Card className="premium-card group hover:shadow-2xl transition-all duration-500 border-2 border-green-500/30">
+              <CardContent className="p-8 flex flex-col h-full">
+                <div className="flex items-start gap-3 mb-6">
+                  <h3 className="text-2xl font-bold text-card-foreground group-hover:text-primary transition-colors duration-300 flex-1">
+                    BIAN Advisory &amp; Implementation Consulting
+                  </h3>
+                  {/* <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700 px-4 py-1.5 text-sm font-bold shadow-lg animate-pulse">NEW</Badge> */}
+                </div>
+                <p className="text-muted-foreground leading-relaxed mb-3 flex-grow">
+                  Adopting BIAN is more than a reference architecture exercise — it requires deep expertise in how the standard translates into real-world banking architecture, API design, data alignment, and governance.
+               
+                  As a BIAN-accredited organisation and two-time award winner of BIAN&apos;s Best In Class Partner Award (2024 and 2025), CC&amp;C&apos;s consulting services brings the required expertise directly into your organisation.
+
+              
+                </p>
+               
+                <button
+                  onClick={() => setLocation("/consulting/bian-advisory-implementation-consulting")}
+                  className="premium-button px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
+                  data-testid="button-bian-advisory-consulting"
+                >
+                  Learn more
+                </button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

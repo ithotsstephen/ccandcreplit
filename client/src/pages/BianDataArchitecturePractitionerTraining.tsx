@@ -2,8 +2,33 @@ import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 import CTASection from "@/components/CTASection";
+
+const clientTestimonials = [
+  {
+    id: "1",
+    quote:
+      "Our partnership with CC&C Solutions has been transformative in accelerating our digital transformation journey. Their expertise in enterprise architecture, BIAN operating model, and agile methodologies has been instrumental in helping us shift to a product-oriented organization. Through their training and consulting services, we've gained the tools and strategies needed to achieve our vision of becoming a leading credit union in the US. The team's professionalism, industry knowledge, and commitment to our success have exceeded our expectations at every step",
+    author: "Ashish Chopra",
+    role: "Chief Information Officer, Texas Dow Employee Credit Union",
+  },
+  {
+    id: "2",
+    quote:
+      "I sincerely thank the entire CC&C team for your excellent support throughout the BIAN adoption process. I truly appreciate the professionalism, responsiveness, and quality of work you've brought to this collaboration.",
+    author: "Domonkos Kertesz",
+    role: "Chief IT Architect, OTP Group",
+  },
+  {
+    id: "3",
+    quote:
+      "ANZ has discovered CC&C Solutions to be an invaluable partner in our BIAN journey. Their extensive knowledge and collaborative approach have contributed significantly to our success. The guidance, training, and support they provide are essential to our successful implementation",
+    author: "Arran Price",
+    role: "Enterprise Architect, ANZ New Zealand",
+  },
+];
 
 const targetAudience = [
   "Enterprise Architects",
@@ -38,6 +63,20 @@ const courseInclusions = [
 ];
 
 export default function BianDataArchitecturePractitionerTraining() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    align: "start",
+    loop: true,
+    slidesToScroll: 1,
+  });
+
+  const scrollPrev = useCallback(() => {
+    emblaApi?.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    emblaApi?.scrollNext();
+  }, [emblaApi]);
+
   useEffect(() => {
     window.scrollTo(0, 0);
 
@@ -159,15 +198,20 @@ export default function BianDataArchitecturePractitionerTraining() {
 
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              The BIAN Data Architecture & Design Practitioner will have the ability to realize the added value of the BIAN Object Model. They have the required knowledge and understanding of the general design principles and elements of BIAN's Reference Architecture for the Financial Industry.
-            </p>
+The BIAN Data Architecture Practitioner Certification is an advanced training programme focused on applying BIAN’s object model and data architecture principles in real world financial institutions.            </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Participants will understand the underlying ArchiMate and UML-based concepts used by BIAN to model the Object Model and learn to apply BIAN modelling patterns.
-            </p>
+Participants gain a strong understanding of the design principles and elements of BIAN’s Reference Architecture, including how ArchiMate and UML concepts are used to model the BIAN Object Model. The course also covers practical application of BIAN modelling patterns to design aligned and interoperable banking architectures.            </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              This course is delivered through in-person and virtual training sessions, offering flexibility while maintaining a highly interactive learning experience.
+This course is delivered through in person and virtual training sessions, offering flexibility while maintaining a highly interactive learning experience.
             </p>
           </div>
+ <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 mt-12 text-center">What You Will Learn</h2>
+
+          <p className="text-lg text-muted-foreground leading-relaxed mb-6">In this course, you will learn how to apply BIAN concepts and artefacts within APRA regulated banking environments while developing a strong understanding of enterprise architecture principles. You will explore how to use the BIAN Object Model effectively to model financial institutions using standardised service domains and capabilities.</p>
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">The course also covers the practical application of BIAN modelling patterns to support governance, compliance, operational resilience, and interoperability across banking systems. Additionally, you will learn how to align business and IT architectures with industry standards, regulatory expectations, and modern banking architecture practices.</p>
+
+        </div>
         </div>
       </section>
 
@@ -250,6 +294,63 @@ export default function BianDataArchitecturePractitionerTraining() {
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 section-dark">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">What Our Clients Say</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Backed by 25 years of expertise, we help teams master the latest architecture standards to design and scale with confidence
+            </p>
+          </div>
+
+          <div className="relative max-w-6xl mx-auto px-4 md:px-14">
+            <button
+              type="button"
+              onClick={scrollPrev}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-11 h-11 md:w-12 md:h-12 rounded-full bg-card border border-border shadow-lg flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+              aria-label="Previous testimonials"
+            >
+              <i className="fas fa-chevron-left"></i>
+            </button>
+
+            <button
+              type="button"
+              onClick={scrollNext}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-11 h-11 md:w-12 md:h-12 rounded-full bg-card border border-border shadow-lg flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+              aria-label="Next testimonials"
+            >
+              <i className="fas fa-chevron-right"></i>
+            </button>
+
+            <div className="overflow-hidden" ref={emblaRef}>
+              <div className="flex">
+                {clientTestimonials.map((testimonial) => (
+                  <div
+                    key={testimonial.id}
+                    className="flex-[0_0_100%] md:flex-[0_0_50%] min-w-0 px-3"
+                  >
+                    <Card className="premium-card h-full">
+                      <CardContent className="p-8 flex flex-col h-full">
+                        <div className="mb-6">
+                          <i className="fas fa-quote-left text-4xl text-primary/20"></i>
+                        </div>
+                        <p className="text-muted-foreground leading-relaxed mb-6 text-lg italic flex-1">
+                          &ldquo;{testimonial.quote}&rdquo;
+                        </p>
+                        <div>
+                          <p className="font-bold text-card-foreground">{testimonial.author}</p>
+                          <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
