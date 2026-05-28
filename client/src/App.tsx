@@ -45,7 +45,7 @@ import BianDiscoveryWorkshop from "@/pages/BianDiscoveryWorkshop";
 import BianExecutiveWorkshop from "@/pages/BianExecutiveWorkshop";
 import Contact from "@/pages/Contact";
 import Registration from "@/pages/Registration";
-import Offerings from "@/pages/Offerings";
+import OurOfferings from "@/pages/Our-Offerings";
 
 function Redirect({ to }: { to: string }) {
   const [, setLocation] = useLocation();
@@ -114,7 +114,8 @@ function AppRouter() {
       <Route path="/services/togaf-training" component={TogafTraining} />
       <Route path="/services/it4it-management" component={It4itManagement} />
       <Route path="/about" component={About} />
-      <Route path="/offerings" component={Offerings} />
+      <Route path="/offerings" component={() => <Redirect to="/training/architecting-the-ai-powered-bank" />} />
+      <Route path="/our-offerings" component={OurOfferings} />
       <Route path="/contact" component={Contact} />
       <Route path="/registration" component={Registration} />
       {!isStaticMode && (

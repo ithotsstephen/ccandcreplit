@@ -79,16 +79,16 @@ export default function Navigation() {
                         >
                           StratIQ (Visualisation Tools)
                         </button>
-                        <button 
+                        {/* <button 
                           onClick={() => { setLocation('/bian-training'); setIsWhatWeDoOpen(false); }}
                           className="w-full text-left px-4 py-2 text-muted-foreground hover:text-primary hover:bg-muted transition-colors"
                           data-testid="dropdown-bian"
                         >
-                          BIAN
-                        </button>
+                          BIANz
+                        </button> */}
 
 <button 
-  onClick={() => { setLocation('/offerings'); setIsWhatWeDoOpen(false); }}
+  onClick={() => { setLocation('/our-offerings'); setIsWhatWeDoOpen(false); }}
   className="w-full text-left px-4 py-2 text-muted-foreground hover:text-primary hover:bg-muted transition-colors"
   data-testid="dropdown-offerings"
 >
@@ -224,17 +224,17 @@ export default function Navigation() {
                   >
                     StratIQ (Visualisation Tools)
                   </button>
-                  <button 
-                    onClick={() => { setLocation('/bian'); setIsMobileMenuOpen(false); }} 
+                  {/* <button 
+                    onClick={() => { setLocation('/bian-training'); setIsMobileMenuOpen(false); }} 
                     className="block w-full text-left px-4 py-2 text-muted-foreground hover:text-primary hover:bg-muted rounded-md transition-colors text-base"
                     data-testid="mobile-link-bian"
                   >
-                    BIAN
-                  </button>
+                    BIANq
+                  </button> */}
 
 
                   <button 
-  onClick={() => { setLocation('/offerings'); setIsMobileMenuOpen(false); }} 
+  onClick={() => { setLocation('/our-offerings'); setIsMobileMenuOpen(false); }} 
   className="block w-full text-left px-4 py-2 text-muted-foreground hover:text-primary hover:bg-muted rounded-md transition-colors text-base"
   data-testid="mobile-link-offerings"
 >
@@ -281,6 +281,13 @@ export default function Navigation() {
               
               {/* Other Menu Items */}
               <button 
+                onClick={() => { setLocation('/bian-training'); setIsMobileMenuOpen(false); }} 
+                className="block w-full text-left px-3 py-3 text-foreground hover:text-primary hover:bg-muted rounded-md transition-colors text-base"
+                data-testid="mobile-link-bian-top"
+              >
+                BIAN
+              </button>
+              <button 
                 onClick={() => { setLocation('/bian-sig'); setIsMobileMenuOpen(false); }} 
                 className="block w-full text-left px-3 py-3 text-foreground hover:text-primary hover:bg-muted rounded-md transition-colors text-base"
                 data-testid="mobile-link-bian-sig"
@@ -309,7 +316,7 @@ export default function Navigation() {
                 About
               </button>
               {/* <button 
-                onClick={() => { setLocation('/offerings'); setIsMobileMenuOpen(false); }} 
+                onClick={() => { setLocation('/our-offerings'); setIsMobileMenuOpen(false); }} 
                 className="block w-full text-left px-3 py-3 text-foreground hover:text-primary hover:bg-muted rounded-md transition-colors text-base"
               >
                 Our Offerings
