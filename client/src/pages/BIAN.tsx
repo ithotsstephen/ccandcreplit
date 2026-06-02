@@ -598,7 +598,7 @@ export default function BIAN() {
             </Card>
 
             {/* BIAN Management Overview */}
-            <Card className="premium-card group hover:shadow-2xl transition-all duration-500">
+            {/* <Card className="premium-card group hover:shadow-2xl transition-all duration-500">
               <CardContent className="p-8 flex flex-col h-full">
                 <h3 className="text-2xl font-bold text-card-foreground mb-6 group-hover:text-primary transition-colors duration-300">
                   BIAN Management Overview
@@ -614,7 +614,7 @@ export default function BIAN() {
                   Learn More
                 </button>
               </CardContent>
-            </Card>
+            </Card> */}
 
             <Card className="premium-card group hover:shadow-2xl transition-all duration-500 border-2 border-green-500/30">
               <CardContent className="p-8 flex flex-col h-full">

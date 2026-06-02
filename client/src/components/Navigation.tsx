@@ -87,15 +87,6 @@ export default function Navigation() {
                           BIANz
                         </button> */}
 
-<button 
-  onClick={() => { setLocation('/our-offerings'); setIsWhatWeDoOpen(false); }}
-  className="w-full text-left px-4 py-2 text-muted-foreground hover:text-primary hover:bg-muted transition-colors"
-  data-testid="dropdown-offerings"
->
-  Our Offerings
-</button>
-
-
                       </div>
                     </div>
                   </div>
@@ -231,15 +222,6 @@ export default function Navigation() {
                   >
                     BIANq
                   </button> */}
-
-
-                  <button 
-  onClick={() => { setLocation('/our-offerings'); setIsMobileMenuOpen(false); }} 
-  className="block w-full text-left px-4 py-2 text-muted-foreground hover:text-primary hover:bg-muted rounded-md transition-colors text-base"
-  data-testid="mobile-link-offerings"
->
-  Our Offerings
-</button>
 
                 </div>
               )}
