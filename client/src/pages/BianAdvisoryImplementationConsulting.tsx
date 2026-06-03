@@ -5,6 +5,11 @@ import Footer from "@/components/Footer";
 import { useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import CTASection from "@/components/CTASection";
+import PdfDownloadForm from "@/components/PdfDownloadForm";
+
+const ADVISORY_CONSULTING_PDF_URL =
+  "/assets/pdf_downloads/BIAN Advisory & Implementation Consulting.pdf";
+const ADVISORY_CONSULTING_FORMSPREE = "https://formspree.io/f/mwvzgopl";
 
 const clientTestimonials = [
   {
@@ -339,6 +344,14 @@ export default function BianAdvisoryImplementationConsulting() {
           </div>
         </div>
       </section>
+
+      <PdfDownloadForm
+        sectionTitle="Download BIAN Advisory & Implementation Consulting Brochure"
+        resourceTitle="BIAN Advisory & Implementation Consulting"
+        pdfUrl={ADVISORY_CONSULTING_PDF_URL}
+        pdfFileName="BIAN Advisory & Implementation Consulting.pdf"
+        formspreeEndpoint={ADVISORY_CONSULTING_FORMSPREE}
+      />
 
       <section className="pt-8 pb-20 section-darker">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

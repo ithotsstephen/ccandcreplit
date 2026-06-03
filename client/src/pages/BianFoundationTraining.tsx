@@ -4,6 +4,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import CTASection from "@/components/CTASection";
+import PdfDownloadForm from "@/components/PdfDownloadForm";
+
+const FOUNDATION_TRAINING_PDF_URL =
+  "/assets/pdf_downloads/BIAN Foundation Certification Training (Trainer-Led).pdf";
+const FOUNDATION_TRAINING_FORMSPREE = "https://formspree.io/f/mwvzgopl";
 
 const targetAudience = [
   "Professionals working in Banking and Financial Industry, Enterprise, Solution, Domain, Data, Integration, Business Architects, Product Owners, and Business Analyst who need a stable, vendor-neutral blueprint for banking change.",
@@ -257,6 +262,14 @@ export default function BianFoundationTraining() {
           </div>
         </div>
       </section>
+
+      <PdfDownloadForm
+        sectionTitle="Download BIAN Foundation Certification Training Brochure"
+        resourceTitle="BIAN Foundation Certification Training"
+        pdfUrl={FOUNDATION_TRAINING_PDF_URL}
+        pdfFileName="BIAN Foundation Certification Training (Trainer-Led).pdf"
+        formspreeEndpoint={FOUNDATION_TRAINING_FORMSPREE}
+      />
 
       <section className="py-20 section-darker">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

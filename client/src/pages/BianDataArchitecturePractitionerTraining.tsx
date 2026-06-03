@@ -5,6 +5,11 @@ import Footer from "@/components/Footer";
 import { useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import CTASection from "@/components/CTASection";
+import PdfDownloadForm from "@/components/PdfDownloadForm";
+
+const DATA_ARCHITECTURE_TRAINING_PDF_URL =
+  "/assets/pdf_downloads/BIAN Data Architecture Practitioner Certification Training (Trainer-Led).pdf";
+const DATA_ARCHITECTURE_TRAINING_FORMSPREE = "https://formspree.io/f/mwvzgopl";
 
 const clientTestimonials = [
   {
@@ -354,6 +359,14 @@ This course is delivered through in person and virtual training sessions, offeri
           </div>
         </div>
       </section>
+
+      <PdfDownloadForm
+        sectionTitle="Download BIAN Data Architecture Practitioner Certification Training Brochure"
+        resourceTitle="BIAN Data Architecture Practitioner Certification Training"
+        pdfUrl={DATA_ARCHITECTURE_TRAINING_PDF_URL}
+        pdfFileName="BIAN Data Architecture Practitioner Certification Training (Trainer-Led).pdf"
+        formspreeEndpoint={DATA_ARCHITECTURE_TRAINING_FORMSPREE}
+      />
 
       <section className="py-20 section-darker">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

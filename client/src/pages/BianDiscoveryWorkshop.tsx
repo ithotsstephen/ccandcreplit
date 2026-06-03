@@ -5,6 +5,10 @@ import Footer from "@/components/Footer";
 import { useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import CTASection from "@/components/CTASection";
+import PdfDownloadForm from "@/components/PdfDownloadForm";
+
+const DISCOVERY_WORKSHOP_PDF_URL = "/assets/pdf_downloads/BIAN Discovery Workshop.pdf";
+const DISCOVERY_WORKSHOP_FORMSPREE = "https://formspree.io/f/mwvzgopl";
 
 const clientTestimonials = [
   {
@@ -343,6 +347,14 @@ export default function BianDiscoveryWorkshop() {
           </div>
         </div>
       </section>
+
+      <PdfDownloadForm
+        sectionTitle="Download BIAN Discovery Workshop Brochure"
+        resourceTitle="BIAN Discovery Workshop"
+        pdfUrl={DISCOVERY_WORKSHOP_PDF_URL}
+        pdfFileName="BIAN Discovery Workshop.pdf"
+        formspreeEndpoint={DISCOVERY_WORKSHOP_FORMSPREE}
+      />
 
       <section className="pt-8 pb-20 section-darker">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

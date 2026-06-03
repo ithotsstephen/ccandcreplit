@@ -5,6 +5,11 @@ import Footer from "@/components/Footer";
 import { useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import CTASection from "@/components/CTASection";
+import PdfDownloadForm from "@/components/PdfDownloadForm";
+
+const FOUNDATION_PRACTITIONER_TRAINING_PDF_URL =
+  "/assets/pdf_downloads/BIAN Foundation & Practitioner Certification Training (Trainer-Led).pdf";
+const FOUNDATION_PRACTITIONER_TRAINING_FORMSPREE = "https://formspree.io/f/mwvzgopl";
 
 const clientTestimonials = [
   {
@@ -376,6 +381,14 @@ export default function BianFoundationPractitionerTraining() {
           </div>
         </div>
       </section>
+
+      <PdfDownloadForm
+        sectionTitle="Download BIAN Foundation & Practitioner Certification Training Brochure"
+        resourceTitle="BIAN Foundation & Practitioner Certification Training"
+        pdfUrl={FOUNDATION_PRACTITIONER_TRAINING_PDF_URL}
+        pdfFileName="BIAN Foundation & Practitioner Certification Training (Trainer-Led).pdf"
+        formspreeEndpoint={FOUNDATION_PRACTITIONER_TRAINING_FORMSPREE}
+      />
 
       <section className="pt-8 pb-20 section-darker">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
