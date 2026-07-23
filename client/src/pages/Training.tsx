@@ -371,9 +371,9 @@ export default function Training() {
                       className="w-full premium-button px-4 py-3 rounded-lg font-semibold text-sm transition-all transform hover:scale-105"
                       data-testid="button-togaf-practitioner"
                     >
-                      TOGAF Practitioner
+                      Learn more
                     </button>
-                    <button
+                    {/* <button
                       onClick={() => setLocation('/training/togaf-9-certified')}
                       className="w-full premium-button px-4 py-3 rounded-lg font-semibold text-sm transition-all transform hover:scale-105"
                       data-testid="button-togaf-9-certified"
@@ -384,7 +384,7 @@ export default function Training() {
                       onClick={() => setLocation('/training/togaf-business-architecture')}
                       className="w-full premium-button px-4 py-3 rounded-lg font-semibold text-sm transition-all transform hover:scale-105"
                       data-testid="button-togaf-business-architecture"
-                    >TOGAF Business Architecture (Level 1)</button>
+                    >TOGAF Business Architecture (Level 1)</button> */}
                   </div>
                 </div>
               </CardContent>

@@ -33,8 +33,6 @@ import ArchitectingAIPoweredBank from "@/pages/ArchitectingAIPoweredBank";
 import ArchiMate from "@/pages/ArchiMate";
 import SparxEA from "@/pages/SparxEA";
 import TogafPractitioner from "@/pages/TogafPractitioner";
-import Togaf9Certified from "@/pages/Togaf9Certified";
-import TogafBusinessArchitecture from "@/pages/TogafBusinessArchitecture";
 import IT4ITFoundation from "@/pages/IT4ITFoundation";
 import BianFoundationTraining from "@/pages/BianFoundationTraining";
 import BianPractitionerTraining from "@/pages/BianPractitionerTraining";
@@ -82,8 +80,8 @@ function AppRouter() {
       <Route path="/training/archimate" component={ArchiMate} />
       <Route path="/training/sparx-ea" component={SparxEA} />
       <Route path="/training/togaf-practitioner" component={TogafPractitioner} />
-      <Route path="/training/togaf-9-certified" component={Togaf9Certified} />
-      <Route path="/training/togaf-business-architecture" component={TogafBusinessArchitecture} />
+      <Route path="/training/togaf-9-certified" component={() => <Redirect to="/services/togaf-training" />} />
+      <Route path="/training/togaf-business-architecture" component={() => <Redirect to="/services/togaf-training" />} />
       <Route path="/training/it4it-foundation" component={IT4ITFoundation} />
       <Route path="/training/bian-foundation" component={() => <Redirect to="/training/bian-foundation-certification-training" />} />
       <Route path="/training/bian-foundation-certification-training" component={BianFoundationTraining} />

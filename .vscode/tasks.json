@@ -10,6 +10,20 @@
 				"$vite"
 			],
 			"group": "build"
+		},
+		{
+			"label": "Run Vite App (npx)",
+			"type": "shell",
+			"command": "npx",
+			"args": [
+				"vite",
+				"--host",
+				"0.0.0.0",
+				"--port",
+				"5173"
+			],
+			"isBackground": true,
+			"group": "build"
 		}
 	]
 }

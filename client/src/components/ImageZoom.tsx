@@ -18,8 +18,8 @@ export default function ImageZoom({ src, alt, className = "", testId }: ImageZoo
   return (
     <>
       <div className="relative group cursor-pointer" onClick={() => setIsOpen(true)}>
-        <img 
-          src={src} 
+        <img
+          src={src}
           alt={alt}
           className={`${className} transition-all duration-300`}
           data-testid={testId}
@@ -35,8 +35,8 @@ export default function ImageZoom({ src, alt, className = "", testId }: ImageZoo
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="w-screen h-screen max-w-none p-0 m-0 overflow-hidden bg-black/95 border-none">
           <div className="relative w-full h-full flex items-center justify-center p-4">
-            <img 
-              src={src} 
+            <img
+              src={src}
               alt={alt}
               className="w-[95vw] h-[95vh] object-contain"
               onClick={() => setIsOpen(false)}
