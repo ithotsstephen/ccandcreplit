@@ -359,7 +359,7 @@ export default function BianPractitionerTraining() {
         sectionTitle="Download BIAN Practitioner Certification Training Brochure"
         resourceTitle="BIAN Practitioner Certification Training"
         pdfUrl={PRACTITIONER_TRAINING_PDF_URL}
-        pdfFileName="BIAN Foundation & Practitioner Certification Training (Trainer-Led).pdf"
+        pdfFileName="BIAN Practitioner Certification Training (Trainer-Led).pdf"
         formspreeEndpoint={PRACTITIONER_TRAINING_FORMSPREE}
       />
 
