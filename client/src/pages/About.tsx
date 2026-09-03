@@ -299,7 +299,8 @@ export default function About() {
         </div>
       </section>
 
-      {/* Leadership Team */}
+      {/* Leadership Team - hidden */}
+      {false && (
       <section className="py-20 section-darker">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -628,6 +629,7 @@ export default function About() {
           </div>
         </div>
       </section>
+      )}
 
       {/* Global Reach */}
       <section className="py-20 section-dark">
